@@ -1,0 +1,32 @@
+$desktop-xtralarge: 1200px;
+$desktop: 992px;
+$tablet: 768px;
+$mobile: 576px;
+
+@mixin media-breakpoint-up($device) {
+  @if #{$device == "desktop-xl"} {
+    @media (min-width: $desktop-xtralarge) {
+      @content;
+    }
+  }
+  @if #{$device == "desktop"} {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+  @if #{$device == "tablet"} {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  }
+  @if #{$device == "mobile"} {
+    @media (min-width: $mobile) {
+      @content;
+    }
+  }
+  @if #{$device == "mobile-portrait"} {
+    @media (min-width: $mobile) and (orientation: portrait) {
+      @content;
+    }
+  }
+}
