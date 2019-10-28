@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "./variable.scss";
 
 @function color($color-name){
     @return map-get($colors, $color-name);
