@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700,800,900|Open+Sans:400,600,700,800&display=swap");
+.circle {
+  width: 5em;
+  height: 5em;
+  border-radius: 100em;
+  background: color(primary-0); }
+  .circle.large {
+    width: calc(5em*2);
+    height: calc(5em*2); }
+  .circle.small {
+    width: 4em;
+    height: 4em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: color(primary-0);
+  text-transform: uppercase; }
+
+.bg-navyblue {
+  background: color(primary-0); }
+
+.bg-lightyellow {
+  background: color(primary-1); }
+
+.bg-blue {
+  background: color(additional-color-0); }
+
+.bg-lightblue {
+  background: color(additional-color-1); }
+
+.bg-gold {
+  background: color(additional-color-2); }
+
+.bg-cyan {
+  background: color(additional-color-3); }
+
+.bg-fuschiapink {
+  background: color(additional-color-4); }
+
+.bg-black {
+  background: color(additional-color-5); }
+
+.bg-lightgray {
+  background: color(additional-color-6); }
+
+.bg-colorsnow {
+  background: color(additional-color-7); }
+
+.border-right {
+  border-right: 1px solid color(additional-color-6) !important; }
+
+.border-left {
+  border-left: 1px solid color(additional-color-6) !important; }

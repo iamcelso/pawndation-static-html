@@ -1,2 +1,26 @@
+@import "./variable.scss";
 @import "components/button.scss";
-@import "components/cards.scss"
+@import "components/cards.scss";
+@import "components/shapes.scss";
+
+h1, h2, h3 , h4, h5, h6{
+    font-family: $font-heading;
+    font-weight: 700;
+    color: color(primary-0);
+    text-transform: uppercase;
+}
+
+.bg-navyblue{background: color(primary-0);}
+.bg-lightyellow{background: color(primary-1);}
+.bg-blue{background: color(additional-color-0);}
+.bg-lightblue{background: color(additional-color-1);}
+.bg-gold{background: color(additional-color-2);}
+.bg-cyan{background: color(additional-color-3);}
+.bg-fuschiapink{background: color(additional-color-4);}
+.bg-black{background: color(additional-color-5);}
+.bg-lightgray{background: color(additional-color-6)}
+.bg-colorsnow{background: color(additional-color-7);}
+
+// Bootstrap overwrite
+.border-right{border-right:1px solid color(additional-color-6) !important;}
+.border-left{border-left:1px solid color(additional-color-6) !important;}

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700,800,900|Open+Sans:400,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700,800,900|Open+Sans:400,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700,800,900|Open+Sans:400,600,700,800&display=swap");
+.circle {
+  width: 5em;
+  height: 5em;
+  border-radius: 100em;
+  background: #2e40a0; }
+  .circle.large {
+    width: calc(5em*2);
+    height: calc(5em*2); }
+  .circle.small {
+    width: 4em;
+    height: 4em; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: #2e40a0;
+  text-transform: uppercase; }
+
+.bg-navyblue {
+  background: #2e40a0; }
+
+.bg-lightyellow {
+  background: #fbc67a; }
+
+.bg-blue {
+  background: #2f42a7; }
+
+.bg-lightblue {
+  background: #5a70e3; }
+
+.bg-gold {
+  background: #ffa930; }
+
+.bg-cyan {
+  background: #3591ab; }
+
+.bg-fuschiapink {
+  background: #e35a6d; }
+
+.bg-black {
+  background: #2b2b2b; }
+
+.bg-lightgray {
+  background: #e2e2e2; }
+
+.bg-colorsnow {
+  background: #f9f9f9; }
+
+.border-right {
+  border-right: 1px solid #e2e2e2 !important; }
+
+.border-left {
+  border-left: 1px solid #e2e2e2 !important; }

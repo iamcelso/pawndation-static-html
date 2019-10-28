@@ -1,12 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,800,900|Open+Sans:400,600,700,800&display=swap');
+
+$font-heading: 'Nunito', sans-serif;
+$font-default: 'Open Sans', sans-serif;
+
 $colors: (
-    primary-0: #2D41A0,
-    primary-1: #FBC67A,
-    additional-color-0: #2F42A8,
-    additional-color-1: #2F42A8,
-    additional-color-2: #FFA930,
-    additional-color-3: #3690AC,
-    additional-color-4: #E35A6C,
-    additional-color-5: #2B2B2B,
-    additional-color-6: #E2E2E2,
-    additional-color-7: #F9F9F9
+    primary-0: #2e40a0,
+    primary-1: #fbc67a,
+    additional-color-0: #2f42a7,
+    additional-color-1: #5a70e3,
+    additional-color-2: #ffa930,
+    additional-color-3: #3591ab,
+    additional-color-4: #e35a6d,
+    additional-color-5: #2b2b2b,
+    additional-color-6: #e2e2e2,
+    additional-color-7: #f9f9f9
 );
+
+$nav-blue: bcolor(primary-0);
+$light-yellow: color(primary-1);
+$blue: color(additional-color-0);
+$lightblue: color(additional-color-1);
+$gold: color(additional-color-2);
+$cyan: color(additional-color-3);
+$fuschiapink: color(additional-color-4);
+$black: color(additional-color-5);
+$lightgray: color(additional-color-6);
+$colorsnow: color(additional-color-7);
