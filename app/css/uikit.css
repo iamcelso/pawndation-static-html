@@ -1,4 +1,47 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700,800,900|Open+Sans:400,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700,800|Open+Sans:400,600,700,800&display=swap");
+.button {
+  background: #2e40a0; }
+  .button.background.none {
+    background: none; }
+  .button.next {
+    width: 40px;
+    height: 40px;
+    border-radius: 100em;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .button.next::before {
+      transform: rotate(90deg);
+      margin-left: 2px;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("../../assets/icons/up-arrow.svg");
+      background-size: contain; }
+  .button.prev, .button.back {
+    width: 40px;
+    height: 40px;
+    border-radius: 100em;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .button.prev::before, .button.back::before {
+      transform: rotate(-90deg);
+      margin-right: 2px;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("../../assets/icons/up-arrow.svg");
+      background-size: contain; }
+    .button.prev.background.none::before, .button.back.background.none::before {
+      transform: rotate(-90deg);
+      margin-right: 2px;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("../../assets/icons/up-arrow-navy.svg");
+      background-size: contain; }
+
 .circle {
   width: 5em;
   height: 5em;
@@ -11,9 +54,19 @@
     width: 4em;
     height: 4em; }
 
+* {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   color: #2e40a0;
   text-transform: uppercase; }
 
@@ -53,11 +106,6 @@ h1, h2, h3, h4, h5, h6 {
 .border-left {
   border-left: 1px solid #e2e2e2 !important; }
 
-* {
-  font-family: "Open Sans", sans-serif;
-  margin: 0;
-  padding: 0; }
-
 .header-container {
   margin: 20; }
   .header-container .header {
@@ -68,7 +116,13 @@ h1, h2, h3, h4, h5, h6 {
       font-weight: 700;
       color: #2e40a0; }
   .header-container .brand {
-    margin: 20px 0; }
+    margin: 20px auto;
+    background: url("../assets/brand/logo-mark.svg");
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
 
 p {
   font-size: 14px; }
@@ -79,14 +133,93 @@ p {
 .component-container p {
   margin: 20px 0 40px 0; }
 
-.component-container .color-container {
+.color .color-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 5em);
+  grid-template-columns: repeat(auto-fit, 5em);
   grid-gap: 1em; }
-  .component-container .color-container .shape-container {
+  .color .color-container .shape-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    .component-container .color-container .shape-container small {
+    .color .color-container .shape-container small {
       margin: 10px 0; }
+
+.typography-container p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800; }
+
+.typography-container .heading-container {
+  display: flex;
+  width: 100%;
+  align-items: center; }
+  .typography-container .heading-container small {
+    margin-top: -10px;
+    width: 80px;
+    font-family: "Nunito", sans-serif; }
+
+.paragraph-container h4 {
+  font-family: "Open Sans", sans-serif;
+  text-transform: none; }
+
+.icon-container {
+  display: flex;
+  align-items: center; }
+  .icon-container span {
+    margin: 15px 0; }
+    .icon-container span:not(:first-child) {
+      margin: 0 25px; }
+    .icon-container span:nth-of-type(1) {
+      background: url("../assets/icons/icon1.png");
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .icon-container span:nth-of-type(2) {
+      background: url("../assets/icons/icon2.png");
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .icon-container span:nth-of-type(3) {
+      background: url("../assets/icons/icon3.png");
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .icon-container span:nth-of-type(4) {
+      background: url("../assets/icons/icon4.png");
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "description buttons" "next-prev buttons"; }
+  .buttons-container .description-container {
+    grid-area: description; }
+    .buttons-container .description-container .style-container {
+      display: flex;
+      flex-direction: column; }
+      .buttons-container .description-container .style-container:not(:first-child) {
+        margin: 30px 0; }
+      .buttons-container .description-container .style-container .label {
+        font-weight: bold; }
+  .buttons-container .next-prev-container {
+    grid-area: next-prev; }
+    .buttons-container .next-prev-container .action-container {
+      display: flex;
+      align-items: center; }
+      .buttons-container .next-prev-container .action-container:not(:first-child) {
+        margin: 20px 0; }
+      .buttons-container .next-prev-container .action-container span {
+        margin: 0 20px; }
+  .buttons-container .buttons {
+    grid-area: buttons; }

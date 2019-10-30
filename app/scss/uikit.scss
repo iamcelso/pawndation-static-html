@@ -1,11 +1,5 @@
 @import "index.scss";
 
-* {
-    font-family: $font-default;
-    margin: 0;
-    padding: 0;
-}
-
 .header-container{
     margin: 20;
     
@@ -15,12 +9,14 @@
             margin: 0;
             font-family: $font-heading;
             font-weight: 700;
-            color: color(primary-0);
+            color: $navy-blue;
         }
     }
 
     .brand{
-        margin: 20px 0;
+        margin: 20px auto;
+        background: url('../assets/brand/logo-mark.svg');
+        @include icon;
     }
 }
 
@@ -32,11 +28,13 @@ p{font-size: 14px;}
     }
     p{
         margin: 20px 0 40px 0;
-    }
+    } 
+}
 
+.color{
     .color-container{
         display: grid;
-        grid-template-columns: repeat(auto-fill, 5em);
+        grid-template-columns: repeat(auto-fit, 5em);
         grid-gap: 1em;
 
         .shape-container{
@@ -49,12 +47,106 @@ p{font-size: 14px;}
                 margin: 10px 0;
             }
         }
-    }    
+    }   
 }
 
+.typography-container{
+    p{
+        font-family: $font-heading;
+        font-weight: 800;
+    }
 
+    .heading-container{
+        display: flex;
+        width: 100%;
+        align-items: center;
 
+        small{
+            margin-top:-10px;
+            width: 80px;
+            font-family: $font-heading;          
+        }
 
+    }
+}
 
+.paragraph-container{
+    h4{
+        font-family: $font-default;
+        text-transform: none;
+    }
+}
 
+.icon-container{
+    display: flex;
+    align-items: center;
 
+   span{
+       margin: 15px 0;
+       &:not(:first-child){
+           margin: 0 25px;
+       }
+       &:nth-of-type(1){
+           background: url('../assets/icons/icon1.png');
+           @include icon(30px);
+       }
+
+       &:nth-of-type(2){
+        background: url('../assets/icons/icon2.png');
+        @include icon(30px);
+       }
+       &:nth-of-type(3){
+        background: url('../assets/icons/icon3.png');
+        @include icon(30px);
+       }
+       &:nth-of-type(4){
+        background: url('../assets/icons/icon4.png');
+        @include icon(30px);
+       }
+
+   }
+}
+
+.buttons-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "description buttons"
+    "next-prev buttons";
+
+    .description-container{
+        grid-area: description;
+
+        .style-container{
+            display: flex;
+            flex-direction: column;
+
+            &:not(:first-child){
+                margin: 30px 0;
+            }
+            .label{
+                font-weight: bold;
+            }
+                
+        }   
+    }
+    .next-prev-container{
+        grid-area: next-prev;
+        .action-container{
+            display: flex;
+            align-items: center;
+
+            &:not(:first-child){
+                margin: 20px 0;
+            }
+            span{
+                margin: 0 20px;
+            }
+        }
+    }
+    .buttons{
+        grid-area: buttons;
+    }
+
+}

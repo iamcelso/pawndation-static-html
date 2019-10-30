@@ -1,0 +1,58 @@
+@import "../variable.scss";
+
+@mixin psuedo-backgound-image-chevron($size: 18px){
+    content: "";
+    width: $size;
+    height: $size;
+    background: url('../../assets/icons/up-arrow.svg');
+    background-size: contain;
+}
+@mixin psuedo-background-imaga-chevron-navy($size: 18px){
+    content: "";
+    width: $size;
+    height: $size;
+    background: url('../../assets/icons/up-arrow-navy.svg');
+    background-size: contain;
+}
+
+@mixin circle($size: 40px) {
+    width: $size;
+    height: $size;
+    border-radius:100em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    background: $navy-blue;
+
+    &.background{
+        &.none{
+            background: none;
+        }
+    }
+
+    &.next{
+        @include circle();
+        &::before{
+            transform: rotate(90deg);
+            margin-left: 2px;
+            @include psuedo-backgound-image-chevron();
+        }
+    }
+    &.prev, &.back{
+        @include circle();
+
+        &::before{
+            transform: rotate(-90deg);
+            margin-right: 2px;
+            @include psuedo-backgound-image-chevron();
+        }
+
+        &.background.none::before{
+            transform: rotate(-90deg);
+            margin-right: 2px;
+            @include psuedo-background-imaga-chevron-navy()
+        }
+    }
+}

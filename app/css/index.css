@@ -1,4 +1,47 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700,800,900|Open+Sans:400,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700,800|Open+Sans:400,600,700,800&display=swap");
+.button {
+  background: #2e40a0; }
+  .button.background.none {
+    background: none; }
+  .button.next {
+    width: 40px;
+    height: 40px;
+    border-radius: 100em;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .button.next::before {
+      transform: rotate(90deg);
+      margin-left: 2px;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("../../assets/icons/up-arrow.svg");
+      background-size: contain; }
+  .button.prev, .button.back {
+    width: 40px;
+    height: 40px;
+    border-radius: 100em;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .button.prev::before, .button.back::before {
+      transform: rotate(-90deg);
+      margin-right: 2px;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("../../assets/icons/up-arrow.svg");
+      background-size: contain; }
+    .button.prev.background.none::before, .button.back.background.none::before {
+      transform: rotate(-90deg);
+      margin-right: 2px;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("../../assets/icons/up-arrow-navy.svg");
+      background-size: contain; }
+
 .circle {
   width: 5em;
   height: 5em;
@@ -11,9 +54,19 @@
     width: 4em;
     height: 4em; }
 
+* {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0;
+  padding: 0; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   color: #2e40a0;
   text-transform: uppercase; }
 

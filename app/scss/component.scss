@@ -3,12 +3,24 @@
 @import "components/cards.scss";
 @import "components/shapes.scss";
 
+* {
+    font-family: $font-default;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
 h1, h2, h3 , h4, h5, h6{
     font-family: $font-heading;
-    font-weight: 700;
+    font-weight: 800;
     color: color(primary-0);
     text-transform: uppercase;
-}
+} 
 
 .bg-navyblue{background: color(primary-0);}
 .bg-lightyellow{background: color(primary-1);}

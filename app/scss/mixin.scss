@@ -30,3 +30,14 @@ $mobile: 576px;
     }
   }
 }
+
+
+
+@mixin icon($size: 50px) {
+  width: $size;
+  height: $size;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
