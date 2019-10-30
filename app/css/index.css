@@ -251,7 +251,8 @@
         margin-left: 0;
         color: #e2e2e2;
         font-family: FontAwesome;
-        font-size: 18px; }
+        font-size: 18px;
+        color: #ffffff; }
     .pawn.progress-form .progress-item.current .item {
       border: 2px solid #ffa930;
       background: #ffa930; }
@@ -260,7 +261,8 @@
         margin-left: 0;
         color: #e2e2e2;
         font-family: FontAwesome;
-        font-size: 18px; }
+        font-size: 18px;
+        color: #ffffff; }
     .pawn.progress-form .progress-item.current .label {
       color: #ffa930;
       font-weight: bold; }

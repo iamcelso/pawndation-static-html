@@ -61,6 +61,7 @@
                     content: "\f00c";
                     margin-left: 0;
                     @include psuedo-fontawesome-style;
+                    color: #ffffff;                    
                 }
             }
         }
@@ -73,6 +74,7 @@
                     content: "\f078";
                     margin-left: 0;
                     @include psuedo-fontawesome-style;
+                    color: #ffffff;
                 }
             }
             .label{
