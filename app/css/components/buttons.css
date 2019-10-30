@@ -17,13 +17,19 @@
   .btn.pawn.no-background {
     background: none;
     border: none;
-    color: #868686; }
+    color: #868686;
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75); }
     .btn.pawn.no-background.active, .btn.pawn.no-background:hover {
       background: color(primary-1);
       height: 50px;
       width: 145px;
       border-radius: 5em;
       border: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
       color: #ffffff; }
   .btn.pawn.outline {
     color: #868686;
@@ -44,6 +50,9 @@
     justify-content: center;
     border: 0;
     cursor: pointer;
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
     transition: all 0.3s ease-in-out; }
     .btn.pawn.next::before {
       transform: rotate(90deg);
@@ -54,7 +63,10 @@
       background: url("../../assets/icons/up-arrow-navy.svg");
       background-size: contain; }
     .btn.pawn.next.active, .btn.pawn.next:hover {
-      background: color(primary-0); }
+      background: color(primary-0);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
       .btn.pawn.next.active::before, .btn.pawn.next:hover::before {
         content: "";
         width: 18px;
@@ -71,6 +83,9 @@
     justify-content: center;
     border: 0;
     cursor: pointer;
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
     transition: all 0.3s ease-in-out; }
     .btn.pawn.prev::before, .btn.pawn.back::before {
       transform: rotate(-90deg);

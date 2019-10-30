@@ -30,3 +30,15 @@ $mobile: 576px;
     }
   }
 }
+
+@mixin box-shadow($none:"", $box-shadow: (hAlign: 0, vAlign: 0, blur: 12px, spread: -5px)) {
+  @if($none !="none"){
+    -webkit-box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,0.75);
+    -moz-box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,0.75);
+    box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,0.75);
+  }@else{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}

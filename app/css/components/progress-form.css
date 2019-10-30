@@ -56,15 +56,15 @@
         font-size: 18px;
         color: #ffffff; }
     .pawn.progress-form .progress-item.current .item {
-      border: 2px solid color(additional-color-2);
-      background: color(additional-color-2); }
+      border: 2px solid color(additional-color-2); }
       .pawn.progress-form .progress-item.current .item::before {
         content: "\f078";
         margin-left: 0;
         color: color(additional-color-6);
         font-family: FontAwesome;
         font-size: 18px;
-        color: #ffffff; }
+        color: color(additional-color-2);
+        font-weight: 600; }
     .pawn.progress-form .progress-item.current .label {
       color: color(additional-color-2);
       font-weight: bold; }

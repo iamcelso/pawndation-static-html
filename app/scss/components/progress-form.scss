@@ -68,13 +68,13 @@
         &.current{
             .item{
                 border: 2px solid $orange;
-                background: $orange;
 
                 &::before{
                     content: "\f078";
                     margin-left: 0;
                     @include psuedo-fontawesome-style;
-                    color: #ffffff;
+                    color: $orange;
+                    font-weight: 600;
                 }
             }
             .label{

@@ -1,4 +1,5 @@
 @import "../variable.scss";
+@import "../mixin.scss";
 
 @mixin psuedo-backgound-image-chevron{
     content: "";
@@ -26,6 +27,7 @@
     border: 0;
     cursor: pointer;
 
+    @include box-shadow();
     transition: $transition;
 }
 
@@ -63,8 +65,11 @@
         background: none;
         border: none;
         color: #868686;
+
+        @include box-shadow();
         &.active, &:hover{
             @include btn-pawn-default;
+            @include box-shadow(none);
             color: #ffffff;            
         }
     }   
@@ -94,6 +99,7 @@
         }
         &.active, &:hover{
             background: $navy-blue;
+            @include box-shadow(none);
             &::before{
                 @include psuedo-backgound-image-chevron;
             }

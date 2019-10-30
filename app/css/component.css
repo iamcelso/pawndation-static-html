@@ -17,13 +17,19 @@
   .btn.pawn.no-background {
     background: none;
     border: none;
-    color: #868686; }
+    color: #868686;
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75); }
     .btn.pawn.no-background.active, .btn.pawn.no-background:hover {
       background: color(primary-1);
       height: 50px;
       width: 145px;
       border-radius: 5em;
       border: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
       color: #ffffff; }
   .btn.pawn.outline {
     color: #868686;
@@ -44,6 +50,9 @@
     justify-content: center;
     border: 0;
     cursor: pointer;
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
     transition: all 0.3s ease-in-out; }
     .btn.pawn.next::before {
       transform: rotate(90deg);
@@ -54,7 +63,10 @@
       background: url("../../assets/icons/up-arrow-navy.svg");
       background-size: contain; }
     .btn.pawn.next.active, .btn.pawn.next:hover {
-      background: color(primary-0); }
+      background: color(primary-0);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
       .btn.pawn.next.active::before, .btn.pawn.next:hover::before {
         content: "";
         width: 18px;
@@ -71,6 +83,9 @@
     justify-content: center;
     border: 0;
     cursor: pointer;
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
     transition: all 0.3s ease-in-out; }
     .btn.pawn.prev::before, .btn.pawn.back::before {
       transform: rotate(-90deg);
@@ -253,15 +268,15 @@
         font-size: 18px;
         color: #ffffff; }
     .pawn.progress-form .progress-item.current .item {
-      border: 2px solid color(additional-color-2);
-      background: color(additional-color-2); }
+      border: 2px solid color(additional-color-2); }
       .pawn.progress-form .progress-item.current .item::before {
         content: "\f078";
         margin-left: 0;
         color: color(additional-color-6);
         font-family: FontAwesome;
         font-size: 18px;
-        color: #ffffff; }
+        color: color(additional-color-2);
+        font-weight: 600; }
     .pawn.progress-form .progress-item.current .label {
       color: color(additional-color-2);
       font-weight: bold; }
@@ -281,6 +296,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   color: color(primary-0);
   text-transform: uppercase; }
+
+h4.open-sans {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: none; }
+  h4.open-sans.semi-bold {
+    font-weight: 700; }
 
 a {
   text-decoration: underline;
