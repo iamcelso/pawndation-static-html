@@ -39,6 +39,11 @@
             margin-left: 2px;
             @include psuedo-backgound-image-chevron();
         }
+        &.background.none::before{
+            transform: rotate(90deg);
+            margin-left: 2px;
+            @include psuedo-background-imaga-chevron-navy()
+        }
     }
     &.prev, &.back{
         @include circle();
