@@ -1,0 +1,124 @@
+@import "../variable.scss";
+
+@mixin psuedo-backgound-image-chevron($size: 18px){
+    content: "";
+    width: $size;
+    height: $size;
+    background: url('../../assets/icons/up-arrow.svg');
+    background-size: contain;
+
+    transition: $transition;
+}
+@mixin psuedo-background-image-chevron-navy($size: 18px){
+    content: "";
+    width: $size;
+    height: $size;
+    background: url('../../assets/icons/up-arrow-navy.svg');
+    background-size: contain;
+
+    transition: $transition;
+}
+
+@mixin circle($size: 40px) {
+    width: $size;
+    height: $size;
+    border-radius:100em;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+
+    transition: $transition;
+}
+
+@mixin btn-pawn-outline{
+    color: $gray;
+    background: none;
+    border: 1px solid $light-yellow;
+}
+
+@mixin btn-pawn-default{
+    background: $light-yellow;
+    height: 50px;
+    width: 145px;
+    border-radius: 5em;
+    border: none;
+}
+
+//------------------------------------------
+
+.btn-pawn{
+    @include btn-pawn-default;
+    transition: $transition;
+    cursor: pointer;
+
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    &.active, &:hover{
+        @include btn-pawn-outline;
+    }
+
+    // button no backgound and outline
+    &.no-background{
+        background: none;
+        border: none;
+        color: #868686;
+        &.active, &:hover{
+            @include btn-pawn-default;
+            color: #ffffff;            
+        }
+    }   
+
+    // button outline only
+    &.outline{
+        @include btn-pawn-outline;
+        &.active, &:hover{
+            background: $light-yellow;
+            color: #ffffff;
+        }
+    }
+    
+    // Background
+    &.background{
+        &.none{
+            background: none;
+        }
+    }
+
+    &.next{
+        @include circle();
+        &::before{
+            transform: rotate(90deg);
+            margin-left: 2px;
+            @include psuedo-background-image-chevron-navy();
+        }
+        &.active, &:hover{
+            background: $navy-blue;
+            &::before{
+                @include psuedo-backgound-image-chevron();
+            }
+        }
+    }
+    &.prev, &.back{
+        @include circle();
+        &::before{
+            transform: rotate(-90deg);
+            margin-right: 2px;
+            @include psuedo-background-image-chevron-navy();
+        }
+        &.active, &:hover{
+            background: $navy-blue;           
+            &::before{
+                @include psuedo-backgound-image-chevron();
+            }
+        }
+    }
+
+    &:focus, &.active{
+        outline: none;
+    }
+}

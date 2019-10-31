@@ -15,12 +15,21 @@
 
     .brand{
         margin: 20px auto;
+        width: 40px;
+        height: 40px;
+
         background: url('../assets/brand/logo-mark.svg');
-        @include icon;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
-p{font-size: 14px;}
+.col-md-6:nth-of-type(2){
+    .component-container{
+        margin-left: 78px;
+    }
+}
 
 .component-container{
     &:not(:first-child){
@@ -78,33 +87,9 @@ p{font-size: 14px;}
 }
 
 .icon-container{
-    display: flex;
-    align-items: center;
-
-   span{
-       margin: 15px 0;
-       &:not(:first-child){
-           margin: 0 25px;
-       }
-       &:nth-of-type(1){
-           background: url('../assets/icons/icon1.png');
-           @include icon(30px);
-       }
-
-       &:nth-of-type(2){
-        background: url('../assets/icons/icon2.png');
-        @include icon(30px);
-       }
-       &:nth-of-type(3){
-        background: url('../assets/icons/icon3.png');
-        @include icon(30px);
-       }
-       &:nth-of-type(4){
-        background: url('../assets/icons/icon4.png');
-        @include icon(30px);
-       }
-
-   }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 60px);
+    grid-gap: 15px;
 }
 
 .buttons-container{
@@ -147,6 +132,17 @@ p{font-size: 14px;}
     }
     .buttons{
         grid-area: buttons;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(4, 80px);
+        grid-gap: 20px;
+
+        .button-container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
 
 }

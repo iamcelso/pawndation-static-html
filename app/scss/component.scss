@@ -1,7 +1,9 @@
 @import "./variable.scss";
-@import "components/button.scss";
-@import "components/cards.scss";
-@import "components/shapes.scss";
+@import "./components/buttons.scss";
+@import "./components/cards.scss";
+@import "./components/shapes.scss";
+@import "./components/icons.scss";
+@import "./components/tabs.scss";
 
 * {
     font-family: $font-default;
@@ -20,13 +22,25 @@ h1, h2, h3 , h4, h5, h6{
     font-weight: 800;
     color: color(primary-0);
     text-transform: uppercase;
-} 
+}
+
+a{
+    text-decoration: underline;
+    font-weight: bold;
+
+    &.navy-blue{
+        color: $navy-blue;
+    }
+    &.orange{
+        color: $orange;
+    }
+}
 
 .bg-navyblue{background: color(primary-0);}
 .bg-lightyellow{background: color(primary-1);}
 .bg-blue{background: color(additional-color-0);}
 .bg-lightblue{background: color(additional-color-1);}
-.bg-gold{background: color(additional-color-2);}
+.bg-orange{background: color(additional-color-2);}
 .bg-cyan{background: color(additional-color-3);}
 .bg-fuschiapink{background: color(additional-color-4);}
 .bg-black{background: color(additional-color-5);}

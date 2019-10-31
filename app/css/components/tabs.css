@@ -1,0 +1,26 @@
+.pawn.nav-tabs {
+  display: flex;
+  list-style-type: none;
+  border-bottom: none; }
+  .pawn.nav-tabs .nav-item {
+    background: none; }
+    .pawn.nav-tabs .nav-item .nav-link {
+      font-family: "Nunito", sans-serif;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 18px;
+      text-decoration: none;
+      color: #868686;
+      border-bottom: 3px solid  transparent;
+      padding: 0 4px;
+      padding-bottom: .2rem;
+      transition: all 0.3s ease-in-out; }
+      .pawn.nav-tabs .nav-item .nav-link.active, .pawn.nav-tabs .nav-item .nav-link:hover, .pawn.nav-tabs .nav-item .nav-link:focus {
+        background: #ffffff;
+        border-color: #ffffff;
+        color: color(additional-color-2);
+        border-bottom: 3px solid color(additional-color-2); }
+    .pawn.nav-tabs .nav-item:first-child {
+      margin-right: 1rem; }
+    .pawn.nav-tabs .nav-item:not(:first-child) {
+      margin: 0 1rem; }
