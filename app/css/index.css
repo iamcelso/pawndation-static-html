@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700,800|Open+Sans:400,600,700,800&display=swap");
-.btn-pawn {
+.btn.pawn {
   background: #fbc67a;
   height: 50px;
   width: 145px;
@@ -11,31 +11,31 @@
   font-size: 14px;
   color: #ffffff;
   text-transform: uppercase; }
-  .btn-pawn.active, .btn-pawn:hover {
+  .btn.pawn.active, .btn.pawn:hover {
     color: #868686;
     background: none;
     border: 1px solid #fbc67a; }
-  .btn-pawn.no-background {
+  .btn.pawn.no-background {
     background: none;
     border: none;
     color: #868686; }
-    .btn-pawn.no-background.active, .btn-pawn.no-background:hover {
+    .btn.pawn.no-background.active, .btn.pawn.no-background:hover {
       background: #fbc67a;
       height: 50px;
       width: 145px;
       border-radius: 5em;
       border: none;
       color: #ffffff; }
-  .btn-pawn.outline {
+  .btn.pawn.outline {
     color: #868686;
     background: none;
     border: 1px solid #fbc67a; }
-    .btn-pawn.outline.active, .btn-pawn.outline:hover {
+    .btn.pawn.outline.active, .btn.pawn.outline:hover {
       background: #fbc67a;
       color: #ffffff; }
-  .btn-pawn.background.none {
+  .btn.pawn.background.none {
     background: none; }
-  .btn-pawn.next {
+  .btn.pawn.next {
     width: 40px;
     height: 40px;
     border-radius: 100em;
@@ -46,7 +46,7 @@
     border: 0;
     cursor: pointer;
     transition: all 0.3s ease-in-out; }
-    .btn-pawn.next::before {
+    .btn.pawn.next::before {
       transform: rotate(90deg);
       margin-left: 2px;
       content: "";
@@ -55,16 +55,16 @@
       background: url("../../assets/icons/up-arrow-navy.svg");
       background-size: contain;
       transition: all 0.3s ease-in-out; }
-    .btn-pawn.next.active, .btn-pawn.next:hover {
+    .btn.pawn.next.active, .btn.pawn.next:hover {
       background: #2e40a0; }
-      .btn-pawn.next.active::before, .btn-pawn.next:hover::before {
+      .btn.pawn.next.active::before, .btn.pawn.next:hover::before {
         content: "";
         width: 18px;
         height: 18px;
         background: url("../../assets/icons/up-arrow.svg");
         background-size: contain;
         transition: all 0.3s ease-in-out; }
-  .btn-pawn.prev, .btn-pawn.back {
+  .btn.pawn.prev, .btn.pawn.back {
     width: 40px;
     height: 40px;
     border-radius: 100em;
@@ -75,7 +75,7 @@
     border: 0;
     cursor: pointer;
     transition: all 0.3s ease-in-out; }
-    .btn-pawn.prev::before, .btn-pawn.back::before {
+    .btn.pawn.prev::before, .btn.pawn.back::before {
       transform: rotate(-90deg);
       margin-right: 2px;
       content: "";
@@ -84,16 +84,16 @@
       background: url("../../assets/icons/up-arrow-navy.svg");
       background-size: contain;
       transition: all 0.3s ease-in-out; }
-    .btn-pawn.prev.active, .btn-pawn.prev:hover, .btn-pawn.back.active, .btn-pawn.back:hover {
+    .btn.pawn.prev.active, .btn.pawn.prev:hover, .btn.pawn.back.active, .btn.pawn.back:hover {
       background: #2e40a0; }
-      .btn-pawn.prev.active::before, .btn-pawn.prev:hover::before, .btn-pawn.back.active::before, .btn-pawn.back:hover::before {
+      .btn.pawn.prev.active::before, .btn.pawn.prev:hover::before, .btn.pawn.back.active::before, .btn.pawn.back:hover::before {
         content: "";
         width: 18px;
         height: 18px;
         background: url("../../assets/icons/up-arrow.svg");
         background-size: contain;
         transition: all 0.3s ease-in-out; }
-  .btn-pawn:focus, .btn-pawn.active {
+  .btn.pawn:focus, .btn.pawn.active {
     outline: none; }
 
 .circle {

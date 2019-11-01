@@ -49,7 +49,7 @@
 
 //------------------------------------------
 
-.btn-pawn{
+.btn.pawn{
     @include btn-pawn-default;
     transition: $transition;
     cursor: pointer;
