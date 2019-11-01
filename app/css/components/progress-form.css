@@ -1,0 +1,68 @@
+.circle {
+  width: 5em;
+  height: 5em;
+  border-radius: 100em;
+  background: color(primary-0); }
+  .circle.large {
+    width: calc(5em*2);
+    height: calc(5em*2); }
+  .circle.small {
+    width: 4em;
+    height: 4em; }
+
+.pawn.progress-form {
+  width: 100%;
+  display: flex;
+  align-items: center; }
+  .pawn.progress-form .progress-item {
+    display: flex;
+    align-items: center;
+    position: relative; }
+    .pawn.progress-form .progress-item .item {
+      width: 40px;
+      height: 40px;
+      border-radius: 5em;
+      border: 2px solid color(additional-color-6);
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .pawn.progress-form .progress-item .item::before {
+        content: "\f054";
+        margin-left: 2px;
+        color: color(additional-color-6);
+        font-family: FontAwesome;
+        font-size: 18px; }
+    .pawn.progress-form .progress-item .separator {
+      height: 1px;
+      width: 48px;
+      margin: 0 8px;
+      border: 1px solid color(additional-color-6); }
+    .pawn.progress-form .progress-item .label {
+      position: absolute;
+      bottom: -35px;
+      left: -30px;
+      width: 100px;
+      text-align: center;
+      transition: all 0.3s ease-in-out; }
+    .pawn.progress-form .progress-item.check .item {
+      border: 2px solid color(additional-color-2);
+      background: color(additional-color-2); }
+      .pawn.progress-form .progress-item.check .item::before {
+        content: "\f00c";
+        margin-left: 0;
+        color: color(additional-color-6);
+        font-family: FontAwesome;
+        font-size: 18px; }
+    .pawn.progress-form .progress-item.current .item {
+      border: 2px solid color(additional-color-2);
+      background: color(additional-color-2); }
+      .pawn.progress-form .progress-item.current .item::before {
+        content: "\f078";
+        margin-left: 0;
+        color: color(additional-color-6);
+        font-family: FontAwesome;
+        font-size: 18px; }
+    .pawn.progress-form .progress-item.current .label {
+      color: color(additional-color-2);
+      font-weight: bold; }

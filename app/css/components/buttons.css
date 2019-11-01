@@ -52,17 +52,15 @@
       width: 18px;
       height: 18px;
       background: url("../../assets/icons/up-arrow-navy.svg");
-      background-size: contain;
-      transition: all 0.3s ease-in-out; }
+      background-size: contain; }
     .btn.pawn.next.active, .btn.pawn.next:hover {
       background: color(primary-0); }
       .btn.pawn.next.active::before, .btn.pawn.next:hover::before {
         content: "";
         width: 18px;
         height: 18px;
-        background: url("../../assets/icons/up-arrow.svg");
-        background-size: contain;
-        transition: all 0.3s ease-in-out; }
+        background: url("../../assets/icons/up-arrow-white.svg");
+        background-size: contain; }
   .btn.pawn.prev, .btn.pawn.back {
     width: 40px;
     height: 40px;
@@ -81,16 +79,14 @@
       width: 18px;
       height: 18px;
       background: url("../../assets/icons/up-arrow-navy.svg");
-      background-size: contain;
-      transition: all 0.3s ease-in-out; }
+      background-size: contain; }
     .btn.pawn.prev.active, .btn.pawn.prev:hover, .btn.pawn.back.active, .btn.pawn.back:hover {
       background: color(primary-0); }
       .btn.pawn.prev.active::before, .btn.pawn.prev:hover::before, .btn.pawn.back.active::before, .btn.pawn.back:hover::before {
         content: "";
         width: 18px;
         height: 18px;
-        background: url("../../assets/icons/up-arrow.svg");
-        background-size: contain;
-        transition: all 0.3s ease-in-out; }
+        background: url("../../assets/icons/up-arrow-white.svg");
+        background-size: contain; }
   .btn.pawn:focus, .btn.pawn.active {
     outline: none; }

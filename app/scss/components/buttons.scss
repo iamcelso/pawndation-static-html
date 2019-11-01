@@ -1,27 +1,23 @@
 @import "../variable.scss";
 
-@mixin psuedo-backgound-image-chevron($size: 18px){
+@mixin psuedo-backgound-image-chevron{
     content: "";
-    width: $size;
-    height: $size;
-    background: url('../../assets/icons/up-arrow.svg');
+    width: $circle-icon-size;
+    height: $circle-icon-size;
+    background: url('../../assets/icons/up-arrow-white.svg');
     background-size: contain;
-
-    transition: $transition;
 }
-@mixin psuedo-background-image-chevron-navy($size: 18px){
+@mixin psuedo-background-image-chevron-navy{
     content: "";
-    width: $size;
-    height: $size;
+    width: $circle-icon-size;
+    height: $circle-icon-size;
     background: url('../../assets/icons/up-arrow-navy.svg');
     background-size: contain;
-
-    transition: $transition;
 }
 
-@mixin circle($size: 40px) {
-    width: $size;
-    height: $size;
+@mixin circle {
+    width: $circle-default-size;
+    height: $circle-default-size;
     border-radius:100em;
     background: none;
     display: flex;
@@ -90,30 +86,30 @@
     }
 
     &.next{
-        @include circle();
+        @include circle;
         &::before{
             transform: rotate(90deg);
             margin-left: 2px;
-            @include psuedo-background-image-chevron-navy();
+            @include psuedo-background-image-chevron-navy;
         }
         &.active, &:hover{
             background: $navy-blue;
             &::before{
-                @include psuedo-backgound-image-chevron();
+                @include psuedo-backgound-image-chevron;
             }
         }
     }
     &.prev, &.back{
-        @include circle();
+        @include circle;
         &::before{
             transform: rotate(-90deg);
             margin-right: 2px;
-            @include psuedo-background-image-chevron-navy();
+            @include psuedo-background-image-chevron-navy;
         }
         &.active, &:hover{
             background: $navy-blue;           
             &::before{
-                @include psuedo-backgound-image-chevron();
+                @include psuedo-backgound-image-chevron;
             }
         }
     }

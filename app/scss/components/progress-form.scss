@@ -1,0 +1,84 @@
+@import "../variable.scss";
+@import "./shapes.scss";
+
+@mixin psuedo-fontawesome-style{
+    color: $lightgray;
+    font-family: FontAwesome;
+    font-size: 18px;
+}
+
+.pawn.progress-form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .progress-item{
+        display: flex;
+        align-items: center;
+        position: relative;
+    
+        .item{
+            width: $circle-default-size;
+            height: $circle-default-size;
+            border-radius: 5em;
+            border: 2px solid $lightgray;
+            transition: $transition;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before{
+                content: "\f054";
+                margin-left: 2px;
+                @include psuedo-fontawesome-style;               
+            }            
+                       
+        }
+        .separator{
+            height: 1px;      
+            width: 48px;
+            margin:0 8px;
+
+            border: 1px solid $lightgray;
+        }
+        .label{
+            position: absolute;
+            bottom: -35px;
+            left: -30px;
+            width: 100px;
+            text-align: center;
+
+            transition: $transition;
+        }
+
+        &.check{
+            .item{
+                border: 2px solid $orange;
+                background: $orange;
+
+                &::before{
+                    content: "\f00c";
+                    margin-left: 0;
+                    @include psuedo-fontawesome-style;
+                }
+            }
+        }
+        &.current{
+            .item{
+                border: 2px solid $orange;
+                background: $orange;
+
+                &::before{
+                    content: "\f078";
+                    margin-left: 0;
+                    @include psuedo-fontawesome-style;
+                }
+            }
+            .label{
+                color: $orange;
+                font-weight: bold;
+            }            
+        }
+    }
+}
