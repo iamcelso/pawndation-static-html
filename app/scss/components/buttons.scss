@@ -1,21 +1,6 @@
 @import "../variable.scss";
 @import "../mixin.scss";
 
-@mixin psuedo-backgound-image-chevron{
-    content: "";
-    width: $circle-icon-size;
-    height: $circle-icon-size;
-    background: url('../../assets/icons/up-arrow-white.svg');
-    background-size: contain;
-}
-@mixin psuedo-background-image-chevron-navy{
-    content: "";
-    width: $circle-icon-size;
-    height: $circle-icon-size;
-    background: url('../../assets/icons/up-arrow-navy.svg');
-    background-size: contain;
-}
-
 @mixin circle {
     width: $circle-default-size;
     height: $circle-default-size;
@@ -45,8 +30,8 @@
     border: none;
 }
 
-
-$transition: transform .4s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+$transition-default: $transition;
+$transition: transform .3s cubic-bezier(0.25, 0.39, 0.39, 2.01);
 $transform-scale: scale(.9);
 
 //------------------------------------------
@@ -100,13 +85,13 @@ $transform-scale: scale(.9);
         &::before{
             transform: rotate(90deg);
             margin-left: 2px;
-            @include psuedo-background-image-chevron-navy;
+            @include psuedo-backgound-image-chevron;
         }
         &.active, &:hover{
             background: $navy-blue;
             @include box-shadow(none);
             &::before{
-                @include psuedo-backgound-image-chevron;
+                @include psuedo-backgound-image-chevron("chevron-white");
             }
         }
     }
@@ -115,13 +100,25 @@ $transform-scale: scale(.9);
         &::before{
             transform: rotate(-90deg);
             margin-right: 2px;
-            @include psuedo-background-image-chevron-navy;
+            @include psuedo-backgound-image-chevron;
         }
         &.active, &:hover{
             background: $navy-blue;
             &::before{
-                @include psuedo-backgound-image-chevron;
+                @include psuedo-backgound-image-chevron("chevron-white");
             }
+        }
+    }
+    &.collapse{
+        @include circle;
+        background-color: $navy-blue;
+        transform: none;
+        box-shadow: none;
+
+        &::before{
+            margin-top: 2px;
+            transform: rotate(180deg);
+            @include psuedo-backgound-image-chevron("chevron-white");
         }
     }
 

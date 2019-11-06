@@ -42,3 +42,29 @@ $mobile: 576px;
     box-shadow: none;
   }
 }
+
+@mixin psuedo-backgound-image-chevron($icon-name:none){
+  content: "";
+  width: $circle-icon-size;
+  height: $circle-icon-size;
+  background: url('../../assets/icons/up-arrow-navy.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @if ($icon-name == "chevron-navy") {
+      background: url('../../assets/icons/up-arrow-navy.svg');
+  }
+  @if ($icon-name == "chevron-lightgray"){
+      background-image: url('../../assets/icons/up-arrow-lightgray.svg');
+  }
+  @if ($icon-name == "chevron-white"){
+      background-image: url('../../assets/icons/up-arrow-white.svg');
+  }
+  @if ($icon-name == "chevron-orange"){
+      background-image: url('../../assets/icons/up-arrow-orange.svg');
+  }
+  @if ($icon-name == "checkmark-orange"){
+    background-image: url('../../assets/icons/checkmark-white.svg');
+}
+}
