@@ -45,6 +45,10 @@
     border: none;
 }
 
+
+$transition: transform .4s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+$transform-scale: scale(.9);
+
 //------------------------------------------
 
 .btn.pawn{
@@ -58,6 +62,7 @@
     text-transform: uppercase;
     &.active, &:hover{
         @include btn-pawn-outline;
+        transform: $transform-scale;
     }
 
     // button no backgound and outline
@@ -113,7 +118,7 @@
             @include psuedo-background-image-chevron-navy;
         }
         &.active, &:hover{
-            background: $navy-blue;           
+            background: $navy-blue;
             &::before{
                 @include psuedo-backgound-image-chevron;
             }

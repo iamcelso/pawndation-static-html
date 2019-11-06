@@ -4,7 +4,7 @@
   width: 145px;
   border-radius: 5em;
   border: none;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.4s cubic-bezier(0.25, 0.39, 0.39, 2.01);
   cursor: pointer;
   font-weight: bold;
   font-size: 14px;
@@ -13,7 +13,8 @@
   .btn.pawn.active, .btn.pawn:hover {
     color: #868686;
     background: none;
-    border: 1px solid color(primary-1); }
+    border: 1px solid color(primary-1);
+    transform: scale(0.9); }
   .btn.pawn.no-background {
     background: none;
     border: none;
@@ -53,7 +54,7 @@
     -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-    transition: all 0.3s ease-in-out; }
+    transition: transform 0.4s cubic-bezier(0.25, 0.39, 0.39, 2.01); }
     .btn.pawn.next::before {
       transform: rotate(90deg);
       margin-left: 2px;
@@ -86,7 +87,7 @@
     -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-    transition: all 0.3s ease-in-out; }
+    transition: transform 0.4s cubic-bezier(0.25, 0.39, 0.39, 2.01); }
     .btn.pawn.prev::before, .btn.pawn.back::before {
       transform: rotate(-90deg);
       margin-right: 2px;
