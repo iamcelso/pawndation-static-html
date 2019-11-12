@@ -1,4 +1,4 @@
-@import "index.scss";
+@import "./index.scss";
 
 .header-container{
     margin: 20;
@@ -25,9 +25,19 @@
     }
 }
 
-.col-md-6:nth-of-type(2){
+.col-lg-6.border-right, .col-lg-6.border-left{
+    @include media-breakpoint-down(lg){
+        border: none !important;
+    }
+}
+
+.col-lg-6:nth-of-type(2){
+
     .component-container{
         margin-left: 78px;
+       @include media-breakpoint-down(lg){
+           margin-left: 0;
+       }
     }
 }
 
@@ -87,11 +97,18 @@
 
 .buttons-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 
     "description buttons"
     "next-prev buttons";
+
+    @include media-breakpoint-down(lg){
+        grid-template-rows: repeat(2,.5fr);
+        grid-template-areas: 
+        "description next-prev"
+        "buttons buttons";
+    }
 
     .description-container{
         grid-area: description;
@@ -116,7 +133,7 @@
             align-items: center;
 
             &:not(:first-child){
-                margin: 20px 0;
+                margin: 20px 0;              
             }
             span{
                 margin: 0 20px;

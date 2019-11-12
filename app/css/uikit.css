@@ -457,8 +457,36 @@ a {
     background-repeat: no-repeat;
     background-position: center; }
 
-.col-md-6:nth-of-type(2) .component-container {
+@media (max-width: 1199.98px) {
+  .col-lg-6.border-right, .col-lg-6.border-left {
+    border: none !important; } }
+
+@media (max-width: 991.98px) {
+  .col-lg-6.border-right, .col-lg-6.border-left {
+    border: none !important; } }
+
+@media (max-width: 767.98px) {
+  .col-lg-6.border-right, .col-lg-6.border-left {
+    border: none !important; } }
+
+@media (max-width: 575.98px) {
+  .col-lg-6.border-right, .col-lg-6.border-left {
+    border: none !important; } }
+
+.col-lg-6:nth-of-type(2) .component-container {
   margin-left: 78px; }
+  @media (max-width: 1199.98px) {
+    .col-lg-6:nth-of-type(2) .component-container {
+      margin-left: 0; } }
+  @media (max-width: 991.98px) {
+    .col-lg-6:nth-of-type(2) .component-container {
+      margin-left: 0; } }
+  @media (max-width: 767.98px) {
+    .col-lg-6:nth-of-type(2) .component-container {
+      margin-left: 0; } }
+  @media (max-width: 575.98px) {
+    .col-lg-6:nth-of-type(2) .component-container {
+      margin-left: 0; } }
 
 .component-container:not(:first-child) {
   margin: 50px 0; }
@@ -498,9 +526,25 @@ a {
 
 .buttons-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas: "description buttons" "next-prev buttons"; }
+  @media (max-width: 1199.98px) {
+    .buttons-container {
+      grid-template-rows: repeat(2, 0.5fr);
+      grid-template-areas: "description next-prev" "buttons buttons"; } }
+  @media (max-width: 991.98px) {
+    .buttons-container {
+      grid-template-rows: repeat(2, 0.5fr);
+      grid-template-areas: "description next-prev" "buttons buttons"; } }
+  @media (max-width: 767.98px) {
+    .buttons-container {
+      grid-template-rows: repeat(2, 0.5fr);
+      grid-template-areas: "description next-prev" "buttons buttons"; } }
+  @media (max-width: 575.98px) {
+    .buttons-container {
+      grid-template-rows: repeat(2, 0.5fr);
+      grid-template-areas: "description next-prev" "buttons buttons"; } }
   .buttons-container .description-container {
     grid-area: description; }
     .buttons-container .description-container .style-container {

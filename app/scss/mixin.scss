@@ -1,31 +1,84 @@
-$desktop-xtralarge: 1200px;
-$desktop: 992px;
-$tablet: 768px;
-$mobile: 576px;
+// minimum width resolution
+$min-xl: 1200px;
+$min-lg: 992px;
+$min-md: 768px;
+$min-sm: 576px;
+
+// maximum width resoltuion
+$max-lg: 1199.98px;
+$max-md: 991.98px;
+$max-sm: 767.98px;
+$max-xs: 575.98px;
 
 @mixin media-breakpoint-up($device) {
-  @if #{$device == "desktop-xl"} {
-    @media (min-width: $desktop-xtralarge) {
+  @if #{$device == xl} {
+    @media (max-width: $min-xl) {
       @content;
     }
   }
-  @if #{$device == "desktop"} {
-    @media (min-width: $desktop) {
+  @if #{$device == lg} {
+    @media (max-width: $min-lg) {
       @content;
     }
   }
-  @if #{$device == "tablet"} {
-    @media (min-width: $tablet) {
+  @if #{$device == md} {
+    @media (max-width: $min-md) {
       @content;
     }
   }
-  @if #{$device == "mobile"} {
-    @media (min-width: $mobile) {
+  @if #{$device == sm} {
+    @media (max-width: $min-sm) {
       @content;
     }
   }
-  @if #{$device == "mobile-portrait"} {
-    @media (min-width: $mobile) and (orientation: portrait) {
+}
+
+@mixin media-breakpoint-down($device) {
+  @if #{$device == lg} {
+    @media (max-width: $max-lg) {
+      @content;
+    }
+  }
+  @if #{$device == md} {
+    @media (max-width: $max-md) {
+      @content;
+    }
+  }
+  @if #{$device == sm} {
+    @media (max-width: $max-sm) {
+      @content;
+    }
+  }
+  @if #{$device == xs} {
+    @media (max-width: $max-xs) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-only($device) {
+  @if #{$device == xl} {
+    @media (max-width: $max-xl) {
+      @content;
+    }
+  }
+  @if #{$device == lg} {
+    @media (min-width: $min-lg) and (max-width: $max-lg) {
+      @content;
+    }
+  }
+  @if #{$device == md} {
+    @media (min-width: $min-md) and (max-width: $max-md) {
+      @content;
+    }
+  }
+  @if #{$device == sm} {
+    @media (min-width: $min-sm) and (max-width: $max-sm) {
+      @content;
+    }
+  }
+  @if #{$device == xs} {
+    @media (max-width: $max-sm) {
       @content;
     }
   }
