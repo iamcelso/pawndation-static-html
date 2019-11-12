@@ -124,7 +124,7 @@ $transform-scale: scale(.9);
         }
 
         &.active, &.show, &[aria-expanded=true]{
-            background: $orange;
+            background: $light-yellow;
             &::before{
                 transform: rotate(0);
                 margin-bottom: 2px;

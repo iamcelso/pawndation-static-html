@@ -146,7 +146,7 @@
       background-position: center;
       background-image: url("../../assets/icons/up-arrow-white.svg"); }
     .btn.pawn.accordion.active, .btn.pawn.accordion.show, .btn.pawn.accordion[aria-expanded=true] {
-      background: #ffa930; }
+      background: #fbc67a; }
       .btn.pawn.accordion.active::before, .btn.pawn.accordion.show::before, .btn.pawn.accordion[aria-expanded=true]::before {
         transform: rotate(0);
         margin-bottom: 2px; }
