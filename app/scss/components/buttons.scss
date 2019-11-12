@@ -1,6 +1,10 @@
 @import "../variable.scss";
 @import "../mixin.scss";
 
+$transition-default: $transition;
+$transition: transform .3s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+$transform-scale: scale(.9);
+
 @mixin circle {
     width: $circle-default-size;
     height: $circle-default-size;
@@ -29,11 +33,6 @@
     border-radius: 5em;
     border: none;
 }
-
-$transition-default: $transition;
-$transition: transform .3s cubic-bezier(0.25, 0.39, 0.39, 2.01);
-$transform-scale: scale(.9);
-
 //------------------------------------------
 
 .btn.pawn{
@@ -109,16 +108,27 @@ $transform-scale: scale(.9);
             }
         }
     }
-    &.collapse{
+    &.accordion{
         @include circle;
         background-color: $navy-blue;
         transform: none;
         box-shadow: none;
-
+        transition: $transition-default;
+        
         &::before{
             margin-top: 2px;
             transform: rotate(180deg);
+            transition: $transition-default;
+
             @include psuedo-backgound-image-chevron("chevron-white");
+        }
+
+        &.active, &.show, &[aria-expanded=true]{
+            background: $orange;
+            &::before{
+                transform: rotate(0);
+                margin-bottom: 2px;
+            }
         }
     }
 

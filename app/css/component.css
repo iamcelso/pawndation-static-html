@@ -114,7 +114,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-image: url("../../assets/icons/up-arrow-white.svg"); }
-  .btn.pawn.collapse {
+  .btn.pawn.accordion {
     width: 40px;
     height: 40px;
     border-radius: 100em;
@@ -130,10 +130,12 @@
     transition: transform 0.3s cubic-bezier(0.25, 0.39, 0.39, 2.01);
     background-color: color(primary-0);
     transform: none;
-    box-shadow: none; }
-    .btn.pawn.collapse::before {
+    box-shadow: none;
+    transition: all 0.3s ease-in-out; }
+    .btn.pawn.accordion::before {
       margin-top: 2px;
       transform: rotate(180deg);
+      transition: all 0.3s ease-in-out;
       content: "";
       width: 18px;
       height: 18px;
@@ -142,6 +144,11 @@
       background-repeat: no-repeat;
       background-position: center;
       background-image: url("../../assets/icons/up-arrow-white.svg"); }
+    .btn.pawn.accordion.active, .btn.pawn.accordion.show, .btn.pawn.accordion[aria-expanded=true] {
+      background: color(additional-color-2); }
+      .btn.pawn.accordion.active::before, .btn.pawn.accordion.show::before, .btn.pawn.accordion[aria-expanded=true]::before {
+        transform: rotate(0);
+        margin-bottom: 2px; }
   .btn.pawn:focus, .btn.pawn.active {
     outline: none; }
 
@@ -340,18 +347,28 @@
   -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75); }
+  .pawn.accordion .card:not(:first-child) {
+    margin: 15px 0; }
   .pawn.accordion .card .card-header {
     padding: 1rem 2.25rem;
     background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: none; }
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; }
+    .pawn.accordion .card .card-header[aria-expanded=true] {
+      background-color: color(primary-0); }
+      .pawn.accordion .card .card-header[aria-expanded=true] h5 {
+        color: #fff; }
     .pawn.accordion .card .card-header h5 {
+      transition: all 0.3s ease-in-out;
       color: #000000;
+      cursor: pointer;
       text-transform: none; }
   .pawn.accordion .card .card-body {
-    padding: .5rem 2.25rem;
+    padding: 1rem 2.25rem;
     padding-bottom: 2rem;
     background-color: color(primary-0); }
 
