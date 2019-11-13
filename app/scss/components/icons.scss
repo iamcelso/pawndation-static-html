@@ -1,11 +1,13 @@
-@mixin icon($url: url('../../assets/icons/icon1.png'),$bg-color: rgba(255, 169, 48, .1), $size: 50px) {
+$opacity: .1;
+
+@mixin icon($url: url('../assets/icons/heartxpaw.svg'),$bg-color: rgba(255, 169, 48, $opacity), $size: 50px) {
     width: $size;
     height: $size;
     border-radius: 100em;
   
     background: $url;
     box-shadow: inset $size $size $size $size $bg-color;
-    background-size: 40%;
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -15,20 +17,36 @@
     &.paw-heart{
         @include icon;
     }
-    &.house{
-        @include icon(url('../../assets/icons/icon2.png'), rgba(89, 112, 227, .1))
+    &.home{
+        @include icon(url('../assets/icons/home.svg'), rgba(90, 112, 227, $opacity));
     }
-    &.cross{
-        @include icon(url('../../assets/icons/icon3.png'), rgba(124, 156, 167, .1))
+    &.medication{
+        @include icon(url('../assets/icons/medication.svg'), rgba(53, 145, 171, $opacity));
     }
-    &.dog-bowl{
-        @include icon(url('../../assets/icons/icon4.png'), rgba(227, 89, 109, .1))
+    &.food-bowl{
+        @include icon(url('../assets/icons/foodbowl.svg'), rgba(227, 90, 109, $opacity));
+        background-size: 60%;
     }
-    &.users{
-        @include icon(url('../../assets/icons/icon5.png'), rgba(52, 145, 171, .1))
+    &.volunteer{
+        @include icon(url('../assets/icons/volunteer.svg'), rgba(53, 145, 171, $opacity));
+        background-size: 60%;
     }
-    &.calendar{
-        @include icon(url('../../assets/icons/'), rgba(52, 145, 171, .1))
+    &.location{
+        @include icon(url('../assets/icons/location.svg'), rgba(255, 169, 48, $opacity));
+        background-size: 35%;
+    }
+    &.email{
+        @include icon(url('../assets/icons/email.svg'), rgba(227, 90, 109, $opacity));
+    }
+    &.date{
+        @include icon(url('../assets/icons/date.svg'), rgba(90, 112, 227, $opacity));
+        background-size: 40%;
+    }
+    &.time{
+        @include icon(url('../assets/icons/time.svg'), rgba(227, 90, 109, $opacity));
+    }
+    &.phone{
+        @include icon(url('../assets/icons/phone.svg'), rgba(90, 112, 227, $opacity));
     }
 
 }

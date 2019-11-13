@@ -61,7 +61,7 @@
       content: "";
       width: 18px;
       height: 18px;
-      background: url("../../assets/icons/up-arrow-navy.svg");
+      background: url("../assets/icons/up-arrow-navy.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center; }
@@ -74,11 +74,11 @@
         content: "";
         width: 18px;
         height: 18px;
-        background: url("../../assets/icons/up-arrow-navy.svg");
+        background: url("../assets/icons/up-arrow-navy.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url("../../assets/icons/up-arrow-white.svg"); }
+        background-image: url("../assets/icons/up-arrow-white.svg"); }
   .btn.pawn.prev, .btn.pawn.back {
     width: 40px;
     height: 40px;
@@ -99,7 +99,7 @@
       content: "";
       width: 18px;
       height: 18px;
-      background: url("../../assets/icons/up-arrow-navy.svg");
+      background: url("../assets/icons/up-arrow-navy.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center; }
@@ -109,11 +109,11 @@
         content: "";
         width: 18px;
         height: 18px;
-        background: url("../../assets/icons/up-arrow-navy.svg");
+        background: url("../assets/icons/up-arrow-navy.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url("../../assets/icons/up-arrow-white.svg"); }
+        background-image: url("../assets/icons/up-arrow-white.svg"); }
   .btn.pawn.accordion {
     width: 40px;
     height: 40px;
@@ -139,11 +139,11 @@
       content: "";
       width: 18px;
       height: 18px;
-      background: url("../../assets/icons/up-arrow-navy.svg");
+      background: url("../assets/icons/up-arrow-navy.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      background-image: url("../../assets/icons/up-arrow-white.svg"); }
+      background-image: url("../assets/icons/up-arrow-white.svg"); }
     .btn.pawn.accordion.active, .btn.pawn.accordion.show, .btn.pawn.accordion[aria-expanded=true] {
       background: color(primary-1); }
       .btn.pawn.accordion.active::before, .btn.pawn.accordion.show::before, .btn.pawn.accordion[aria-expanded=true]::before {

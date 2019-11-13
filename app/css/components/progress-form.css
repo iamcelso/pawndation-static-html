@@ -33,11 +33,11 @@
         content: "";
         width: 18px;
         height: 18px;
-        background: url("../../assets/icons/up-arrow-navy.svg");
+        background: url("../assets/icons/up-arrow-navy.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url("../../assets/icons/up-arrow-lightgray.svg"); }
+        background-image: url("../assets/icons/up-arrow-lightgray.svg"); }
     .pawn.progress-form .progress-item .separator {
       height: 1px;
       width: 48px;
@@ -58,11 +58,11 @@
         content: "";
         width: 18px;
         height: 18px;
-        background: url("../../assets/icons/up-arrow-navy.svg");
+        background: url("../assets/icons/up-arrow-navy.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url("../../assets/icons/checkmark-white.svg");
+        background-image: url("../assets/icons/checkmark-white.svg");
         background-size: 14px; }
     .pawn.progress-form .progress-item.current .item {
       border: 2px solid color(additional-color-2); }
@@ -73,11 +73,11 @@
         content: "";
         width: 18px;
         height: 18px;
-        background: url("../../assets/icons/up-arrow-navy.svg");
+        background: url("../assets/icons/up-arrow-navy.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        background-image: url("../../assets/icons/up-arrow-orange.svg"); }
+        background-image: url("../assets/icons/up-arrow-orange.svg"); }
     .pawn.progress-form .progress-item.current .label {
       color: color(additional-color-2);
       font-weight: bold; }

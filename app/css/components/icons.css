@@ -2,62 +2,102 @@
   width: 50px;
   height: 50px;
   border-radius: 100em;
-  background: url("../../assets/icons/icon1.png");
+  background: url("../assets/icons/heartxpaw.svg");
   box-shadow: inset 50px 50px 50px 50px rgba(255, 169, 48, 0.1);
-  background-size: 40%;
+  background-size: 50%;
   background-repeat: no-repeat;
   background-position: center; }
   .icon.paw-heart {
     width: 50px;
     height: 50px;
     border-radius: 100em;
-    background: url("../../assets/icons/icon1.png");
+    background: url("../assets/icons/heartxpaw.svg");
     box-shadow: inset 50px 50px 50px 50px rgba(255, 169, 48, 0.1);
-    background-size: 40%;
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center; }
-  .icon.house {
+  .icon.home {
     width: 50px;
     height: 50px;
     border-radius: 100em;
-    background: url("../../assets/icons/icon2.png");
-    box-shadow: inset 50px 50px 50px 50px rgba(89, 112, 227, 0.1);
-    background-size: 40%;
+    background: url("../assets/icons/home.svg");
+    box-shadow: inset 50px 50px 50px 50px rgba(90, 112, 227, 0.1);
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center; }
-  .icon.cross {
+  .icon.medication {
     width: 50px;
     height: 50px;
     border-radius: 100em;
-    background: url("../../assets/icons/icon3.png");
-    box-shadow: inset 50px 50px 50px 50px rgba(124, 156, 167, 0.1);
-    background-size: 40%;
+    background: url("../assets/icons/medication.svg");
+    box-shadow: inset 50px 50px 50px 50px rgba(53, 145, 171, 0.1);
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center; }
-  .icon.dog-bowl {
+  .icon.food-bowl {
     width: 50px;
     height: 50px;
     border-radius: 100em;
-    background: url("../../assets/icons/icon4.png");
-    box-shadow: inset 50px 50px 50px 50px rgba(227, 89, 109, 0.1);
-    background-size: 40%;
+    background: url("../assets/icons/foodbowl.svg");
+    box-shadow: inset 50px 50px 50px 50px rgba(227, 90, 109, 0.1);
+    background-size: 50%;
     background-repeat: no-repeat;
-    background-position: center; }
-  .icon.users {
+    background-position: center;
+    background-size: 60%; }
+  .icon.volunteer {
     width: 50px;
     height: 50px;
     border-radius: 100em;
-    background: url("../../assets/icons/icon5.png");
-    box-shadow: inset 50px 50px 50px 50px rgba(52, 145, 171, 0.1);
-    background-size: 40%;
+    background: url("../assets/icons/volunteer.svg");
+    box-shadow: inset 50px 50px 50px 50px rgba(53, 145, 171, 0.1);
+    background-size: 50%;
     background-repeat: no-repeat;
-    background-position: center; }
-  .icon.calendar {
+    background-position: center;
+    background-size: 60%; }
+  .icon.location {
     width: 50px;
     height: 50px;
     border-radius: 100em;
-    background: url("../../assets/icons/");
-    box-shadow: inset 50px 50px 50px 50px rgba(52, 145, 171, 0.1);
-    background-size: 40%;
+    background: url("../assets/icons/location.svg");
+    box-shadow: inset 50px 50px 50px 50px rgba(255, 169, 48, 0.1);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35%; }
+  .icon.email {
+    width: 50px;
+    height: 50px;
+    border-radius: 100em;
+    background: url("../assets/icons/email.svg");
+    box-shadow: inset 50px 50px 50px 50px rgba(227, 90, 109, 0.1);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .icon.date {
+    width: 50px;
+    height: 50px;
+    border-radius: 100em;
+    background: url("../assets/icons/date.svg");
+    box-shadow: inset 50px 50px 50px 50px rgba(90, 112, 227, 0.1);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%; }
+  .icon.time {
+    width: 50px;
+    height: 50px;
+    border-radius: 100em;
+    background: url("../assets/icons/time.svg");
+    box-shadow: inset 50px 50px 50px 50px rgba(227, 90, 109, 0.1);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .icon.phone {
+    width: 50px;
+    height: 50px;
+    border-radius: 100em;
+    background: url("../assets/icons/phone.svg");
+    box-shadow: inset 50px 50px 50px 50px rgba(90, 112, 227, 0.1);
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center; }
