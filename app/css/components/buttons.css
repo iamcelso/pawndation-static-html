@@ -19,9 +19,9 @@
     background: none;
     border: none;
     color: #868686;
-    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75); }
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7); }
     .btn.pawn.no-background.active, .btn.pawn.no-background:hover {
       background: color(primary-1);
       height: 50px;
@@ -51,9 +51,9 @@
     justify-content: center;
     border: 0;
     cursor: pointer;
-    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s cubic-bezier(0.25, 0.39, 0.39, 2.01); }
     .btn.pawn.next::before {
       transform: rotate(90deg);
@@ -89,9 +89,9 @@
     justify-content: center;
     border: 0;
     cursor: pointer;
-    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s cubic-bezier(0.25, 0.39, 0.39, 2.01); }
     .btn.pawn.prev::before, .btn.pawn.back::before {
       transform: rotate(-90deg);
@@ -124,9 +124,9 @@
     justify-content: center;
     border: 0;
     cursor: pointer;
-    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s cubic-bezier(0.25, 0.39, 0.39, 2.01);
     background-color: color(primary-0);
     transform: none;

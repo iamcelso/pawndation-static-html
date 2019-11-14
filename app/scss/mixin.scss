@@ -84,11 +84,11 @@ $max-xs: 575.98px;
   }
 }
 
-@mixin box-shadow($none:"", $box-shadow: (hAlign: 0, vAlign: 0, blur: 12px, spread: -5px)) {
+@mixin box-shadow($none:"", $box-shadow: (hAlign: 0, vAlign: 0, blur: 12px, spread: -5px), $opacity: .7) {
   @if($none !="none"){
-    -webkit-box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,0.75);
-    -moz-box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,0.75);
-    box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,0.75);
+    -webkit-box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,$opacity);
+    -moz-box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,$opacity);
+    box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,$opacity);
   }@else{
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -117,7 +117,13 @@ $max-xs: 575.98px;
   @if ($icon-name == "chevron-orange"){
       background-image: url('../assets/icons/up-arrow-orange.svg');
   }
-  @if ($icon-name == "checkmark-orange"){
+  @if ($icon-name == "checkmark-white"){
     background-image: url('../assets/icons/checkmark-white.svg');
-}
+  }
+  @if ($icon-name == "checkmark-gray"){
+    background-image: url('../assets/icons/checkmark-gray.svg');
+  }
+  @if ($icon-name == "checkmark-navy"){
+    background-image: url('../assets/icons/checkmark-navy.svg');
+  }
 }

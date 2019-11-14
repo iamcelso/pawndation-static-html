@@ -2,9 +2,9 @@
   border-radius: 1em;
   color: #ffffff;
   border: 0;
-  -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.75); }
+  -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7); }
   .pawn.accordion .card:not(:first-child) {
     margin: 15px 0; }
   .pawn.accordion .card .card-header {

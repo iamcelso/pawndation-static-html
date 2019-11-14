@@ -54,7 +54,7 @@
 
                 &::before{
                     transform: none;
-                    @include psuedo-backgound-image-chevron("checkmark-orange");          
+                    @include psuedo-backgound-image-chevron("checkmark-white");          
                     background-size: 14px;
                 }
             }
