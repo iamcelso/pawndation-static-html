@@ -165,8 +165,6 @@
     object-position: top center; }
   .card.md {
     width: 280px; }
-  .card .card-body {
-    background-color: #fafafa; }
 
 .circle {
   width: 5em;
