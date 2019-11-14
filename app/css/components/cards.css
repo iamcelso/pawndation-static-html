@@ -5,9 +5,12 @@
     .card.curve-side img {
       border-top-right-radius: 1em;
       border-top-left-radius: 1em; }
+    .card.curve-side .card-body {
+      border-bottom-left-radius: 1em;
+      border-bottom-right-radius: 1em; }
   .card .card-img-top {
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     object-position: top center; }
   .card.md {
-    width: 280px; }
+    width: 320px; }
