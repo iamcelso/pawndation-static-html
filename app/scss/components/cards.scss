@@ -1,0 +1,23 @@
+.card{
+    border:none;
+
+    &.curve-side{
+        border-radius: 1em;
+        img{
+            border-top-right-radius: 1em;
+            border-top-left-radius: 1em;
+        }
+    }
+    
+    .card-img-top{
+        height: 200px;
+        object-fit: cover;
+        object-position: top center;
+    }
+    &.md{
+        width: 280px;
+    }
+    .card-body{
+        background-color: #fafafa;
+    }
+}

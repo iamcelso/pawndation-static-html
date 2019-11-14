@@ -153,6 +153,22 @@
   .btn.pawn:focus, .btn.pawn.active {
     outline: none; }
 
+.card {
+  border: none; }
+  .card.curve-side {
+    border-radius: 1em; }
+    .card.curve-side img {
+      border-top-right-radius: 1em;
+      border-top-left-radius: 1em; }
+  .card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    object-position: top center; }
+  .card.md {
+    width: 280px; }
+  .card .card-body {
+    background-color: #fafafa; }
+
 .circle {
   width: 5em;
   height: 5em;
