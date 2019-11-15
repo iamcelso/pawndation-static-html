@@ -14,17 +14,18 @@
             font-size: 18px;
             text-decoration: none;
             color: $lightgray;
-            border-bottom: 3px solid  transparent;
+            border-bottom: 3px solid  $lightgray;
             padding: 0 4px;
             padding-bottom: .2rem;            
 
             transition: $transition;
 
             &.active, &:hover, &:focus{
-                background: #ffffff;
-                border-color: #ffffff;
+                outline: none;
+                background: #fff;
+                border-color: #fff;
+                border-bottom-color: $orange;
                 color: $orange;
-                border-bottom: 3px solid  $orange;
             }
         }
 

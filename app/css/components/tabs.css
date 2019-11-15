@@ -12,15 +12,16 @@
       font-size: 18px;
       text-decoration: none;
       color: color(additional-color-6);
-      border-bottom: 3px solid  transparent;
+      border-bottom: 3px solid color(additional-color-6);
       padding: 0 4px;
       padding-bottom: .2rem;
       transition: all 0.3s ease-in-out; }
       .pawn.nav-tabs .nav-item .nav-link.active, .pawn.nav-tabs .nav-item .nav-link:hover, .pawn.nav-tabs .nav-item .nav-link:focus {
-        background: #ffffff;
-        border-color: #ffffff;
-        color: color(additional-color-2);
-        border-bottom: 3px solid color(additional-color-2); }
+        outline: none;
+        background: #fff;
+        border-color: #fff;
+        border-bottom-color: color(additional-color-2);
+        color: color(additional-color-2); }
     .pawn.nav-tabs .nav-item:first-child {
       margin-right: 1rem; }
     .pawn.nav-tabs .nav-item:not(:first-child) {
