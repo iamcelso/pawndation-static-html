@@ -261,6 +261,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 height: 100%;
+                position: relative;
                 
                 .header-container{
                     display: flex;
@@ -273,12 +274,31 @@
                     }
                 }
                 .description{
-                    height: 80%;
-                    padding: 10px 0;
+                    height: 40%;
 
                     p{
                         margin: 0;
                     }
+                }
+
+                button{
+                    background: none;
+                    outline: none;
+                    border: none;
+
+                    margin-bottom: 20px;
+                    align-self: flex-start;
+                    color: $navy-blue;
+                }
+
+                .date-container{
+                    padding: 5px 1.25rem ;
+                    background-color: #fafafa;
+
+                    position: absolute;
+                    bottom: -1.25rem;
+                    left: -1.25rem;
+                    right: -1.25rem;
                 }
             }
         }
