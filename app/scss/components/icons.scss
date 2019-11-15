@@ -37,6 +37,7 @@ $opacity: .1;
     }
     &.email{
         @include icon(url('../assets/icons/email.svg'), rgba(227, 90, 109, $opacity));
+        background-size: 48%;
     }
     &.date{
         @include icon(url('../assets/icons/date.svg'), rgba(90, 112, 227, $opacity));
