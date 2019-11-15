@@ -891,6 +891,7 @@ a {
           .news-event-container .events-container .card .card-body .content .date-container {
             padding: 5px 1.25rem;
             background-color: #fafafa;
+            border-bottom-right-radius: 1em;
             position: absolute;
             bottom: -1.25rem;
             left: -1.25rem;
