@@ -1,16 +1,36 @@
 .card {
   border: none; }
-  .card.curve-side {
+  .card.card-img-top.md {
+    width: 300px; }
+  .card.card-img-top.curve-side {
     border-radius: 1em; }
-    .card.curve-side img {
+    .card.card-img-top.curve-side img {
       border-top-right-radius: 1em;
       border-top-left-radius: 1em; }
-    .card.curve-side .card-body {
+    .card.card-img-top.curve-side .card-body {
       border-bottom-left-radius: 1em;
       border-bottom-right-radius: 1em; }
-  .card .card-img-top {
+  .card.card-img-top img, .card.card-img-top .card-img-top {
     height: 180px;
+    width: 300px;
     object-fit: cover;
     object-position: top center; }
-  .card.md {
-    width: 320px; }
+  .card.card-img-left {
+    flex-direction: row; }
+    .card.card-img-left.curve-side {
+      border-radius: 1em; }
+      .card.card-img-left.curve-side img {
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em; }
+      .card.card-img-left.curve-side .card-body {
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em; }
+    .card.card-img-left .card-body {
+      width: 300px; }
+    .card.card-img-left.md {
+      width: 480px;
+      height: 200px; }
+    .card.card-img-left img, .card.card-img-left .card-img-left {
+      width: 160px;
+      object-fit: cover;
+      object-position: top center; }

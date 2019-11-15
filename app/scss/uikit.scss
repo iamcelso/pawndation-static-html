@@ -237,3 +237,51 @@
         }
     }
 }
+
+.news-event-container{
+    margin: 50px 0;
+
+    .events-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 40px;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: center;
+
+    .card{
+        @include box-shadow;
+        margin: 0 auto;
+        
+        .card-body{
+            background-color: #fff;
+            
+            .content{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                
+                .header-container{
+                    display: flex;
+                    justify-content: space-between;
+                    h5{
+                        text-transform: none;
+                        width: 150px; 
+
+                        margin-right: 50px;
+                    }
+                }
+                .description{
+                    height: 80%;
+                    padding: 10px 0;
+
+                    p{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+}

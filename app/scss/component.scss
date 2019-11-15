@@ -62,3 +62,20 @@ a{
 // Bootstrap overwrite
 .border-right{border-right:1px solid color(additional-color-6) !important;}
 .border-left{border-left:1px solid color(additional-color-6) !important;}
+
+// tags
+.tag{
+    height: 30px;
+    padding:  5px 15px;
+    border-radius: .5em;
+    font-size: .9em;
+
+    &.event{
+        color: $primary-color-0;
+        background: rgba($primary-color-0, $alpha: .1);
+    }
+    &.news{
+        color: $primary-color;
+        background: rgba($primary-color, $alpha: .1);
+    }
+}
