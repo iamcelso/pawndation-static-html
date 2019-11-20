@@ -63,6 +63,90 @@ a{
 .border-right{border-right:1px solid color(additional-color-6) !important;}
 .border-left{border-left:1px solid color(additional-color-6) !important;}
 
+// owl carousel overwrite
+.custom-pawn.owl-carousel{
+    position: relative;
+  .owl-item{
+      width: 300px;
+      height: 350px;
+      padding: .7% 0;
+
+      &.active.center{
+          z-index: 999;
+
+        img{
+          margin: auto;
+          width: 120%;
+          height: 110%;
+          object-fit: cover;
+          margin-left: -10%;
+          margin-top: -5%;
+          border-radius: 1em;
+
+          @include box-shadow("true", (hAlign: 0, vAlign: 0, blur: 10px, spread: 2px), .5);
+        }          
+      }
+      img{
+          margin: auto;
+          margin-top: 8%;
+          width: 90%;
+          height: 80%;
+          object-fit: cover;
+          transition: $transition;
+
+      }
+  }
+
+  .owl-nav{
+      position: absolute;
+      top: 45%;
+      left: 28.5%;
+      width: 43%;
+      display: flex;
+      justify-content: space-between;
+    .owl-prev, .owl-next{
+        background: #fff;
+        height: 38px;
+        width: 38px;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100em;
+
+        transition: transform .3s cubic-bezier(0.25, 0.39, 0.39, 2.01);        
+        @include box-shadow;
+        &::before{
+            position: absolute;
+            @include psuedo-backgound-image-chevron;
+        }
+        
+        &:hover{
+            background: $navy-blue;
+            transform: scale(.9);
+            &::before{
+                @include psuedo-backgound-image-chevron("chevron-white");
+            }
+        }
+        span{
+            display: none;
+        }
+    }
+    .owl-prev{
+        &::before{
+            transform: rotate(-90deg);
+            margin-right: 2px;
+        }
+    }
+    .owl-next{
+        &::before{
+            transform: rotate(90deg);
+            margin-left: 2px;
+        }
+    }
+  }
+}
+
 // tags
 .tag{
     height: 30px;

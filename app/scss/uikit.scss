@@ -1,5 +1,7 @@
 @import "./index.scss";
 
+$section-row-margin: 50px 0;
+
 .header-container{
     margin: 20;
     
@@ -192,7 +194,7 @@
 }
 
 .blog-container{
-    margin: 40px 0;
+    margin: $section-row-margin;
     
     .card-blog-container{
         margin: 20px 0;
@@ -239,7 +241,7 @@
 }
 
 .news-event-container{
-    margin: 50px 0;
+    margin: $section-row-margin;
 
     .events-container{
     display: grid;
@@ -305,4 +307,8 @@
         }
     }
 }
+}
+
+.image-slider-container{
+    margin: $section-row-margin;
 }

@@ -481,11 +481,14 @@
                 <div class="image-slider-container">
                     <h4 class="text-center">Image Slider</h4>
                     <div class="component-container">
-                            <div class="owl-carousel">
-                                <picture>
-                                    <img class="owl-lazy" src="" alt="">
-                                </picture>
-                            </div>
+                        <div class="custom-pawn owl-carousel">
+                            <img class="owl-lazy" data-src="./assets/images/iamge.png" data-src-retina="https://placehold.it/350x250&text=1-retina" alt="">
+                            <img class="owl-lazy" data-src="./assets/images/image-1.png" data-src-retina="https://placehold.it/350x250&text=1-retina" alt="">
+                            <img class="owl-lazy" data-src="./assets/images/image-2.png" data-src-retina="https://placehold.it/350x250&text=1-retina" alt="">
+                            <img class="owl-lazy" data-src="./assets/images/iamge.png" data-src-retina="https://placehold.it/350x250&text=1-retina" alt="">
+                            <img class="owl-lazy" data-src="./assets/images/image-1.png" data-src-retina="https://placehold.it/350x250&text=1-retina" alt="">
+                            <img class="owl-lazy" data-src="./assets/images/image-2.png" data-src-retina="https://placehold.it/350x250&text=1-retina" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -503,9 +506,10 @@
             autoplay: false,
             loop: true,
             nav: true,
-            margin: 20,
             dots: false,
-            responsiveClass: true
+            center: true,
+            lazyLoad:true,
+            mouseDrag: false,
         });
     </script>
 </body>
