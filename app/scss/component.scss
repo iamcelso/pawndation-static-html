@@ -82,6 +82,7 @@ a{
           margin-left: -10%;
           margin-top: -5%;
           border-radius: 1em;
+          transition: $transition;
 
           @include box-shadow("true", (hAlign: 0, vAlign: 0, blur: 10px, spread: 2px), .5);
         }          
@@ -92,8 +93,6 @@ a{
           width: 90%;
           height: 80%;
           object-fit: cover;
-          transition: $transition;
-
       }
   }
 
