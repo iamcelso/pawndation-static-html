@@ -1,0 +1,31 @@
+.pawn.accordion .card {
+  border-radius: 1em;
+  color: #ffffff;
+  border: 0;
+  -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7); }
+  .pawn.accordion .card:not(:first-child) {
+    margin: 15px 0; }
+  .pawn.accordion .card .card-header {
+    padding: 1rem 2.25rem;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; }
+    .pawn.accordion .card .card-header[aria-expanded=true] {
+      background-color: color(primary-0); }
+      .pawn.accordion .card .card-header[aria-expanded=true] h5 {
+        color: #fff; }
+    .pawn.accordion .card .card-header h5 {
+      transition: all 0.3s ease-in-out;
+      color: #000000;
+      cursor: pointer;
+      text-transform: none; }
+  .pawn.accordion .card .card-body {
+    padding: 1rem 2.25rem;
+    padding-bottom: 2rem;
+    background-color: color(primary-0); }

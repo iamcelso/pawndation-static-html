@@ -1,0 +1,39 @@
+@import "../variable.scss";
+
+.pawn.nav-tabs{
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    border-bottom: none;
+    .nav-item{
+        background: none;
+        .nav-link{
+            font-family: $font-heading;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 18px;
+            text-decoration: none;
+            color: $lightgray;
+            border-bottom: 3px solid  $lightgray;
+            padding: 0 4px;
+            padding-bottom: .2rem;            
+
+            transition: $transition;
+
+            &.active, &:hover, &:focus{
+                outline: none;
+                background: #fff;
+                border-color: #fff;
+                border-bottom-color: $orange;
+                color: $orange;
+            }
+        }
+
+        &:first-child{
+            margin-right: 1rem;
+        }
+        &:not(:first-child){
+            margin:0 1rem;
+        }
+    }
+}

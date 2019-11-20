@@ -1,0 +1,65 @@
+$border-radius-size: 1em;
+$card-medium-size: 300px;
+
+.card{
+    border:none;
+
+    &.card-img-top{
+        &.md{
+            width: $card-medium-size;
+        }
+
+        &.curve-side{
+            border-radius: $border-radius-size;
+                
+            img{
+                border-top-right-radius: $border-radius-size;
+                border-top-left-radius: $border-radius-size;
+            }
+            .card-body{
+                border-bottom-left-radius: $border-radius-size;
+                border-bottom-right-radius: $border-radius-size;
+            }
+    
+        }
+
+        img, .card-img-top{
+            height: 180px;
+            width: $card-medium-size;
+            object-fit: cover;
+            object-position: top center;
+        }
+    }
+
+    &.card-img-left{
+        flex-direction: row;
+
+        &.curve-side{
+            border-radius: $border-radius-size;
+                
+            img{
+                border-top-left-radius: $border-radius-size;
+                border-bottom-left-radius: $border-radius-size;
+            }
+            .card-body{
+                border-top-right-radius: $border-radius-size;
+                border-bottom-right-radius: $border-radius-size;
+            }
+    
+        }
+
+        .card-body{
+            width: $card-medium-size;
+        }
+        &.md{
+            width: $card-medium-size + 180;
+            height: $card-medium-size - 100;
+
+        }
+        img, .card-img-left{
+            width: $card-medium-size - 140;
+            object-fit: cover;
+            object-position: top center;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import "../variable.scss";
+@import "../mixin.scss";
+
+$background-color: $navy-blue;
+$color: #ffffff;
+
+.pawn.accordion{
+    .card{
+        border-radius: 1em;
+        color: $color;
+        border: 0;
+        @include box-shadow;
+
+        &:not(:first-child){
+            margin: 15px 0;
+        }
+        
+        .card-header{
+            padding: 1rem 2.25rem;
+            background-color: #ffffff;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: none;
+            cursor: pointer;
+            transition: $transition;
+            
+            &[aria-expanded=true]{
+                background-color: $navy-blue;
+                h5{
+                    color: #fff;
+                }
+            }
+            
+            h5{
+                transition: $transition;
+                color: #000000;
+                cursor: pointer;
+                text-transform: none;
+            }
+            
+        }
+        .card-body{
+            padding: 1rem 2.25rem;
+            padding-bottom: 2rem;
+            background-color: $background-color;
+        }
+    }
+}

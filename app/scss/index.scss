@@ -1,4 +1,6 @@
-@import "variables.scss";
-@import "functions.scss";
-@import "mixin.scss";
-@import "components.scss";
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,800|Open+Sans:400,600,700,800&display=swap');
+
+@import "./variable.scss";
+@import "./function.scss";
+@import "./mixin.scss";
+@import "./component.scss";

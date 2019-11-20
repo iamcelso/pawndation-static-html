@@ -1,0 +1,11 @@
+.circle {
+  width: 5em;
+  height: 5em;
+  border-radius: 100em;
+  background: color(primary-0); }
+  .circle.large {
+    width: calc(5em*2);
+    height: calc(5em*2); }
+  .circle.small {
+    width: 4em;
+    height: 4em; }
