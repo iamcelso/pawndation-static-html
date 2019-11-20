@@ -1,0 +1,153 @@
+.btn.pawn {
+  background: color(primary-1);
+  height: 50px;
+  width: 145px;
+  border-radius: 5em;
+  border: none;
+  transition: transform 0.3s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase; }
+  .btn.pawn.active, .btn.pawn:hover {
+    color: #868686;
+    background: none;
+    border: 1px solid color(primary-1);
+    transform: scale(0.9); }
+  .btn.pawn.no-background {
+    background: none;
+    border: none;
+    color: #868686;
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7); }
+    .btn.pawn.no-background.active, .btn.pawn.no-background:hover {
+      background: color(primary-1);
+      height: 50px;
+      width: 145px;
+      border-radius: 5em;
+      border: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      color: #ffffff; }
+  .btn.pawn.outline {
+    color: #868686;
+    background: none;
+    border: 1px solid color(primary-1); }
+    .btn.pawn.outline.active, .btn.pawn.outline:hover {
+      background: color(primary-1);
+      color: #ffffff; }
+  .btn.pawn.background.none {
+    background: none; }
+  .btn.pawn.next {
+    width: 40px;
+    height: 40px;
+    border-radius: 100em;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s cubic-bezier(0.25, 0.39, 0.39, 2.01); }
+    .btn.pawn.next::before {
+      transform: rotate(90deg);
+      margin-left: 2px;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("../assets/icons/up-arrow-navy.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .btn.pawn.next.active, .btn.pawn.next:hover {
+      background: color(primary-0);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+      .btn.pawn.next.active::before, .btn.pawn.next:hover::before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        background: url("../assets/icons/up-arrow-navy.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../assets/icons/up-arrow-white.svg"); }
+  .btn.pawn.prev, .btn.pawn.back {
+    width: 40px;
+    height: 40px;
+    border-radius: 100em;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s cubic-bezier(0.25, 0.39, 0.39, 2.01); }
+    .btn.pawn.prev::before, .btn.pawn.back::before {
+      transform: rotate(-90deg);
+      margin-right: 2px;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("../assets/icons/up-arrow-navy.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .btn.pawn.prev.active, .btn.pawn.prev:hover, .btn.pawn.back.active, .btn.pawn.back:hover {
+      background: color(primary-0); }
+      .btn.pawn.prev.active::before, .btn.pawn.prev:hover::before, .btn.pawn.back.active::before, .btn.pawn.back:hover::before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        background: url("../assets/icons/up-arrow-navy.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("../assets/icons/up-arrow-white.svg"); }
+  .btn.pawn.accordion {
+    width: 40px;
+    height: 40px;
+    border-radius: 100em;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+    background-color: color(primary-0);
+    transform: none;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out; }
+    .btn.pawn.accordion::before {
+      margin-top: 2px;
+      transform: rotate(180deg);
+      transition: all 0.3s ease-in-out;
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: url("../assets/icons/up-arrow-navy.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../assets/icons/up-arrow-white.svg"); }
+    .btn.pawn.accordion.active, .btn.pawn.accordion.show, .btn.pawn.accordion[aria-expanded=true] {
+      background: color(primary-1); }
+      .btn.pawn.accordion.active::before, .btn.pawn.accordion.show::before, .btn.pawn.accordion[aria-expanded=true]::before {
+        transform: rotate(0);
+        margin-bottom: 2px; }
+  .btn.pawn:focus, .btn.pawn.active {
+    outline: none; }

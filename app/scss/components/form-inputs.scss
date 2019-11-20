@@ -1,0 +1,153 @@
+@import "../variable.scss";
+@import "../mixin.scss";
+
+$select-color: #fff;
+$select-background: #c0392b;
+$select-width: 100%;
+$select-height: 54px;
+
+$border: 1px solid $gray;
+
+.pawn{
+    &.input{
+        background: none;
+        outline: none;
+        border: $border;
+        border-radius: .5em;
+        padding: 15px;
+        width: 100%;
+
+        &:focus, &.active{
+            border-color: $navy-blue;
+        }
+    }
+
+    
+    &.custom-radio-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+
+      label {
+        display: flex;
+        align-items: center;
+        color: #000;
+        padding: 10px 20px;
+        margin: 0 20px;
+        text-align: right;
+
+        cursor: pointer;
+
+        &::after, &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 10px;
+          background: none;
+          border: 2px solid $gray;
+          border-radius: 1em;
+          transition: $transition;
+          
+          @include psuedo-backgound-image-chevron("checkmark-gray");
+          width: 24px;
+          height: 24px;
+          background-size: 40%;
+        }        
+      }
+      input[type="radio"] {
+        display: none;
+        position: absolute;
+        width: 100%;
+        appearance: none;
+        &:checked + label {
+          &:before {
+           border-color: $navy-blue;
+           background-color: $navy-blue;
+          }
+          &::after{
+            border-color: $navy-blue;
+            @include psuedo-backgound-image-chevron("checkmark-white");
+            width: 24px;
+            height: 24px;
+            background-size: 40%;
+          }
+        }
+      }
+    }
+}
+
+
+select{display: none;}
+.select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+  .select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    color: $select-color;
+    width: $select-width;
+    height: $select-height;
+  }
+  .select-styled {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    color: #000;
+    border: $border;
+    padding: 15px;
+    border-radius: .5em;
+    &:active, &.active {
+      border-color: $navy-blue;
+      &:after {        
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background: url('../assets/icons/up-arrow-navy.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        transform: rotate(180deg);
+        top: 20px;
+        right: 15px;
+      }
+    }
+  }
+  
+  .select-options {
+    display: none; 
+    position: absolute;
+    top: 105%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-radius: .5em;
+    @include box-shadow("true", (hAlign: 0, vAlign: 0, blur: 12px, spread: -5px), .5);
+
+    li {
+      margin: 0;
+      padding: 12px 0;
+      text-indent: 15px;
+      color: #000;
+      background-color: #fff;
+
+      &:hover {
+        background: #f9f9f9;
+      }
+      &[rel="placeholder"] {
+        display: none;
+      }
+    }
+  }

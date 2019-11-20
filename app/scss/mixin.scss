@@ -1,32 +1,129 @@
-$desktop-xtralarge: 1200px;
-$desktop: 992px;
-$tablet: 768px;
-$mobile: 576px;
+// minimum width resolution
+$min-xl: 1200px;
+$min-lg: 992px;
+$min-md: 768px;
+$min-sm: 576px;
+
+// maximum width resoltuion
+$max-lg: 1199.98px;
+$max-md: 991.98px;
+$max-sm: 767.98px;
+$max-xs: 575.98px;
 
 @mixin media-breakpoint-up($device) {
-  @if #{$device == "desktop-xl"} {
-    @media (min-width: $desktop-xtralarge) {
+  @if #{$device == xl} {
+    @media (max-width: $min-xl) {
       @content;
     }
   }
-  @if #{$device == "desktop"} {
-    @media (min-width: $desktop) {
+  @if #{$device == lg} {
+    @media (max-width: $min-lg) {
       @content;
     }
   }
-  @if #{$device == "tablet"} {
-    @media (min-width: $tablet) {
+  @if #{$device == md} {
+    @media (max-width: $min-md) {
       @content;
     }
   }
-  @if #{$device == "mobile"} {
-    @media (min-width: $mobile) {
+  @if #{$device == sm} {
+    @media (max-width: $min-sm) {
       @content;
     }
   }
-  @if #{$device == "mobile-portrait"} {
-    @media (min-width: $mobile) and (orientation: portrait) {
+}
+
+@mixin media-breakpoint-down($device) {
+  @if #{$device == lg} {
+    @media (max-width: $max-lg) {
       @content;
     }
+  }
+  @if #{$device == md} {
+    @media (max-width: $max-md) {
+      @content;
+    }
+  }
+  @if #{$device == sm} {
+    @media (max-width: $max-sm) {
+      @content;
+    }
+  }
+  @if #{$device == xs} {
+    @media (max-width: $max-xs) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-only($device) {
+  @if #{$device == xl} {
+    @media (max-width: $max-xl) {
+      @content;
+    }
+  }
+  @if #{$device == lg} {
+    @media (min-width: $min-lg) and (max-width: $max-lg) {
+      @content;
+    }
+  }
+  @if #{$device == md} {
+    @media (min-width: $min-md) and (max-width: $max-md) {
+      @content;
+    }
+  }
+  @if #{$device == sm} {
+    @media (min-width: $min-sm) and (max-width: $max-sm) {
+      @content;
+    }
+  }
+  @if #{$device == xs} {
+    @media (max-width: $max-sm) {
+      @content;
+    }
+  }
+}
+
+@mixin box-shadow($none:"", $box-shadow: (hAlign: 0, vAlign: 0, blur: 12px, spread: -5px), $opacity: .7) {
+  @if($none !="none"){
+    -webkit-box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,$opacity);
+    -moz-box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,$opacity);
+    box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,$opacity);
+  }@else{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+@mixin psuedo-backgound-image-chevron($icon-name:none){
+  content: "";
+  width: $circle-icon-size;
+  height: $circle-icon-size;
+  background: url('../assets/icons/up-arrow-navy.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @if ($icon-name == "chevron-navy") {
+      background: url('../assets/icons/up-arrow-navy.svg');
+  }
+  @if ($icon-name == "chevron-lightgray"){
+      background-image: url('../assets/icons/up-arrow-lightgray.svg');
+  }
+  @if ($icon-name == "chevron-white"){
+      background-image: url('../assets/icons/up-arrow-white.svg');
+  }
+  @if ($icon-name == "chevron-orange"){
+      background-image: url('../assets/icons/up-arrow-orange.svg');
+  }
+  @if ($icon-name == "checkmark-white"){
+    background-image: url('../assets/icons/checkmark-white.svg');
+  }
+  @if ($icon-name == "checkmark-gray"){
+    background-image: url('../assets/icons/checkmark-gray.svg');
+  }
+  @if ($icon-name == "checkmark-navy"){
+    background-image: url('../assets/icons/checkmark-navy.svg');
   }
 }
