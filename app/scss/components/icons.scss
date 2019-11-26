@@ -4,6 +4,7 @@ $opacity: .1;
     width: $size;
     height: $size;
     border-radius: 100em;
+    display: inline-block;
   
     background: $url;
     box-shadow: inset $size $size $size $size $bg-color;

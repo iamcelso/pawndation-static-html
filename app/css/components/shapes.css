@@ -4,8 +4,11 @@
   border-radius: 100em;
   background: color(primary-0); }
   .circle.large {
-    width: calc(5em*2);
-    height: calc(5em*2); }
+    width: calc(5em*4);
+    height: calc(5em*4); }
+  .circle.medium {
+    width: calc(5em*3);
+    height: calc(5em*3); }
   .circle.small {
     width: 4em;
     height: 4em; }

@@ -5,8 +5,13 @@
     background: color(primary-0);
 
     &.large{
-        width: calc(5em*2);
-        height: calc(5em*2);
+        width: calc(5em*4);
+        height: calc(5em*4);
+    }
+
+    &.medium{
+        width: calc(5em*3);
+        height: calc(5em*3);
     }
 
     &.small{
