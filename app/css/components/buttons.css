@@ -47,8 +47,9 @@
     .btn.pawn.outline.active, .btn.pawn.outline:hover {
       background: color(primary-1);
       color: #ffffff; }
-  .btn.pawn.background.none {
-    background: none; }
+  .btn.pawn.background.white {
+    background: #fff;
+    color: #868686; }
   .btn.pawn.next {
     width: 40px;
     height: 40px;

@@ -163,3 +163,176 @@ a{
         background: rgba($primary-color, $alpha: .1);
     }
 }
+
+
+.featured-container{
+    display: grid;
+    grid-template-columns:25% 75%;
+    grid-template-areas: 
+    "detail-container featured-items"
+    "button featured-items";
+    overflow: hidden;
+    padding-left: 10%;
+
+    .detail-container{
+        grid-area: detail-container;
+    }
+
+    .btn-container{
+        grid-area: button;
+        margin-top: -100px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+
+        button{
+            height: 45px;
+        }
+
+    }
+
+    .featured-items{
+        grid-area: featured-items;
+        width: 100%;
+        right: -16%;
+        z-index: 999;
+
+        img{
+            width: 95%;
+            height: 250px;
+
+            object-fit: cover;
+            border-radius: 1em;
+        }
+
+        .owl-nav{
+            position: absolute;
+            left: -50px;
+            bottom: 28px;
+            display: flex;
+            justify-content: space-between;
+            
+            .owl-next{
+                margin-top: 50px;
+                margin-left: -39px;
+            }
+          .owl-prev, .owl-next{
+              background: #fff;
+              height: 38px;
+              width: 38px;
+              outline: none;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 100em;
+      
+              transition: transform .3s cubic-bezier(0.25, 0.39, 0.39, 2.01);        
+              @include box-shadow;
+              &::before{
+                  position: absolute;
+                  @include psuedo-backgound-image-chevron;
+              }
+              
+              &:hover{
+                  background: $navy-blue;
+                  transform: scale(.9);
+                  &::before{
+                      @include psuedo-backgound-image-chevron("chevron-white");
+                  }
+              }
+              span{
+                  display: none;
+              }
+          }
+          .owl-prev{
+              &::before{
+                  transform: rotate(-90deg);
+                  margin-right: 2px;
+              }
+          }
+          .owl-next{
+              &::before{
+                  transform: rotate(90deg);
+                  margin-left: 2px;
+              }
+          }
+        }
+    }
+
+}
+
+
+.events-card-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 40px;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: center;
+
+    .card{
+        @include box-shadow;
+        margin: 0 auto;
+    
+        .card-body{
+            background-color: #fff;
+            padding:0 1.25rem;
+            padding-top: 1.25rem;
+            
+            
+            .content{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                
+                .header-container{
+                    display: flex;
+                    justify-content: space-between;
+                    
+
+                    h5{
+                        text-transform: none;
+                        width: 150px; 
+
+                        margin-right: 50px;
+                    }
+                }
+                .description{
+                    height: 35%;
+
+                    p{
+                        margin: 0;
+                        padding: 0 !important;
+                    }
+                }
+
+                button{
+                    background: none;
+                    outline: none;
+                    border: none;
+                    margin-bottom: 40px;
+                    align-self: flex-start;
+                    color: $navy-blue;
+                }
+
+                
+            }
+            .date-container{
+                padding: 5px 1.25rem ;
+                background-color: #fafafa;
+                border-bottom-right-radius: 1em;
+
+                position: absolute;
+                bottom: 0;
+                left: 160px;
+                right: 0;
+            }
+        }
+    }
+}

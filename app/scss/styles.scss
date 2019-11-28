@@ -1,9 +1,12 @@
 @import './index.scss';
 
+$alternate-background: #f9f9f9;
+$margin-top-from-heading: 80px;
+$custom-button-height: 45px;
+
 html, body{
     margin: 0;
     padding: 0;
-
 }
 
 *{
@@ -13,6 +16,10 @@ html, body{
 .sub-header{
     width: 60%;
     margin: auto;
+}
+
+.content{
+    overflow-y: hidden;
 }
 
 nav{
@@ -127,163 +134,219 @@ nav{
     }
 }
 
-.jumbotron{
-    background-image: url('../assets/images/hero-homepage.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-position: center;
-
-    h1{
-        font-weight: 800;
-        color: #fff;
-        width: 35%;
-    }
-    p{
-        color: #fff;
-        width: 35%;
-    }
-
-    .button-container{
-        margin: 40px 0;
-        width: 28%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .btn.pawn{
-            height: 45px;
-
-            &:hover{
-                border-color: #fff;
-                color: #fff;
-            }
-        }
-        .btn.pawn.outline{
-            border-color: #fff;
-            color: #fff;
-
-            &:hover{
-                border: none;
-            }
-        }
-    }
-}
-
-.faq-container{
-    width: 80%;
-    height: 150px;
-    margin: auto;
-    border-radius: 10em;
-    margin-top: -9.5%;
-    background: #fff;
-    padding: 30px 60px;
-
-    @include box-shadow;
-    .inner-container{
-        width: 100%;
-        height: 100%;
+.homepage{
+    .jumbotron{
+        background-image: url('../assets/images/hero-homepage.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-    }
+        justify-content: center;
+        background-position: center;
     
-}
-
-.about-our-shelter-container{
-    margin: 50px auto;
-
-    .image-container{
-        position: relative;
-
-
-        .shape.ellipse{
-            position: absolute;
-            left: 20px;
-            top: -5px;
-
-            width: 350px;
-            height: 350px;
-            clip-path: ellipse(37% 39% at 50% 50%);
-            background: $primary-color;
+        h1{
+            font-weight: 800;
+            color: #fff;
+            width: 35%;
         }
-
-        img{
-            width: 445px;
-            height: 445px;
-            object-fit: contain;
-            clip-path: ellipse(32% 46% at 50% 50%);
-
-            transform: rotate(12deg);
+        p{
+            color: #fff;
+            width: 35%;
         }
-    }
-
-    .media-body{
-        button{
-            margin-top: 30px;
-            text-transform: uppercase;
-
-            height: 45px;
+    
+        .button-container{
+            margin: 40px 0;
+            width: 28%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .btn.pawn{
+                height: $custom-button-height;
+    
+                &:hover{
+                    border-color: #fff;
+                    color: #fff;
+                }
+            }
+            .btn.pawn.outline{
+                border-color: #fff;
+                color: #fff;
+    
+                &:hover{
+                    border: none;
+                }
+            }
         }
     }
-}
-
-.what-wedo-container{
-    padding: 40px auto;
-    background: #f9f9f9;
     
-    h2{
-        margin-top: 50px;
-    }
-    
-    .inner-container{
-        width: 75%;
+    .faq-container{
+        width: 80%;
+        height: 150px;
         margin: auto;
-
-        .card-container{
-            margin: 40px auto;
-            display: grid;
-            width: 85%;
-            grid-template-columns: repeat(2, 1fr);
-            
-            .card{            
-                margin: auto;
-                background: #f9f9f9;
-                border-radius: 0;
-
-                .card-body{
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
-                    padding: 2rem;
-
-                    .icon{
-                        margin: 20px 0;
+        border-radius: 10em;
+        margin-top: -9.5%;
+        background: #fff;
+        padding: 30px 60px;
+    
+        @include box-shadow;
+        .inner-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+    }
+    
+    .about-our-shelter-container{
+        margin: 50px auto;
+    
+        .image-container{
+            position: relative;
+    
+    
+            .shape.ellipse{
+                position: absolute;
+                left: 20px;
+                top: -5px;
+    
+                width: 350px;
+                height: 350px;
+                clip-path: ellipse(37% 39% at 50% 50%);
+                background: $primary-color;
+            }
+    
+            img{
+                width: 445px;
+                height: 445px;
+                object-fit: contain;
+                clip-path: ellipse(32% 46% at 50% 50%);
+    
+                transform: rotate(12deg);
+            }
+        }
+    
+        .media-body{
+            button{
+                margin-top: 30px;
+                text-transform: uppercase;
+    
+                height: $custom-button-height;
+            }
+        }
+    }
+    
+    .what-wedo-container{
+        padding: 40px auto;
+        padding-bottom: 150px;
+        background: $alternate-background;
+        position: relative;
+        
+        h2{
+            margin-top: 50px;
+        }
+        
+        .inner-container{
+            width: 75%;
+            margin: auto;
+    
+            .card-container{
+                margin: 0 auto;
+                margin-top: $margin-top-from-heading;
+                display: grid;
+                width: 85%;
+                grid-template-columns: repeat(2, 1fr);
+                
+                .card{            
+                    margin: auto;
+                    background: #f9f9f9;
+                    border-radius: 0;
+    
+                    .card-body{
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        padding: 2rem;
+    
+                        .icon{
+                            margin: 20px 0;
+                        }
                     }
+                }
+            }
+        }
+    
+        .counts-container{
+            display: flex;
+            width: 80%;
+            left: 10%;
+            top: 40px;
+            position: absolute;
+
+            .circle{
+                @include box-shadow;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+                margin: 0 auto;
+    
+                h1{
+                    margin: 5px 0;
                 }
             }
         }
     }
 
-    .counts-container{
-        display: flex;
-        margin: 0 auto;
-        width: 80%;
-        .circle{
-            @include box-shadow;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 30px;
-            margin: 0 auto;
+    .featured-container{
+        margin-top: 200px;
+    }
 
-            h1{
-                margin: 5px 0;
+    .news-events-container{
+        background: $alternate-background;
+        margin: 40px 0;
+        padding-top: 50px;
+
+        p{
+            padding: 0 100px;
+        }
+
+        hr{
+        margin-top: $margin-top-from-heading;
+        }
+
+        .button-container{
+            margin: 0 auto;
+            width: 380px;
+            margin-top: -35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            button{
+                height: $custom-button-height;
+                &:hover{
+                    background: #fff;
+                }
+            }
+            button:first-child{
+                width: 200px;
+                text-transform: none;
+            }
+        }
+
+        .events-card-container{
+            margin-top: 100px;
+            padding: 0 100px;
+            .card{
+                width: 92%;
+                height: 210px;
             }
         }
     }
@@ -298,7 +361,7 @@ nav{
         align-items: center;
         justify-content: space-between;
 
-        margin: 40px 0;
+        margin: 50px 0;
         
         .links-container{
             color: #fff;

@@ -86,8 +86,9 @@ $transform-scale: scale(.9);
     
     // Background
     &.background{
-        &.none{
-            background: none;
+        &.white{
+            background: #fff;
+            color: $gray;
         }
     }
 

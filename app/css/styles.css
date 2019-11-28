@@ -48,8 +48,9 @@
     .btn.pawn.outline.active, .btn.pawn.outline:hover {
       background: #fbc67a;
       color: #ffffff; }
-  .btn.pawn.background.none {
-    background: none; }
+  .btn.pawn.background.white {
+    background: #fff;
+    color: #868686; }
   .btn.pawn.next {
     width: 40px;
     height: 40px;
@@ -767,6 +768,136 @@ a {
     color: #2e40a0;
     background: rgba(46, 64, 160, 0.1); }
 
+.featured-container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-areas: "detail-container featured-items" "button featured-items";
+  overflow: hidden;
+  padding-left: 10%; }
+  .featured-container .detail-container {
+    grid-area: detail-container; }
+  .featured-container .btn-container {
+    grid-area: button;
+    margin-top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; }
+    .featured-container .btn-container button {
+      height: 45px; }
+  .featured-container .featured-items {
+    grid-area: featured-items;
+    width: 100%;
+    right: -16%;
+    z-index: 999; }
+    .featured-container .featured-items img {
+      width: 95%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 1em; }
+    .featured-container .featured-items .owl-nav {
+      position: absolute;
+      left: -50px;
+      bottom: 28px;
+      display: flex;
+      justify-content: space-between; }
+      .featured-container .featured-items .owl-nav .owl-next {
+        margin-top: 50px;
+        margin-left: -39px; }
+      .featured-container .featured-items .owl-nav .owl-prev, .featured-container .featured-items .owl-nav .owl-next {
+        background: #fff;
+        height: 38px;
+        width: 38px;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100em;
+        transition: transform 0.3s cubic-bezier(0.25, 0.39, 0.39, 2.01);
+        -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+        box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7); }
+        .featured-container .featured-items .owl-nav .owl-prev::before, .featured-container .featured-items .owl-nav .owl-next::before {
+          position: absolute;
+          content: "";
+          width: 18px;
+          height: 18px;
+          background: url("../assets/icons/up-arrow-navy.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .featured-container .featured-items .owl-nav .owl-prev:hover, .featured-container .featured-items .owl-nav .owl-next:hover {
+          background: #2e40a0;
+          transform: scale(0.9); }
+          .featured-container .featured-items .owl-nav .owl-prev:hover::before, .featured-container .featured-items .owl-nav .owl-next:hover::before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            background: url("../assets/icons/up-arrow-navy.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url("../assets/icons/up-arrow-white.svg"); }
+        .featured-container .featured-items .owl-nav .owl-prev span, .featured-container .featured-items .owl-nav .owl-next span {
+          display: none; }
+      .featured-container .featured-items .owl-nav .owl-prev::before {
+        transform: rotate(-90deg);
+        margin-right: 2px; }
+      .featured-container .featured-items .owl-nav .owl-next::before {
+        transform: rotate(90deg);
+        margin-left: 2px; }
+
+.events-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 40px;
+  padding: 0 40px;
+  align-items: center;
+  justify-content: center; }
+  .events-card-container .card {
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    margin: 0 auto; }
+    .events-card-container .card .card-body {
+      background-color: #fff;
+      padding: 0 1.25rem;
+      padding-top: 1.25rem; }
+      .events-card-container .card .card-body .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        position: relative;
+        overflow: hidden; }
+        .events-card-container .card .card-body .content .header-container {
+          display: flex;
+          justify-content: space-between; }
+          .events-card-container .card .card-body .content .header-container h5 {
+            text-transform: none;
+            width: 150px;
+            margin-right: 50px; }
+        .events-card-container .card .card-body .content .description {
+          height: 35%; }
+          .events-card-container .card .card-body .content .description p {
+            margin: 0;
+            padding: 0 !important; }
+        .events-card-container .card .card-body .content button {
+          background: none;
+          outline: none;
+          border: none;
+          margin-bottom: 40px;
+          align-self: flex-start;
+          color: #2e40a0; }
+      .events-card-container .card .card-body .date-container {
+        padding: 5px 1.25rem;
+        background-color: #fafafa;
+        border-bottom-right-radius: 1em;
+        position: absolute;
+        bottom: 0;
+        left: 160px;
+        right: 0; }
+
 html, body {
   margin: 0;
   padding: 0; }
@@ -777,6 +908,9 @@ html, body {
 .sub-header {
   width: 60%;
   margin: auto; }
+
+.content {
+  overflow-y: hidden; }
 
 nav {
   width: 100%;
@@ -860,7 +994,7 @@ nav {
           nav .container .button-container .btn.pawn.outline:hover {
             border: none; }
 
-.jumbotron {
+.homepage .jumbotron {
   background-image: url("../assets/images/hero-homepage.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -870,31 +1004,31 @@ nav {
   align-items: center;
   justify-content: center;
   background-position: center; }
-  .jumbotron h1 {
+  .homepage .jumbotron h1 {
     font-weight: 800;
     color: #fff;
     width: 35%; }
-  .jumbotron p {
+  .homepage .jumbotron p {
     color: #fff;
     width: 35%; }
-  .jumbotron .button-container {
+  .homepage .jumbotron .button-container {
     margin: 40px 0;
     width: 28%;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .jumbotron .button-container .btn.pawn {
+    .homepage .jumbotron .button-container .btn.pawn {
       height: 45px; }
-      .jumbotron .button-container .btn.pawn:hover {
+      .homepage .jumbotron .button-container .btn.pawn:hover {
         border-color: #fff;
         color: #fff; }
-    .jumbotron .button-container .btn.pawn.outline {
+    .homepage .jumbotron .button-container .btn.pawn.outline {
       border-color: #fff;
       color: #fff; }
-      .jumbotron .button-container .btn.pawn.outline:hover {
+      .homepage .jumbotron .button-container .btn.pawn.outline:hover {
         border: none; }
 
-.faq-container {
+.homepage .faq-container {
   width: 80%;
   height: 150px;
   margin: auto;
@@ -905,7 +1039,7 @@ nav {
   -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7); }
-  .faq-container .inner-container {
+  .homepage .faq-container .inner-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -913,11 +1047,11 @@ nav {
     align-items: center;
     justify-content: space-between; }
 
-.about-our-shelter-container {
+.homepage .about-our-shelter-container {
   margin: 50px auto; }
-  .about-our-shelter-container .image-container {
+  .homepage .about-our-shelter-container .image-container {
     position: relative; }
-    .about-our-shelter-container .image-container .shape.ellipse {
+    .homepage .about-our-shelter-container .image-container .shape.ellipse {
       position: absolute;
       left: 20px;
       top: -5px;
@@ -925,46 +1059,51 @@ nav {
       height: 350px;
       clip-path: ellipse(37% 39% at 50% 50%);
       background: #2e40a0; }
-    .about-our-shelter-container .image-container img {
+    .homepage .about-our-shelter-container .image-container img {
       width: 445px;
       height: 445px;
       object-fit: contain;
       clip-path: ellipse(32% 46% at 50% 50%);
       transform: rotate(12deg); }
-  .about-our-shelter-container .media-body button {
+  .homepage .about-our-shelter-container .media-body button {
     margin-top: 30px;
     text-transform: uppercase;
     height: 45px; }
 
-.what-wedo-container {
+.homepage .what-wedo-container {
   padding: 40px auto;
-  background: #f9f9f9; }
-  .what-wedo-container h2 {
+  padding-bottom: 150px;
+  background: #f9f9f9;
+  position: relative; }
+  .homepage .what-wedo-container h2 {
     margin-top: 50px; }
-  .what-wedo-container .inner-container {
+  .homepage .what-wedo-container .inner-container {
     width: 75%;
     margin: auto; }
-    .what-wedo-container .inner-container .card-container {
-      margin: 40px auto;
+    .homepage .what-wedo-container .inner-container .card-container {
+      margin: 0 auto;
+      margin-top: 80px;
       display: grid;
       width: 85%;
       grid-template-columns: repeat(2, 1fr); }
-      .what-wedo-container .inner-container .card-container .card {
+      .homepage .what-wedo-container .inner-container .card-container .card {
         margin: auto;
         background: #f9f9f9;
         border-radius: 0; }
-        .what-wedo-container .inner-container .card-container .card .card-body {
+        .homepage .what-wedo-container .inner-container .card-container .card .card-body {
           display: flex;
           align-items: center;
           flex-direction: column;
           padding: 2rem; }
-          .what-wedo-container .inner-container .card-container .card .card-body .icon {
+          .homepage .what-wedo-container .inner-container .card-container .card .card-body .icon {
             margin: 20px 0; }
-  .what-wedo-container .counts-container {
+  .homepage .what-wedo-container .counts-container {
     display: flex;
-    margin: 0 auto;
-    width: 80%; }
-    .what-wedo-container .counts-container .circle {
+    width: 80%;
+    left: 10%;
+    top: 40px;
+    position: absolute; }
+    .homepage .what-wedo-container .counts-container .circle {
       -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
       -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
       box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
@@ -973,8 +1112,40 @@ nav {
       align-items: center;
       padding: 30px;
       margin: 0 auto; }
-      .what-wedo-container .counts-container .circle h1 {
+      .homepage .what-wedo-container .counts-container .circle h1 {
         margin: 5px 0; }
+
+.homepage .featured-container {
+  margin-top: 200px; }
+
+.homepage .news-events-container {
+  background: #f9f9f9;
+  margin: 40px 0;
+  padding-top: 50px; }
+  .homepage .news-events-container p {
+    padding: 0 100px; }
+  .homepage .news-events-container hr {
+    margin-top: 80px; }
+  .homepage .news-events-container .button-container {
+    margin: 0 auto;
+    width: 380px;
+    margin-top: -35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .homepage .news-events-container .button-container button {
+      height: 45px; }
+      .homepage .news-events-container .button-container button:hover {
+        background: #fff; }
+    .homepage .news-events-container .button-container button:first-child {
+      width: 200px;
+      text-transform: none; }
+  .homepage .news-events-container .events-card-container {
+    margin-top: 100px;
+    padding: 0 100px; }
+    .homepage .news-events-container .events-card-container .card {
+      width: 92%;
+      height: 210px; }
 
 .footer {
   width: 100%;
@@ -983,7 +1154,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 40px 0; }
+    margin: 50px 0; }
     .footer .inner-container .links-container {
       color: #fff; }
       .footer .inner-container .links-container ul {
