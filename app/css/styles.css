@@ -1116,7 +1116,8 @@ nav {
         margin: 5px 0; }
 
 .homepage .featured-container {
-  margin-top: 200px; }
+  margin-top: 200px;
+  margin-bottom: 70px; }
 
 .homepage .news-events-container {
   background: #f9f9f9;
