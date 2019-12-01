@@ -336,3 +336,50 @@ a{
         }
     }
 }
+
+.card-blog-container{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-down(lg){
+        flex-direction: column;
+    }
+
+    .card{
+        &:nth-child(2){
+            margin: 0 30px;
+        }
+
+        .card-body{
+            background-color: #fafafa;
+
+            .content{
+                .date-container{
+                    display: flex;
+                    align-items: center;
+                    small:last-child{
+                        margin: 0 18px;
+                    }
+                }
+            }
+
+            h5{
+                text-transform: none;
+                margin: 10px 0;
+            }
+
+            button{
+                background: none;
+                outline: none;
+                border: none;
+                color: $navy-blue;
+                font-weight: bold;
+                margin: 20px 0;
+                text-decoration: underline;
+            }
+
+        }
+    }
+}

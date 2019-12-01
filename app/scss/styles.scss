@@ -13,11 +13,27 @@ html, body{
     font-family: $font-default;
 }
 
-.sub-header{
+.sub-header-fluid{
     width: 60%;
     margin: auto;
 }
+.sub-header{
+    width: 55%;
+    margin: auto;
+}
 
+
+.btn-seemore-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .btn.pawn{
+        margin: 80px;
+        height: $custom-button-height;
+    }
+}
 .content{
     overflow-y: hidden;
 }
@@ -349,6 +365,12 @@ nav{
                 width: 92%;
                 height: 210px;
             }
+        }
+    }
+
+    .blog-container{
+        .card-blog-container{
+            margin-top: $margin-top-from-heading;
         }
     }
 }
