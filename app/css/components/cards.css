@@ -1,7 +1,7 @@
 .card {
   border: none; }
   .card.card-img-top.md {
-    width: 300px; }
+    width: 280px; }
   .card.card-img-top.curve-side {
     border-radius: 1em; }
     .card.card-img-top.curve-side img {
@@ -12,7 +12,7 @@
       border-bottom-right-radius: 1em; }
   .card.card-img-top img, .card.card-img-top .card-img-top {
     height: 180px;
-    width: 300px;
+    width: 280px;
     object-fit: cover;
     object-position: top center; }
   .card.card-img-left {
@@ -26,11 +26,11 @@
         border-top-right-radius: 1em;
         border-bottom-right-radius: 1em; }
     .card.card-img-left .card-body {
-      width: 300px; }
+      width: 280px; }
     .card.card-img-left.md {
-      width: 480px;
-      height: 200px; }
+      width: 460px;
+      height: 180px; }
     .card.card-img-left img, .card.card-img-left .card-img-left {
-      width: 160px;
+      width: 140px;
       object-fit: cover;
       object-position: top center; }

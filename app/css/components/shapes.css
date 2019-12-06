@@ -9,6 +9,22 @@
   .circle.medium {
     width: calc(5em*3);
     height: calc(5em*3); }
+    @media (max-width: 1199.98px) {
+      .circle.medium {
+        width: calc(5em*2.5);
+        height: calc(5em*2.5); } }
+    @media (max-width: 991.98px) {
+      .circle.medium {
+        width: calc(5em*2.5);
+        height: calc(5em*2.5); } }
+    @media (max-width: 767.98px) {
+      .circle.medium {
+        width: calc(5em*2.5);
+        height: calc(5em*2.5); } }
+    @media (max-width: 575.98px) {
+      .circle.medium {
+        width: calc(5em*2.5);
+        height: calc(5em*2.5); } }
   .circle.small {
     width: 4em;
     height: 4em; }

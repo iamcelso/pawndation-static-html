@@ -309,6 +309,7 @@ nav{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
                 padding: 30px;
                 margin: 0 auto;
     
@@ -359,12 +360,8 @@ nav{
         }
 
         .events-card-container{
-            margin-top: 100px;
-            padding: 0 100px;
-            .card{
-                width: 92%;
-                height: 210px;
-            }
+            margin-top: $margin-top-from-heading;
+            padding: 0 115px;
         }
     }
 
@@ -422,6 +419,79 @@ nav{
                 &.fa-instagram{
                     font-size: 16px;
                 }
+            }
+        }
+    }
+}
+
+//-----------------------------------------------------
+//  M E D I A   Q U E R I E S
+//-----------------------------------------------------
+@include media-breakpoint-down(lg){
+    $margin-top-from-heading: 50px;
+
+    nav{
+        .container{
+            .button-container{
+                display: none;
+            }
+        }
+    }
+
+    .homepage{
+        .jumbotron{
+            h1, p{
+                width: 40%;
+            }
+            .button-container{
+                width: 33%;
+            }
+        }
+
+        .faq-container{
+            margin-top: -11%;
+        }
+
+        .about-our-shelter-container{
+            .shape.ellipse{
+                width: 260px;
+                height: 260px;
+
+                left: 25px;
+                top: 0;
+            }
+            img{
+                width: 355px;
+                height: 355px;
+            }
+        }
+        
+        .what-wedo-container{
+            .inner-container{
+                .card-container{
+                    margin-top: $margin-top-from-heading;
+                }
+            }
+
+            .counts-container{
+                top: 60px;
+            }
+        }
+
+        .news-events-container{
+            hr{
+                margin-top: $margin-top-from-heading;
+            }
+
+            .events-card-container{
+                padding: 0;
+                margin-top: $margin-top-from-heading;
+            }
+        }
+
+        .blog-container{
+            .card-blog-container{
+                margin-top: $margin-top-from-heading;
             }
         }
     }
