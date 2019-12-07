@@ -10,46 +10,46 @@ $max-md: 991.98px;
 $max-sm: 767.98px;
 $max-xs: 575.98px;
 
-@mixin media-breakpoint-up($device) {
-  @if #{$device == xl} {
-    @media (max-width: $min-xl) {
-      @content;
-    }
-  }
-  @if #{$device == lg} {
-    @media (max-width: $min-lg) {
-      @content;
-    }
-  }
-  @if #{$device == md} {
-    @media (max-width: $min-md) {
-      @content;
-    }
-  }
-  @if #{$device == sm} {
-    @media (max-width: $min-sm) {
-      @content;
-    }
-  }
-}
+// @mixin media-breakpoint-up($device) {
+//   @if ($device == xl) {
+//     @media (max-width: $min-xl) {
+//       @content;
+//     }
+//   }
+//   @if ($device == lg) {
+//     @media (max-width: $min-lg) {
+//       @content;
+//     }
+//   }
+//   @if ($device == md) {
+//     @media (max-width: $min-md) {
+//       @content;
+//     }
+//   }
+//   @if ($device == sm) {
+//     @media (max-width: $min-sm) {
+//       @content;
+//     }
+//   }
+// }
 
 @mixin media-breakpoint-down($device) {
-  @if #{$device == lg} {
+  @if ($device == lg) {
     @media (max-width: $max-lg) {
       @content;
     }
   }
-  @if #{$device == md} {
+  @if ($device == md) {
     @media (max-width: $max-md) {
       @content;
     }
   }
-  @if #{$device == sm} {
+  @if ($device == sm) {
     @media (max-width: $max-sm) {
       @content;
     }
   }
-  @if #{$device == xs} {
+  @if ($device == xs) {
     @media (max-width: $max-xs) {
       @content;
     }
@@ -57,27 +57,22 @@ $max-xs: 575.98px;
 }
 
 @mixin media-breakpoint-only($device) {
-  @if #{$device == xl} {
-    @media (max-width: $max-xl) {
-      @content;
-    }
-  }
-  @if #{$device == lg} {
+  @if ($device == lg) {
     @media (min-width: $min-lg) and (max-width: $max-lg) {
       @content;
     }
   }
-  @if #{$device == md} {
+  @if ($device == md) {
     @media (min-width: $min-md) and (max-width: $max-md) {
       @content;
     }
   }
-  @if #{$device == sm} {
+  @if ($device == sm) {
     @media (min-width: $min-sm) and (max-width: $max-sm) {
       @content;
     }
   }
-  @if #{$device == xs} {
+  @if ($device == xs) {
     @media (max-width: $max-sm) {
       @content;
     }

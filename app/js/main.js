@@ -11,6 +11,19 @@
             center: true,
             lazyLoad:true,
             mouseDrag: true,
+            responsive:{
+                0:{
+                    items: 1
+                },
+                768:{
+                    items: 2,
+                    center: false,
+                },
+                992:{
+                    items: 3
+                }
+                
+            }
         });
 
     });

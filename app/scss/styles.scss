@@ -432,6 +432,9 @@ nav{
 
     nav{
         .container{
+            .menu-navigation{
+                display: flex;
+            }
             .button-container{
                 display: none;
             }
@@ -453,16 +456,18 @@ nav{
         }
 
         .about-our-shelter-container{
-            .shape.ellipse{
-                width: 260px;
-                height: 260px;
-
-                left: 25px;
-                top: 0;
-            }
-            img{
-                width: 355px;
-                height: 355px;
+            .image-container{
+                .shape.ellipse{
+                    width: 260px;
+                    height: 260px;
+    
+                    left: 25px;
+                    top: 0;
+                }
+                img{
+                    width: 355px;
+                    height: 355px;
+                }
             }
         }
         
@@ -492,6 +497,63 @@ nav{
         .blog-container{
             .card-blog-container{
                 margin-top: $margin-top-from-heading;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md){
+    .sub-header-fluid{
+        width: 100%;
+    }
+    .sub-header{
+        width: 80%;
+    }
+
+    nav{
+        .container{
+            .menu-navigation{
+                display: none;
+            }
+        }
+    }
+
+    .homepage{
+        .jumbotron{
+            h1, p{
+                width: 55%;
+            }
+            .button-container{
+                width: 45%;
+            }
+        }
+        .faq-container{
+            margin-top: -15%;
+            width: 90%;
+            padding: 20px 40px;
+        }
+        .about-our-shelter-container{
+            .image-container{
+                .shape.ellipse{
+                    width: 220px;
+                    height: 220px;
+
+                    left: -35px;
+                }
+                img{
+                    width: 280px;
+                    height: 280px;
+
+                    margin-left: -47px;
+                }
+            }
+        }
+
+        .what-wedo-container{
+            .inner-container{
+                .card-container{
+                    width: 100%;                    
+                }
             }
         }
     }
