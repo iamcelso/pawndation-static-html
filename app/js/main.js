@@ -26,5 +26,14 @@
             }
         });
 
+
+        $('.hamburger').click(function(){
+            $(this).toggleClass('is-active');
+
+            if($(this).hasClass('is-active')){
+                $('body').animate({});
+            }
+        });
+
     });
 })(jQuery);

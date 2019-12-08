@@ -283,68 +283,45 @@ a{
 .events-card-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 40px;
-    padding: 0 40px;
-    align-items: center;
+    grid-gap: 20px;
+    width: 80%;
+    margin: auto;
     justify-content: center;
 
     .card{
-        @include box-shadow;
-        margin: 0 auto;
-
         .card-body{
-            background-color: #fff;
-            padding:0 1.25rem;
-            padding-top: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
 
             .content{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: 100%;
-                position: relative;
-                overflow: hidden;
-                
+                padding: 10px 15px;
+                flex: 1;
                 .header-container{
                     display: flex;
                     justify-content: space-between;
-                
+                    
                     h5{
                         text-transform: none;
-                        width: 150px; 
-
-                        margin-right: 50px;
-                    }
-                }
-                .description{
-                    height: 35%;
-
-                    p{
-                        margin: 0;
-                        padding: 0 !important;
-                    }
+                        width: 60%;
+                    }    
                 }
 
+                .description{margin-top: 5px;}
                 button{
-                    background: none;
                     outline: none;
+                    background: none;
                     border: none;
-                    margin-bottom: 40px;
-                    align-self: flex-start;
-                    color: $navy-blue;
+                    margin-top: 8px;
+                    color: $primary-color;
+                    text-decoration: underline;
                 }
-
-                
             }
-            .date-container{
-                padding: 5px 1.25rem ;
-                background-color: #fafafa;
-                border-bottom-right-radius: 1em;
 
-                position: absolute;
-                bottom: 0;
-                left: 160px;
-                right: 0;
+            .date-container{
+                background: #fcfcfc;
+                border-bottom-right-radius: 1em;
+                padding: 8px 15px;
             }
         }
     }
@@ -361,38 +338,31 @@ a{
     }
 
     .card{
+        background: #fafafa;
+
         &:nth-child(2){
             margin: 0 40px;
         }
 
-        .card-body{
-            background-color: #fafafa;
-
-            .content{
-                .date-container{
-                    display: flex;
-                    align-items: center;
-                    small:last-child{
-                        margin: 0 18px;
-                    }
-                }
-            }
+        .content{
+            display: flex;
+            flex-direction: column;
 
             h5{
-                text-transform: none;
                 margin: 10px 0;
+                text-transform: none;
             }
 
             button{
-                background: none;
                 outline: none;
+                background: none;
                 border: none;
-                color: $navy-blue;
-                font-weight: bold;
-                margin: 20px 0;
+                margin-top: 20px;
+                color: $primary-color;
                 text-decoration: underline;
+                width: 75px;
+                padding: 5px 0;
             }
-
         }
     }
 }
