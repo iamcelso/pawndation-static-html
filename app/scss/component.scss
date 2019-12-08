@@ -154,6 +154,11 @@ a{
     border-radius: .5em;
     font-size: .9em;
 
+    @include media-breakpoint-down(md){
+        height: 20px;
+        padding: 0 10px;
+    }
+
     &.event{
         color: $primary-color-0;
         background: rgba($primary-color-0, $alpha: .1);
@@ -289,6 +294,15 @@ a{
     justify-content: center;
 
     .card{
+
+        @include box-shadow;
+        @include media-breakpoint-down(md){
+            &.card-img-left{
+                &.md{
+                    width: 25rem;
+                }
+            }
+        }
         .card-body{
             display: flex;
             flex-direction: column;
@@ -304,10 +318,19 @@ a{
                     h5{
                         text-transform: none;
                         width: 60%;
+                        @include media-breakpoint-down(md){
+                            width: 70%;
+                            font-size: 15px;                   
+                        }
                     }    
                 }
 
-                .description{margin-top: 5px;}
+                .description{
+                    margin-top: 5px;
+                    @include media-breakpoint-down(md){
+                        margin-top: 0;                        
+                    }
+                }
                 button{
                     outline: none;
                     background: none;
@@ -315,6 +338,9 @@ a{
                     margin-top: 8px;
                     color: $primary-color;
                     text-decoration: underline;
+                    @include media-breakpoint-down(md){
+                        margin-top: 0;
+                    }
                 }
             }
 
@@ -338,10 +364,24 @@ a{
     }
 
     .card{
+
+        &.card-img-top{
+            &.md{
+                @include media-breakpoint-down(md){
+                    height: 380px;
+                }
+            }
+        }
+        
+        @include box-shadow;
         background: #fafafa;
 
         &:nth-child(2){
             margin: 0 40px;
+
+            @include media-breakpoint-down(md){
+                margin: 0 20px;
+            }
         }
 
         .content{
