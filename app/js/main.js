@@ -2,10 +2,12 @@
     $(document).ready(function () {
 
         $body = $('body');
-        $mobileNavigation = $('#mobileNavigation');
         $hamburgerMenu = $('.hamburger');
+        $navigation = $('nav');
+        $navigationBorderColor = $('nav').css('border-bottom-color');
+        $navigationHeight = $('nav').height();
         
-        let isMenuAlreadyChangedStyle = false;
+        const cloneMobileNavigation = $('.mobile-navigation').clone();        
 
         $('.featured-items').owlCarousel({
             items: 3,
@@ -32,13 +34,10 @@
             }
         });
 
-        $(window).on('resize',function (){
-            $body.animate({
-                transform: 'translateX(0)'
-            });
-            
-            $mobileNavigation.hide();
+        $(window).on('resize',function (){          
             $hamburgerMenu.removeClass('is-active');
+            $('nav').css('position', 'absolute');
+            $('.mobile-navigation').remove();
         });
         
         $('.hamburger').on('click',function() {
@@ -51,7 +50,7 @@
         });
 
         $(window).scroll(function(){
-            setElementFixed('nav', 576 ,768 , {position : 'absolute', background: '#2e40a0'});
+            setElementFixed('nav', 50 ,768 , {position : 'absolute', background: '#2e40a0'});
         });
 
 //----------------------------------------------------------
@@ -59,86 +58,74 @@
         function setElementFixed(element, offset, resolutionTobeFixed, styles ={}){
             if($(window).width() <= resolutionTobeFixed){
                 if($(window).scrollTop() >= offset){
-                    $(`${element}`).css({
-                        ...styles,
-                        position : 'fixed',
-                        zIndex: 9999,                    
-                    });                
+                    
+                    if($(element).css('position') != 'fixed'){                        
+                        $(element).css({
+                            ...styles,
+                            position : 'fixed',
+                            zIndex: 9999,
+                            transform: 'translateY(-50px)',
+                            '-webkit-transform': 'translateY(-50px)'                  
+                        });
+                        
+                        $(element).animate({
+                            opacity: 1,
+                            transform: 'translateY(0)',
+                            '-webkit-transform': 'translateY(0)'
+                        })
+                    }
                 }
-                else{
-                    $(`${element}`).css({...styles,background : 'none'});
+                else{                    
+                    if($(element).css('position') != styles.position){                      
+                        $(element).css({
+                            ...styles,
+                            background : 'none',
+                            opacity: 1
+                        });
+                    }
                 }
             }
         }
 
         function animateMobileNavigation(selector){
-            $(selector).toggleClass('is-active');
-            
-            const prependHTML = 
-            `<nav class="mobile-header" style="position: absolute;top: 0;left: 0;right: 0;">
-            <div class="container">
-                <div class="brand-container">
-                    <div class="brand"></div>
-                    <div class="brand-name-container">
-                        <div class="brand-name">
-                            <h5>Pawndation</h5>
-                        </div>
-                        <small>Animal Shelter</small>
-                    </div>
-                </div>  
-                <button id="hamburger" class="hamburger hamburger--spin is-active" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-    
-                </div>      
-            </nav>`;
+            $(selector).toggleClass('is-active');            
+            const isElementActive = $(selector).hasClass('is-active');
 
-            $mobileNavigation.show();
-            $body.css('overflow', 'hidden');
-            $mobileWidth = 576;
 
-            if($(selector).hasClass('is-active')){
-                if($( window ).width() <= $mobileWidth){
-                    const width = $(window).width();
-                
-                    $mobileNavigation.css({
-                        'width' : width,
-                        'transform' : `translateX(${width}px)`,
-                        'padding-top' : '100px'
-                    });
-                    
-                    $mobileNavigation.prepend(prependHTML);                
-                    $body.animate({
-                        transform: `translateX(-${width})`,
-                    });
+            if(isElementActive){
+                $navigation.append(cloneMobileNavigation);        
+                $navigation.css('border-color', 'transparent');
 
-                
-                }else{
-                    const isMobileNavigationHasHeader = $mobileNavigation.find('nav').hasClass('mobile-header');
+                $('.mobile-navigation').css({
+                    opacity: 0,
+                    transform: 'translateY(50px)',
+                    '-webkit-transform': 'translateY(50px)'
+                });
 
-                    $mobileNavigation.css({
-                        'padding-top' : '25px'
-                    });
-                    if(isMobileNavigationHasHeader){                        
-                        $mobileNavigation = $('.mobile-header').detach();
-                    }                    
-                    $body.animate({
-                        transform: 'translateX(-250px)',                    
-                    });   
-                }             
-                
-            }else{   
-                $body.css('overflow', 'auto');                
-                $body.animate({
-                        transform: 'translateX(0)'
-                },400);
+                $('.mobile-navigation').animate({
+                    opacity: 1,
+                    transform: 'translateY(0)',
+                    '-webkit-transform': 'translateY(0)'
+                });
+            }else{                
+                //------------------------
+                $navigation.css('height', 'auto');
 
-                setTimeout(function(){
-                    $mobileNavigation.hide();                    
+                $('.mobile-navigation').css({
+                    opacity: 1,
+                    transform: 'translateY(0)'
+                });
+                $('.mobile-navigation').animate({
+                    opacity: 0,
+                    transform: 'translateY(50px)',
+                    '-webkit-transform': 'translateY(50px)'
+                });
+
+                $navigation.animate({
+                   height: $navigationHeight
                 },500);
             }
+            
         }
     });
 })(jQuery);

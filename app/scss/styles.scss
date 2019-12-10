@@ -143,34 +143,6 @@ nav{
             }
         }
     }
-
-    .mobile-navigation{
-        list-style-type: none;
-        position: fixed;
-        display: none;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 250px;
-        transform: translateX(250px);
-        background: $lightblue;
-        padding: 25px 0;
-
-        li{
-            margin: 20px;
-            a{
-                text-decoration: none;
-                font-weight: 300;
-                text-transform: uppercase;
-                padding:5px 5px;
-                color: #fff;
-
-                &.active{
-                    color: $primary-color-0;
-                }
-            }
-        }
-    }
     .button-container{
         width: 190px;
         display: flex;
