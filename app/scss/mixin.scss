@@ -56,25 +56,43 @@ $max-xs: 575.98px;
   }
 }
 
-@mixin media-breakpoint-only($device) {
+@mixin media-breakpoint-only($device, $orientation: none) {
   @if ($device == lg) {
-    @media (min-width: $min-lg) and (max-width: $max-lg) {
+    @media only screen and (min-width: $min-lg) and (max-width: $max-lg) {
       @content;
     }
   }
   @if ($device == md) {
-    @media (min-width: $min-md) and (max-width: $max-md) {
-      @content;
+    @if($orientation != none){
+      @media only screen and (min-width: $min-md) and (max-width: $max-md) and (orientation: $orientation) {
+        @content;
+      }
+    }@else{
+      @media only screen and (min-width: $min-md) and (max-width: $max-md) {
+        @content;
+      }
     }
   }
   @if ($device == sm) {
-    @media (min-width: $min-sm) and (max-width: $max-sm) {
-      @content;
+    @if($orientation != none){
+      @media only screen and (min-width: $min-sm) and (max-width: $max-sm) and (orientation: $orientation){
+        @content;
+      }
+    }@else{
+      @media only screen and (min-width: $min-sm) and (max-width: $max-sm) {
+        @content;
+      }
     }
   }
   @if ($device == xs) {
-    @media (max-width: $max-sm) {
-      @content;
+    @if($orientation != none){
+      @media only screen and (max-width: $max-sm) and (orientation: $orientation) {
+        @content;
+      }
+    }@else{
+      @media only screen and (max-width: $max-sm){
+        @content;
+      }
     }
   }
 }

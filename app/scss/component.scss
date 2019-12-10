@@ -179,6 +179,16 @@ a{
     overflow: hidden;
     padding-left: 10%;
 
+    @include media-breakpoint-down(sm){
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "detail-container"
+        "featured-items"
+        "button";
+
+        padding: 0 15px;
+    }
+
     .detail-container{
         grid-area: detail-container;
     }
@@ -186,22 +196,28 @@ a{
     .btn-container{
         grid-area: button;
         margin-top: -100px;
+        width: 100%;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        width: 100%;
+        @include media-breakpoint-down(sm){
+            width: 70%;
+            margin: auto;
+        }
+        .btn.pawn{
+            @include media-breakpoint-down(sm){
+                width: 110px;
+                height: 40px;
+            }
+        }
 
         @include media-breakpoint-down(lg){
             margin-top: -40px;
         }
         @include media-breakpoint-down(md){
             margin-top: 10px;
-        }
-
-        button{
-            height: 45px;
         }
 
     }
@@ -215,6 +231,12 @@ a{
         @include media-breakpoint-down(md){
             right: -25%;
         }
+        @include media-breakpoint-down(sm){
+            right: 0;
+            left: 0;
+
+            margin: 20px 0;
+        }
 
         img{
             width: 95%;
@@ -226,6 +248,10 @@ a{
             @include media-breakpoint-down(lg){
                 width: 100%;
                 height: 200px;
+            }
+
+            @include media-breakpoint-only(xs, landscape){
+                height: 300px;
             }
         }
 
@@ -240,6 +266,7 @@ a{
                 margin-top: 50px;
                 margin-left: -39px;
             }
+
           .owl-prev, .owl-next{
               background: #fff;
               height: 38px;
@@ -269,12 +296,39 @@ a{
               }
           }
           .owl-prev{
+            @include media-breakpoint-down(sm){
+                position: absolute;
+                top: -80px;
+                left: 11vw;
+            }
+            @include media-breakpoint-down(xs){
+                position: absolute;
+                top: -90px;
+                left: 12vw;
+            }
+            @include media-breakpoint-only(xs, landscape){
+                top: -135px;
+                left: 7vw;
+            }
               &::before{
                   transform: rotate(-90deg);
                   margin-right: 2px;
               }
           }
           .owl-next{
+            @include media-breakpoint-down(sm){
+                position: absolute;
+                top: -128px;
+                right: -108vw;
+            }
+            @include media-breakpoint-down(xs){
+                top: -140px;
+                right: -110vw;
+            }
+            @include media-breakpoint-only(xs, landscape){
+                top: -185px;
+                right: -105vw;
+            }
               &::before{
                   transform: rotate(90deg);
                   margin-left: 2px;
@@ -293,13 +347,26 @@ a{
     margin: auto;
     justify-content: center;
 
-    .card{
+    @include media-breakpoint-down(sm){
+        grid-template-columns: 100%;
+        width: 100%;
+    }
 
+    .card{
         @include box-shadow;
         @include media-breakpoint-down(md){
             &.card-img-left{
                 &.md{
                     width: 25rem;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(xs){
+            &.card-img-left{
+                &.md{
+                    width: 100%;
+                    height: 215px;
                 }
             }
         }
@@ -362,13 +429,22 @@ a{
     @include media-breakpoint-down(lg){
         flex-direction: row;
     }
+    @include media-breakpoint-down(sm){
+        flex-direction: column;
+    }
 
     .card{
-
         &.card-img-top{
             &.md{
                 @include media-breakpoint-down(md){
                     height: 380px;
+                }
+                @include media-breakpoint-down(sm){
+                    width: 100%;
+
+                    &:not(:first-child){
+                        margin-top: 20px;
+                    }
                 }
             }
         }

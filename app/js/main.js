@@ -4,6 +4,8 @@
         $body = $('body');
         $mobileNavigation = $('#mobileNavigation');
         $hamburgerMenu = $('.hamburger');
+        
+        let isMenuAlreadyChangedStyle = false;
 
         $('.featured-items').owlCarousel({
             items: 3,
@@ -39,28 +41,104 @@
             $hamburgerMenu.removeClass('is-active');
         });
         
-        $('.hamburger').click(function(){
-           $(this).toggleClass('is-active');
-           $mobileNavigation.show();
-
-            if($(this).hasClass('is-active')){
-
-                $body.animate({
-                    transform: 'translateX(-250px)'
-                });
-                $mobileNavigation.animate({
-                    transform: 'translateX(250px)'
-                });
-
-            }else{
-                
-                $body.animate({
-                    transform: 'translateX(0)'
-                });
-                $mobileNavigation.animate({
-                    transform: 'translateX(250px)'
-                });
-                }
+        $('.hamburger').on('click',function() {
+          animateMobileNavigation(this);
         });
+
+        $(document).on('click', '#hamburger', function() {
+            animateMobileNavigation();
+            $hamburgerMenu.removeClass('is-active');
+        });
+
+        $(window).scroll(function(){
+            setElementFixed('nav', 576 ,768 , {position : 'absolute', background: '#2e40a0'});
+        });
+
+//----------------------------------------------------------
+
+        function setElementFixed(element, offset, resolutionTobeFixed, styles ={}){
+            if($(window).width() <= resolutionTobeFixed){
+                if($(window).scrollTop() >= offset){
+                    $(`${element}`).css({
+                        ...styles,
+                        position : 'fixed',
+                        zIndex: 9999,                    
+                    });                
+                }
+                else{
+                    $(`${element}`).css({...styles,background : 'none'});
+                }
+            }
+        }
+
+        function animateMobileNavigation(selector){
+            $(selector).toggleClass('is-active');
+            
+            const prependHTML = 
+            `<nav class="mobile-header" style="position: absolute;top: 0;left: 0;right: 0;">
+            <div class="container">
+                <div class="brand-container">
+                    <div class="brand"></div>
+                    <div class="brand-name-container">
+                        <div class="brand-name">
+                            <h5>Pawndation</h5>
+                        </div>
+                        <small>Animal Shelter</small>
+                    </div>
+                </div>  
+                <button id="hamburger" class="hamburger hamburger--spin is-active" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+    
+                </div>      
+            </nav>`;
+
+            $mobileNavigation.show();
+            $body.css('overflow', 'hidden');
+            $mobileWidth = 576;
+
+            if($(selector).hasClass('is-active')){
+                if($( window ).width() <= $mobileWidth){
+                    const width = $(window).width();
+                
+                    $mobileNavigation.css({
+                        'width' : width,
+                        'transform' : `translateX(${width}px)`,
+                        'padding-top' : '100px'
+                    });
+                    
+                    $mobileNavigation.prepend(prependHTML);                
+                    $body.animate({
+                        transform: `translateX(-${width})`,
+                    });
+
+                
+                }else{
+                    const isMobileNavigationHasHeader = $mobileNavigation.find('nav').hasClass('mobile-header');
+
+                    $mobileNavigation.css({
+                        'padding-top' : '25px'
+                    });
+                    if(isMobileNavigationHasHeader){                        
+                        $mobileNavigation = $('.mobile-header').detach();
+                    }                    
+                    $body.animate({
+                        transform: 'translateX(-250px)',                    
+                    });   
+                }             
+                
+            }else{   
+                $body.css('overflow', 'auto');                
+                $body.animate({
+                        transform: 'translateX(0)'
+                },400);
+
+                setTimeout(function(){
+                    $mobileNavigation.hide();                    
+                },500);
+            }
+        }
     });
 })(jQuery);
