@@ -597,6 +597,11 @@ a{
 
 .mobile-navigation{
     width: 100%;
+    position: absolute;
+    list-style-type: none;
+    left: 0;
+    display: none;
+
    li{
        padding: 8px 5vw;
        background-color: $primary-color;

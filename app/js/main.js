@@ -4,11 +4,9 @@
         $body = $('body');
         $hamburgerMenu = $('.hamburger');
         $navigation = $('nav');
-        $navigationBorderColor = $('nav').css('border-bottom-color');
-        $navigationHeight = $('nav').height();
+        $mobileNavigation = $('.mobile-navigation');
+        $navigationHeight = $navigation.height();
         
-        const cloneMobileNavigation = $('.mobile-navigation').clone();        
-
         $('.featured-items').owlCarousel({
             items: 3,
             autoplay: false,
@@ -36,8 +34,9 @@
 
         $(window).on('resize',function (){          
             $hamburgerMenu.removeClass('is-active');
+            $navigationHeight = $navigation.height();
+            
             $('nav').css('position', 'absolute');
-            $('.mobile-navigation').remove();
         });
         
         $('.hamburger').on('click',function() {
@@ -90,40 +89,29 @@
         function animateMobileNavigation(selector){
             $(selector).toggleClass('is-active');            
             const isElementActive = $(selector).hasClass('is-active');
-
-
+            
             if(isElementActive){
-                $navigation.append(cloneMobileNavigation);        
-                $navigation.css('border-color', 'transparent');
 
-                $('.mobile-navigation').css({
+                $mobileNavigation.css({
                     opacity: 0,
+                    display: 'initial',
+                    top: $navigationHeight,
                     transform: 'translateY(50px)',
                     '-webkit-transform': 'translateY(50px)'
                 });
 
-                $('.mobile-navigation').animate({
+                $mobileNavigation.animate({
                     opacity: 1,
                     transform: 'translateY(0)',
                     '-webkit-transform': 'translateY(0)'
                 });
             }else{                
-                //------------------------
-                $navigation.css('height', 'auto');
+              $mobileNavigation.animate({
+                opacity: 0,                
+                transform: 'translateY(50px)',
+                display: 'none',
+              });
 
-                $('.mobile-navigation').css({
-                    opacity: 1,
-                    transform: 'translateY(0)'
-                });
-                $('.mobile-navigation').animate({
-                    opacity: 0,
-                    transform: 'translateY(50px)',
-                    '-webkit-transform': 'translateY(50px)'
-                });
-
-                $navigation.animate({
-                   height: $navigationHeight
-                },500);
             }
             
         }

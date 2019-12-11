@@ -1117,7 +1117,11 @@ a {
   transform: translate3d(0, 10px, 0) rotate(-45deg); }
 
 .mobile-navigation {
-  width: 100%; }
+  width: 100%;
+  position: absolute;
+  list-style-type: none;
+  left: 0;
+  display: none; }
   .mobile-navigation li {
     padding: 8px 5vw;
     background-color: #2e40a0; }

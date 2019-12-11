@@ -1118,7 +1118,11 @@ a {
   transform: translate3d(0, 10px, 0) rotate(-45deg); }
 
 .mobile-navigation {
-  width: 100%; }
+  width: 100%;
+  position: absolute;
+  list-style-type: none;
+  left: 0;
+  display: none; }
   .mobile-navigation li {
     padding: 8px 5vw;
     background-color: #2e40a0; }
@@ -1239,21 +1243,6 @@ nav {
           right: 0;
           bottom: -40.5px;
           border: 1px solid #fbc67a; }
-    nav .container .mobile-navigation {
-      list-style-type: none;
-      width: 100vw;
-      background: #2e40a0;
-      display: none; }
-      nav .container .mobile-navigation li {
-        margin: 20px; }
-        nav .container .mobile-navigation li a {
-          text-decoration: none;
-          font-weight: 300;
-          text-transform: uppercase;
-          padding: 5px 5px;
-          color: #fff; }
-          nav .container .mobile-navigation li a.active {
-            color: #fbc67a; }
     nav .container .button-container {
       width: 190px;
       display: flex;
