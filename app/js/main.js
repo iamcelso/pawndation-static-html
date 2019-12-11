@@ -35,8 +35,9 @@
         $(window).on('resize',function (){          
             $hamburgerMenu.removeClass('is-active');
             $navigationHeight = $navigation.height();
-            
+
             $('nav').css('position', 'absolute');
+            $mobileNavigation.css('top', $navigationHeight);
         });
         
         $('.hamburger').on('click',function() {
