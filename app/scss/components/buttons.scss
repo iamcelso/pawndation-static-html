@@ -61,7 +61,19 @@ $transform-scale: scale(.9);
             @include box-shadow(none);
             color: #ffffff;            
         }
-    }   
+    }
+    
+    &.none{
+        background: none;
+        color: $primary-color;
+        text-transform: none;
+        text-decoration: underline;
+        border: none;
+
+        &:hover{
+            transform: none;
+        }
+    }
 
     // button outline only
     &.outline{
@@ -74,8 +86,9 @@ $transform-scale: scale(.9);
     
     // Background
     &.background{
-        &.none{
-            background: none;
+        &.white{
+            background: #fff;
+            color: $gray;
         }
     }
 
@@ -134,5 +147,6 @@ $transform-scale: scale(.9);
 
     &:focus, &.active{
         outline: none;
+        box-shadow: none;
     }
 }

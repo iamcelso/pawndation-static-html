@@ -1,0 +1,903 @@
+@import './index.scss';
+
+$alternate-background: #f9f9f9;
+$margin-top-from-heading: 80px;
+$custom-button-height: 45px;
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: $font-default;
+}
+
+.sub-header-fluid{
+    width: 60%;
+    margin: auto;
+
+    @include media-breakpoint-down(md){
+        width: 80%;
+    }
+
+    @include media-breakpoint-down(sm){
+        width: 100%;
+    }
+}
+.sub-header{
+    width: 65%;
+    margin: auto;
+
+    @include media-breakpoint-down(md){
+        width: 90%;
+    }
+
+    @include media-breakpoint-down(sm){
+        width: 100%;
+    }
+}
+
+
+.btn-seemore-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .btn.pawn{
+        margin: 50px;
+        height: $custom-button-height;
+    }
+}
+
+.card.border-right, .card.border-top{
+    @include media-breakpoint-down(md){
+        border: none !important;
+    }
+}
+.content{
+    overflow-y: hidden;
+}
+
+nav{
+    width: 100%;
+    border-bottom: 1px solid $gray;
+    position: absolute;
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    .brand-container{
+        display: flex;
+        align-items: center;
+
+        margin: 30px 0;
+        .brand{
+            width: 50px;
+            height: 50px;
+            background-image: url('../assets/brand/logo-mark-white.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+        .brand-name-container{
+            margin: 0 20px;
+            margin-top: 5px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h5{
+                color: #fff;
+                margin: 0;
+            }
+        }
+    }
+
+    .menu-navigation{        
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 15%;
+
+        li{
+            position: relative;
+            margin: 0 15px;
+            padding:5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: -40.5px;
+                left: 50%;                    
+                right: 50%;
+                border: 1px solid transparent;
+                transition: $transition;
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+
+            &:hover, &.active{
+                &::before{
+                    content: "";
+                    position: absolute;
+                    left:0;
+                    right: 0;
+                    bottom: -40.5px;                   
+                    border: 1px solid $light-yellow;
+                }
+            }
+        }
+    }
+    .button-container{
+        width: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .btn.pawn{
+            width: 90px;
+            height: 45px;
+            font-size: 13px;
+
+            &:hover{
+                border-color: #fff;
+                color: #fff;
+            }
+
+            &.outline{
+                border-color: #fff;
+                color: #fff;
+                &:hover{
+                    border:none;
+                }
+            }
+        }
+    }
+    }
+}
+
+.homepage{
+    .jumbotron{
+        background-image: url('../assets/images/hero-homepage.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-position: center;
+    
+        h1{
+            font-weight: 800;
+            color: #fff;
+            width: 35%;
+        }
+        p{
+            color: #fff;
+            width: 35%;
+        }
+    
+        .button-container{
+            margin: 40px 0;
+            width: 28%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .btn.pawn{
+                height: $custom-button-height;
+    
+                &:hover{
+                    border-color: #fff;
+                    color: #fff;
+                }
+            }
+            .btn.pawn.outline{
+                border-color: #fff;
+                color: #fff;
+    
+                &:hover{
+                    border: none;
+                }
+            }
+        }
+    }
+    
+    .faq-container{
+        width: 80%;
+        height: 150px;
+        margin: auto;
+        border-radius: 10em;
+        margin-top: -9.5%;
+        background: #fff;
+        padding: 30px 60px;
+    
+        @include box-shadow;
+        .inner-container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+    }
+    
+    .about-our-shelter-container{
+        margin: 50px auto;
+    
+        .image-container{
+            position: relative;
+    
+            .shape.ellipse{
+                position: absolute;
+                left: 20px;
+                top: -5px;
+    
+                width: 350px;
+                height: 350px;                
+                background: $primary-color;
+
+                clip-path: ellipse(37% 39% at 50% 50%);
+                -webkit-clip-path: ellipse(37% 39% at 50% 50%);
+            }
+    
+            img{
+                width: 445px;
+                height: 445px;
+                object-fit: contain;
+                
+                clip-path: ellipse(32% 46% at 50% 50%);
+                -webkit-clip-path: ellipse(32% 46% at 50% 50%);
+    
+                transform: rotate(12deg);
+            }
+        }
+    
+        .media-body{
+            button{
+                margin-top: 30px;
+                text-transform: uppercase;
+    
+                height: $custom-button-height;
+            }
+        }
+    }
+    
+    .what-wedo-container{
+        padding: 40px auto;
+        padding-bottom: 150px;
+        background: $alternate-background;
+        position: relative;
+        
+        h2{
+            margin-top: 50px;
+        }
+        
+        .inner-container{
+            width: 75%;
+            margin: auto;
+    
+            .card-container{
+                margin: 0 auto;
+                margin-top: $margin-top-from-heading;
+                display: grid;
+                width: 85%;
+                grid-template-columns: repeat(2, 1fr);
+                
+                .card{            
+                    margin: auto;
+                    background: #f9f9f9;
+                    border-radius: 0;
+    
+                    .card-body{
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        padding: 2rem;
+    
+                        .icon{
+                            margin: 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .counts-container{
+            display: flex;
+            width: 80%;
+            left: 10%;
+            top: 40px;
+            position: absolute;
+
+            .circle{
+                @include box-shadow;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                padding: 30px;
+                margin: 0 auto;
+    
+                h1{
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+
+    .featured-container{
+        margin-top: 200px;
+        margin-bottom: 70px;
+    }
+
+    .news-events-container{
+        background: $alternate-background;
+        margin: 40px 0;
+        padding-top: 50px;
+        
+        hr{
+        margin-top: $margin-top-from-heading;
+        }
+
+        .button-container{
+            margin: 0 auto;
+            width: 380px;
+            margin-top: -35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            button{
+                height: $custom-button-height;
+                &:hover{
+                    background: #fff;
+                }
+            }
+            button:first-child{
+                width: 200px;
+                text-transform: none;
+            }
+        }
+
+        .events-card-container{
+            margin-top: $margin-top-from-heading;
+            padding: 0 115px;
+        }
+    }
+
+    .blog-container{
+        .card-blog-container{
+            margin-top: $margin-top-from-heading;
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    background: $primary-color;
+    
+    .inner-container{        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 50px 0;
+        
+        .links-container{
+            color: #fff;
+
+            ul{
+                list-style-type: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+                li{
+                    &:first-child{
+                        position: relative;
+                        margin-right: 20px;                       
+                    }
+                    &:not(:first-child){
+                        margin: 0 20px;
+                    }
+                    
+                    a{
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .social-media-container{
+            color: #fff;
+
+            display: flex;
+            align-items: center;    
+            i{
+                margin: 0 15px;
+                &.fa-instagram{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+//-----------------------------------------------------
+//  M E D I A   Q U E R I E S
+//-----------------------------------------------------
+@include media-breakpoint-down(lg){
+    $margin-top-from-heading: 50px;
+
+    nav{
+        .container{
+            .menu-navigation{
+                display: flex;
+            }
+            .button-container{
+                display: none;
+            }
+        }
+    }
+
+    .homepage{
+        .jumbotron{
+            h1, p{
+                width: 40%;
+            }
+            .button-container{
+                width: 33%;
+            }
+        }
+
+        .faq-container{
+            margin-top: -11%;
+        }
+
+        .about-our-shelter-container{
+            .image-container{
+                .shape.ellipse{
+                    width: 260px;
+                    height: 260px;
+    
+                    left: 25px;
+                    top: 0;
+                }
+                img{
+                    width: 355px;
+                    height: 355px;
+                }
+            }
+        }
+        
+        .what-wedo-container{
+            .inner-container{
+                .card-container{
+                    margin-top: $margin-top-from-heading;
+                }
+            }
+
+            .counts-container{
+                top: 60px;
+            }
+        }
+
+        .news-events-container{
+            hr{
+                margin-top: $margin-top-from-heading;
+            }
+
+            .events-card-container{
+                padding: 0;
+                margin-top: $margin-top-from-heading;
+            }
+        }
+
+        .blog-container{
+            .card-blog-container{
+                margin-top: $margin-top-from-heading;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md){  
+    nav{
+        .container{
+            .menu-navigation{
+                display: none;
+            }
+        }
+    }
+
+    .homepage{
+        .jumbotron{
+            h1, p{
+                width: 55%;
+            }
+            .button-container{
+                width: 45%;
+            }
+        }
+        .faq-container{
+            margin-top: -15%;
+            width: 90%;
+            padding: 20px 40px;
+        }
+        .about-our-shelter-container{
+            .image-container{
+                .shape.ellipse{
+                    width: 220px;
+                    height: 220px;
+
+                    left: -35px;
+                }
+                img{
+                    width: 280px;
+                    height: 280px;
+
+                    margin-left: -47px;
+                }
+            }
+        }
+
+        .what-wedo-container{
+            .inner-container{
+                .card-container{
+                    width: 100%;                    
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm){
+    $custom-button-height: 40px;
+    $custom-button-width: 110px;
+    $heading-width: 55%;
+    $paragraph-margin-top-from-heading:20px;
+
+    nav{
+        .container{
+            .brand-container{
+                margin: 20px 0;
+            }
+        }
+    }
+
+    .homepage{
+        .jumbotron{
+            h1, p{
+                width: 90%;
+            }
+
+            .button-container{
+                width: 70%;
+                .btn.pawn{
+                    width: $custom-button-width;
+                    height: $custom-button-height;
+                }
+            }
+        }
+
+        .faq-container{
+            height: 115px;
+            padding: 20px;
+            margin-top: -25%;
+
+            .inner-container{
+                p{
+                    overflow: hidden;
+                }
+            }
+        }
+        .about-our-shelter-container{
+            flex-direction: column;
+    
+            .image-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .shape.ellipse{
+                    position: absolute;
+                    left: 5%;
+                    top: -3%;
+                    width: 85%;
+                    height: 85%;
+
+                    clip-path: circle(39% at 50% 50%);
+                    -webkit-clip-path: circle(39% at 50% 50%);
+                }
+                img{
+                    margin-top: -50px;
+                    margin-left: 10px;
+                    width: 60%;
+                    height: 50%;
+                    transform: rotate(0);
+
+                    clip-path: circle(39% at 50% 50%);
+                    -webkit-clip-path: circle(39% at 50% 50%);
+                }
+            }
+
+            .media-body{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h2{
+                    width: $heading-width;
+                    margin: auto;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                p{
+                    text-align: center;
+                    margin-top: $paragraph-margin-top-from-heading;
+                }
+               
+            }
+        }
+
+        .what-wedo-container{
+            padding-bottom: 70px;
+
+            .inner-container{ 
+                width: 90%;              
+                p{
+                    margin-top: $paragraph-margin-top-from-heading;
+                }
+
+                .card-container{
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+
+            .counts-container{
+                width: 100%;
+                left: 0;
+                top: 20px;
+                
+                .circle{
+                    width: 100px;
+                    height: 100px;
+    
+                    &:nth-child(2){
+                        margin: 0 10px;
+                    }
+    
+                    h1{
+                        font-size: 18px;
+                        margin: 0;
+                    }
+                    .icon{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .featured-container{
+            margin-top: 100px;
+        }
+
+        .news-events-container{
+            .button-container{
+                width: 100%;
+            }
+        }
+    }
+
+    .footer{
+        .inner-container{            
+            margin: 20px 0;
+            ul{
+                flex-direction: column;
+                li{
+                    padding: 0;
+                    &:first-child{
+                        margin-right: 20px;                       
+                    }
+                    &:not(:first-child){
+                        margin: 20px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-only(md, landscape){
+    nav{
+        .container{
+            .brand-container{
+                margin: 0;
+            }
+        }
+    }
+    .homepage{
+        .jumbotron{
+            h1{
+                margin-top: 15px;
+            }
+
+            .button-container{
+                margin: 10px 0;
+            }
+        }
+
+        .faq-container{
+            height: 110px;
+            padding: 10px;
+            margin-top: -12%;
+
+            .inner-container{
+                p{
+                    overflow: hidden;
+                }
+            }
+        }
+
+        .about-our-shelter-container{
+            .image-container{
+                .shape.ellipse{
+                    left: -25px;
+                    top: -5px;
+                }
+            }
+        }
+    }
+}
+
+
+@include media-breakpoint-down(xs){
+    nav{
+        .container{
+            .brand-container{
+                margin: 20px 0;
+            }
+        }
+    }
+
+    .homepage{
+        .jumbotron{
+            h1{
+                margin-top: 30px;
+            }
+            h1,p{
+                width: 100%;
+            }
+            .button-container{
+                width: 80%;
+            }
+        }
+        .faq-container{
+            width: 100%;
+            margin-top: -28%;
+            word-break: break-all;
+        }
+
+        .about-our-shelter-container{
+            .image-container{
+                .shape.ellipse{
+                    left: 10px;
+                    top: -12px;
+                }
+            }
+            .media-body{
+                h2{
+                    width: 100%;
+                }
+            }
+        }
+
+        .what-wedo-container{
+            padding-bottom: 50px;
+
+            .counts-container{
+                top: 10px;
+
+                .circle{
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+
+        .featured-container{
+            margin-bottom: 0;
+        }
+       
+    }
+}
+
+@include media-breakpoint-only(xs, landscape){
+    nav{
+        .container{
+            .brand-container{
+                margin: 0;
+            }
+        }
+    }
+    .homepage{
+        .jumbotron{
+            h1{
+                margin-top: 50px;
+            }
+
+            .button-container{
+                width: 45%;
+                margin: 10px 0;
+            }
+        }
+        .faq-container{
+            display: none;
+        }
+        .about-our-shelter-container{
+            .image-container{
+                .shape.ellipse{
+                    width:50%;
+                    height:70%;
+                    left: 20%;
+                    top: 0;
+                }
+                img{
+                    width: 40%;
+                    height: 30%;
+                }
+            }
+        }
+
+        .what-wedo-container{
+            padding-bottom: 80px;
+            .inner-container{
+                width: 80%;
+            }
+            .counts-container{
+                top: 0;
+
+                .circle{
+                    width: 140px;
+                    height: 140px;
+
+                    .icon{
+                        display: initial;
+                        transform: scale(.5);
+                    }
+                }
+            }
+        }
+        .news-events-container {
+            .button-container{
+                width: 60%;
+            }
+        }
+    }
+    
+}
