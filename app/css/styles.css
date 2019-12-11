@@ -1555,7 +1555,7 @@ nav {
         text-align: center;
         margin-top: 20px; }
   .homepage .what-wedo-container {
-    padding-bottom: 70px; }
+    padding-bottom: 355px; }
     .homepage .what-wedo-container .inner-container {
       width: 90%; }
       .homepage .what-wedo-container .inner-container p {
@@ -1563,21 +1563,11 @@ nav {
       .homepage .what-wedo-container .inner-container .card-container {
         grid-template-columns: repeat(1, 1fr); }
     .homepage .what-wedo-container .counts-container {
-      width: 100%;
-      left: 0;
-      top: 20px; }
-      .homepage .what-wedo-container .counts-container .circle {
-        width: 100px;
-        height: 100px; }
-        .homepage .what-wedo-container .counts-container .circle:nth-child(2) {
-          margin: 0 10px; }
-        .homepage .what-wedo-container .counts-container .circle h1 {
-          font-size: 18px;
-          margin: 0; }
-        .homepage .what-wedo-container .counts-container .circle .icon {
-          display: none; }
+      flex-direction: column;
+      height: 580px;
+      justify-content: space-between; }
   .homepage .featured-container {
-    margin-top: 100px; }
+    margin-top: 320px; }
   .homepage .news-events-container .button-container {
     width: 100%; }
   .footer .inner-container {
@@ -1626,13 +1616,6 @@ nav {
     top: -12px; }
   .homepage .about-our-shelter-container .media-body h2 {
     width: 100%; }
-  .homepage .what-wedo-container {
-    padding-bottom: 50px; }
-    .homepage .what-wedo-container .counts-container {
-      top: 10px; }
-      .homepage .what-wedo-container .counts-container .circle {
-        width: 80px;
-        height: 80px; }
   .homepage .featured-container {
     margin-bottom: 0; } }
 
@@ -1658,13 +1641,5 @@ nav {
     padding-bottom: 80px; }
     .homepage .what-wedo-container .inner-container {
       width: 80%; }
-    .homepage .what-wedo-container .counts-container {
-      top: 0; }
-      .homepage .what-wedo-container .counts-container .circle {
-        width: 140px;
-        height: 140px; }
-        .homepage .what-wedo-container .counts-container .circle .icon {
-          display: initial;
-          transform: scale(0.5); }
   .homepage .news-events-container .button-container {
     width: 60%; } }

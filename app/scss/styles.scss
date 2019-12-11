@@ -666,7 +666,7 @@ nav{
         }
 
         .what-wedo-container{
-            padding-bottom: 70px;
+            padding-bottom:355px;
 
             .inner-container{ 
                 width: 90%;              
@@ -680,31 +680,14 @@ nav{
             }
 
             .counts-container{
-                width: 100%;
-                left: 0;
-                top: 20px;
-                
-                .circle{
-                    width: 100px;
-                    height: 100px;
-    
-                    &:nth-child(2){
-                        margin: 0 10px;
-                    }
-    
-                    h1{
-                        font-size: 18px;
-                        margin: 0;
-                    }
-                    .icon{
-                        display: none;
-                    }
-                }
+                flex-direction: column;
+                height: 580px;
+                justify-content: space-between;
             }
         }
 
         .featured-container{
-            margin-top: 100px;
+            margin-top: 320px;
         }
 
         .news-events-container{
@@ -816,20 +799,6 @@ nav{
                 }
             }
         }
-
-        .what-wedo-container{
-            padding-bottom: 50px;
-
-            .counts-container{
-                top: 10px;
-
-                .circle{
-                    width: 80px;
-                    height: 80px;
-                }
-            }
-        }
-
         .featured-container{
             margin-bottom: 0;
         }
@@ -879,19 +848,7 @@ nav{
             .inner-container{
                 width: 80%;
             }
-            .counts-container{
-                top: 0;
 
-                .circle{
-                    width: 140px;
-                    height: 140px;
-
-                    .icon{
-                        display: initial;
-                        transform: scale(.5);
-                    }
-                }
-            }
         }
         .news-events-container {
             .button-container{
