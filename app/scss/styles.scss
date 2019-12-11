@@ -844,12 +844,24 @@ nav{
         }
 
         .what-wedo-container{
-            padding-bottom: 80px;
+            padding-bottom: 135px;
             .inner-container{
                 width: 80%;
             }
 
+            .counts-container{
+                flex-direction: row;
+                width: 100%;
+                left: 0;
+                top: 40px;
+            }
+
         }
+
+        .featured-container{
+            margin-top: 100px;
+        }
+
         .news-events-container {
             .button-container{
                 width: 60%;

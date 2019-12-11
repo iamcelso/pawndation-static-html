@@ -1638,8 +1638,15 @@ nav {
     width: 40%;
     height: 30%; }
   .homepage .what-wedo-container {
-    padding-bottom: 80px; }
+    padding-bottom: 135px; }
     .homepage .what-wedo-container .inner-container {
       width: 80%; }
+    .homepage .what-wedo-container .counts-container {
+      flex-direction: row;
+      width: 100%;
+      left: 0;
+      top: 40px; }
+  .homepage .featured-container {
+    margin-top: 100px; }
   .homepage .news-events-container .button-container {
     width: 60%; } }
