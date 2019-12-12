@@ -350,7 +350,7 @@ a{
     @include media-breakpoint-down(sm){
         grid-template-columns: 100%;
         width: 100%;
-    }
+    }   
 
     .card{
         @include box-shadow;
@@ -363,6 +363,14 @@ a{
         }
 
         @include media-breakpoint-down(xs){
+            &.card-img-left{
+                &.md{
+                    width: 100%;
+                    height: 215px;
+                }
+            }
+        }
+        @include media-breakpoint-only(xs,landscape){
             &.card-img-left{
                 &.md{
                     width: 100%;
