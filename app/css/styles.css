@@ -1376,8 +1376,7 @@ nav {
           nav .container .button-container .btn.pawn.outline:hover {
             border: none; }
 
-.homepage .jumbotron {
-  background-image: url("../assets/images/hero-homepage.png");
+.jumbotron {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -1386,29 +1385,32 @@ nav {
   align-items: center;
   justify-content: center;
   background-position: center; }
-  .homepage .jumbotron h1 {
+  .jumbotron h1 {
     font-weight: 800;
     color: #fff;
     width: 35%; }
-  .homepage .jumbotron p {
+  .jumbotron p {
     color: #fff;
     width: 35%; }
-  .homepage .jumbotron .button-container {
+  .jumbotron .button-container {
     margin: 40px 0;
     width: 28%;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    .homepage .jumbotron .button-container .btn.pawn {
+    .jumbotron .button-container .btn.pawn {
       height: 45px; }
-      .homepage .jumbotron .button-container .btn.pawn:hover {
+      .jumbotron .button-container .btn.pawn:hover {
         border-color: #fff;
         color: #fff; }
-    .homepage .jumbotron .button-container .btn.pawn.outline {
+    .jumbotron .button-container .btn.pawn.outline {
       border-color: #fff;
       color: #fff; }
-      .homepage .jumbotron .button-container .btn.pawn.outline:hover {
+      .jumbotron .button-container .btn.pawn.outline:hover {
         border: none; }
+
+.homepage .jumbotron {
+  background-image: url("../assets/images/hero-homepage.png"); }
 
 .homepage .faq-container {
   width: 80%;
@@ -1545,9 +1547,9 @@ nav {
     display: flex; }
   nav .container .button-container {
     display: none; }
-  .homepage .jumbotron h1, .homepage .jumbotron p {
+  .jumbotron h1, .jumbotron p {
     width: 40%; }
-  .homepage .jumbotron .button-container {
+  .jumbotron .button-container {
     width: 33%; }
   .homepage .faq-container {
     margin-top: -11%; }
@@ -1566,9 +1568,9 @@ nav {
 @media (max-width: 991.98px) {
   nav .container .menu-navigation {
     display: none; }
-  .homepage .jumbotron h1, .homepage .jumbotron p {
+  .jumbotron h1, .jumbotron p {
     width: 55%; }
-  .homepage .jumbotron .button-container {
+  .jumbotron .button-container {
     width: 45%; }
   .homepage .faq-container {
     margin-top: -15%;
@@ -1580,11 +1582,11 @@ nav {
 @media (max-width: 767.98px) {
   nav .container .brand-container {
     margin: 20px 0; }
-  .homepage .jumbotron h1, .homepage .jumbotron p {
+  .jumbotron h1, .jumbotron p {
     width: 90%; }
-  .homepage .jumbotron .button-container {
+  .jumbotron .button-container {
     width: 70%; }
-    .homepage .jumbotron .button-container .btn.pawn {
+    .jumbotron .button-container .btn.pawn {
       width: 110px;
       height: 40px; }
   .homepage .faq-container {
@@ -1623,9 +1625,9 @@ nav {
 @media only screen and (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
   nav .container .brand-container {
     margin: 0; }
-  .homepage .jumbotron h1 {
+  .jumbotron h1 {
     margin-top: 15px; }
-  .homepage .jumbotron .button-container {
+  .jumbotron .button-container {
     margin: 10px 0; }
   .homepage .faq-container {
     height: 110px;
@@ -1637,11 +1639,11 @@ nav {
 @media (max-width: 575.98px) {
   nav .container .brand-container {
     margin: 20px 0; }
-  .homepage .jumbotron h1 {
+  .jumbotron h1 {
     margin-top: 30px; }
-  .homepage .jumbotron h1, .homepage .jumbotron p {
+  .jumbotron h1, .jumbotron p {
     width: 100%; }
-  .homepage .jumbotron .button-container {
+  .jumbotron .button-container {
     width: 80%; }
   .homepage .faq-container {
     width: 100%;
@@ -1653,9 +1655,9 @@ nav {
 @media only screen and (max-width: 767.98px) and (orientation: landscape) {
   nav .container .brand-container {
     margin: 0; }
-  .homepage .jumbotron h1 {
+  .jumbotron h1 {
     margin-top: 50px; }
-  .homepage .jumbotron .button-container {
+  .jumbotron .button-container {
     width: 45%;
     margin: 10px 0; }
   .homepage .faq-container {
