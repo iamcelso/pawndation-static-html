@@ -239,48 +239,6 @@ nav{
         }
         
     }
-    
-    .about-our-shelter-container{
-        margin: 50px auto;
-    
-        .image-container{
-            position: relative;
-    
-            .shape.ellipse{
-                position: absolute;
-                left: 20px;
-                top: -5px;
-    
-                width: 350px;
-                height: 350px;                
-                background: $primary-color;
-
-                clip-path: ellipse(37% 39% at 50% 50%);
-                -webkit-clip-path: ellipse(37% 39% at 50% 50%);
-            }
-    
-            img{
-                width: 445px;
-                height: 445px;
-                object-fit: contain;
-                
-                clip-path: ellipse(32% 46% at 50% 50%);
-                -webkit-clip-path: ellipse(32% 46% at 50% 50%);
-    
-                transform: rotate(12deg);
-            }
-        }
-    
-        .media-body{
-            button{
-                margin-top: 30px;
-                text-transform: uppercase;
-    
-                height: $custom-button-height;
-            }
-        }
-    }
-    
     .what-wedo-container{
         padding: 40px auto;
         padding-bottom: 150px;
@@ -476,22 +434,6 @@ nav{
         .faq-container{
             margin-top: -11%;
         }
-
-        .about-our-shelter-container{
-            .image-container{
-                .shape.ellipse{
-                    width: 260px;
-                    height: 260px;
-    
-                    left: 25px;
-                    top: 0;
-                }
-                img{
-                    width: 355px;
-                    height: 355px;
-                }
-            }
-        }
         
         .what-wedo-container{
             .inner-container{
@@ -547,23 +489,6 @@ nav{
             width: 90%;
             padding: 20px 40px;
         }
-        .about-our-shelter-container{
-            .image-container{
-                .shape.ellipse{
-                    width: 220px;
-                    height: 220px;
-
-                    left: -35px;
-                }
-                img{
-                    width: 280px;
-                    height: 280px;
-
-                    margin-left: -47px;
-                }
-            }
-        }
-
         .what-wedo-container{
             .inner-container{
                 .card-container{
@@ -614,57 +539,6 @@ nav{
                 }
             }
         }
-        .about-our-shelter-container{
-            flex-direction: column;
-    
-            .image-container{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                .shape.ellipse{
-                    position: absolute;
-                    left: 5%;
-                    top: -3%;
-                    width: 85%;
-                    height: 85%;
-
-                    clip-path: circle(39% at 50% 50%);
-                    -webkit-clip-path: circle(39% at 50% 50%);
-                }
-                img{
-                    margin-top: -50px;
-                    margin-left: 10px;
-                    width: 60%;
-                    height: 50%;
-                    transform: rotate(0);
-
-                    clip-path: circle(39% at 50% 50%);
-                    -webkit-clip-path: circle(39% at 50% 50%);
-                }
-            }
-
-            .media-body{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-
-                h2{
-                    width: $heading-width;
-                    margin: auto;
-                    align-items: center;
-                    text-align: center;
-                }
-
-                p{
-                    text-align: center;
-                    margin-top: $paragraph-margin-top-from-heading;
-                }
-               
-            }
-        }
-
         .what-wedo-container{
             padding-bottom:355px;
 
@@ -746,15 +620,6 @@ nav{
                 }
             }
         }
-
-        .about-our-shelter-container{
-            .image-container{
-                .shape.ellipse{
-                    left: -25px;
-                    top: -5px;
-                }
-            }
-        }
     }
 }
 
@@ -785,20 +650,6 @@ nav{
             margin-top: -28%;
             word-break: break-all;
         }
-
-        .about-our-shelter-container{
-            .image-container{
-                .shape.ellipse{
-                    left: 10px;
-                    top: -12px;
-                }
-            }
-            .media-body{
-                h2{
-                    width: 100%;
-                }
-            }
-        }
         .featured-container{
             margin-bottom: 0;
         }
@@ -828,21 +679,6 @@ nav{
         .faq-container{
             display: none;
         }
-        .about-our-shelter-container{
-            .image-container{
-                .shape.ellipse{
-                    width:50%;
-                    height:70%;
-                    left: 20%;
-                    top: 0;
-                }
-                img{
-                    width: 40%;
-                    height: 30%;
-                }
-            }
-        }
-
         .what-wedo-container{
             padding-bottom: 135px;
             .inner-container{

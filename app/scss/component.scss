@@ -619,3 +619,141 @@ a{
        }
    } 
 }
+
+.pawn.media{
+    &.image-left-align{
+        margin: 50px auto;
+        @include media-breakpoint-down(sm){
+            flex-direction: column;
+        } 
+        .image-container{
+            position: relative;
+            @include media-breakpoint-down(sm){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .shape.ellipse{
+                position: absolute;
+                left: 20px;
+                top: -5px;
+    
+                width: 350px;
+                height: 350px;                
+                background: $primary-color;
+
+                clip-path: ellipse(37% 39% at 50% 50%);
+                -webkit-clip-path: ellipse(37% 39% at 50% 50%);
+
+                @include media-breakpoint-down(lg){
+                    width: 260px;
+                    height: 260px;
+    
+                    left: 25px;
+                    top: 0;
+                }
+                @include media-breakpoint-down(md){
+                    width: 220px;
+                    height: 220px;
+                    left: -35px;
+                }
+                @include media-breakpoint-down(sm){
+                    position: absolute;
+                    left: 5%;
+                    top: -3%;
+                    width: 85%;
+                    height: 85%;
+
+                    clip-path: circle(39% at 50% 50%);
+                    -webkit-clip-path: circle(39% at 50% 50%);
+                }
+                @include media-breakpoint-only(md, landscape){
+                    left: -25px;
+                    top: -5px;
+                }
+                @include media-breakpoint-down(xs){
+                    left: 10px;
+                    top: -12px;
+                }
+                @include media-breakpoint-only(xs, landscape){
+                    width:50%;
+                    height:70%;
+                    left: 20%;
+                    top: 0;                    
+                }
+            }
+    
+            img{
+                width: 445px;
+                height: 445px;
+                object-fit: contain;
+                
+                clip-path: ellipse(32% 46% at 50% 50%);
+                -webkit-clip-path: ellipse(32% 46% at 50% 50%);
+    
+                transform: rotate(12deg);
+                @include media-breakpoint-down(lg){
+                    width: 355px;
+                    height: 355px;
+                }
+                @include media-breakpoint-down(md){
+                    width: 280px;
+                    height: 280px;
+                    display:  none;
+
+                    margin-left: -47px;                    
+                }
+                @include media-breakpoint-down(sm){
+                    margin-top: -50px;
+                    margin-left: 10px;
+                    width: 60%;
+                    height: 50%;
+                    transform: rotate(0);
+
+                    clip-path: circle(39% at 50% 50%);
+                    -webkit-clip-path: circle(39% at 50% 50%);
+                }
+                @include media-breakpoint-only(xs, landscape){
+                    width: 40%;
+                    height: 30%;
+                }
+                
+            }
+        }
+    
+        .media-body{
+            @include media-breakpoint-down(sm){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h2{
+                    @include media-breakpoint-down(sm){
+                        width: 55%;
+                        margin: auto;
+                        align-items: center;
+                        text-align: center;
+                    }
+
+                    @include media-breakpoint-down(xs){
+                        width: 100%;
+                    }
+                }
+                p{
+                    @include media-breakpoint-down(sm){
+                        text-align: center;
+                        margin-top: 20px;
+                    }
+                }
+            }
+            button{
+                margin-top: 30px;
+                text-transform: uppercase;
+    
+                height: 45px;
+            }
+        }        
+    }
+}

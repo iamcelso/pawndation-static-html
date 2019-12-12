@@ -1134,3 +1134,112 @@ a {
     .mobile-navigation li.active, .mobile-navigation li:hover {
       background-color: #5a70e3;
       color: #2e40a0; }
+
+.pawn.media.image-left-align {
+  margin: 50px auto; }
+  @media (max-width: 767.98px) {
+    .pawn.media.image-left-align {
+      flex-direction: column; } }
+  .pawn.media.image-left-align .image-container {
+    position: relative; }
+    @media (max-width: 767.98px) {
+      .pawn.media.image-left-align .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center; } }
+    .pawn.media.image-left-align .image-container .shape.ellipse {
+      position: absolute;
+      left: 20px;
+      top: -5px;
+      width: 350px;
+      height: 350px;
+      background: #2e40a0;
+      clip-path: ellipse(37% 39% at 50% 50%);
+      -webkit-clip-path: ellipse(37% 39% at 50% 50%); }
+      @media (max-width: 1199.98px) {
+        .pawn.media.image-left-align .image-container .shape.ellipse {
+          width: 260px;
+          height: 260px;
+          left: 25px;
+          top: 0; } }
+      @media (max-width: 991.98px) {
+        .pawn.media.image-left-align .image-container .shape.ellipse {
+          width: 220px;
+          height: 220px;
+          left: -35px; } }
+      @media (max-width: 767.98px) {
+        .pawn.media.image-left-align .image-container .shape.ellipse {
+          position: absolute;
+          left: 5%;
+          top: -3%;
+          width: 85%;
+          height: 85%;
+          clip-path: circle(39% at 50% 50%);
+          -webkit-clip-path: circle(39% at 50% 50%); } }
+      @media only screen and (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
+        .pawn.media.image-left-align .image-container .shape.ellipse {
+          left: -25px;
+          top: -5px; } }
+      @media (max-width: 575.98px) {
+        .pawn.media.image-left-align .image-container .shape.ellipse {
+          left: 10px;
+          top: -12px; } }
+      @media only screen and (max-width: 767.98px) and (orientation: landscape) {
+        .pawn.media.image-left-align .image-container .shape.ellipse {
+          width: 50%;
+          height: 70%;
+          left: 20%;
+          top: 0; } }
+    .pawn.media.image-left-align .image-container img {
+      width: 445px;
+      height: 445px;
+      object-fit: contain;
+      clip-path: ellipse(32% 46% at 50% 50%);
+      -webkit-clip-path: ellipse(32% 46% at 50% 50%);
+      transform: rotate(12deg); }
+      @media (max-width: 1199.98px) {
+        .pawn.media.image-left-align .image-container img {
+          width: 355px;
+          height: 355px; } }
+      @media (max-width: 991.98px) {
+        .pawn.media.image-left-align .image-container img {
+          width: 280px;
+          height: 280px;
+          display: none;
+          margin-left: -47px; } }
+      @media (max-width: 767.98px) {
+        .pawn.media.image-left-align .image-container img {
+          margin-top: -50px;
+          margin-left: 10px;
+          width: 60%;
+          height: 50%;
+          transform: rotate(0);
+          clip-path: circle(39% at 50% 50%);
+          -webkit-clip-path: circle(39% at 50% 50%); } }
+      @media only screen and (max-width: 767.98px) and (orientation: landscape) {
+        .pawn.media.image-left-align .image-container img {
+          width: 40%;
+          height: 30%; } }
+  @media (max-width: 767.98px) {
+    .pawn.media.image-left-align .media-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; } }
+  @media (max-width: 767.98px) and (max-width: 767.98px) {
+    .pawn.media.image-left-align .media-body h2 {
+      width: 55%;
+      margin: auto;
+      align-items: center;
+      text-align: center; } }
+  @media (max-width: 767.98px) and (max-width: 575.98px) {
+    .pawn.media.image-left-align .media-body h2 {
+      width: 100%; } }
+  @media (max-width: 767.98px) and (max-width: 767.98px) {
+    .pawn.media.image-left-align .media-body p {
+      text-align: center;
+      margin-top: 20px; } }
+  .pawn.media.image-left-align .media-body button {
+    margin-top: 30px;
+    text-transform: uppercase;
+    height: 45px; }
