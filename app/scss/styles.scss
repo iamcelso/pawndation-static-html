@@ -355,6 +355,27 @@ nav{
     }
 }
 
+.about-page{
+    .jumbotron{
+        background-image: url('../assets/images/hero-about.jpg');
+    }
+    .built-kennel-container{
+        background: $alternate-background;
+
+        .pawn.media.image-left-align{
+            .image-container{
+                img{
+                    clip-path: none;
+                    transform: none;
+                    width: 65%;
+                    height: auto;
+                }
+            } 
+        }        
+    }
+    
+}
+
 .footer{
     width: 100%;
     background: $primary-color;

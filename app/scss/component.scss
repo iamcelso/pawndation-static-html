@@ -646,22 +646,20 @@ a{
     
             .shape.ellipse{
                 position: absolute;
-                left: 20px;
-                top: -5px;
+                left: 70px;
+                top: 25px;
     
-                width: 350px;
-                height: 350px;                
+                width: 280px;
+                height: 280px;                
                 background: $primary-color;
-
-                clip-path: ellipse(37% 39% at 50% 50%);
-                -webkit-clip-path: ellipse(37% 39% at 50% 50%);
+                border-radius: 100em;     
 
                 @include media-breakpoint-down(lg){
-                    width: 260px;
-                    height: 260px;
+                    width: 200px;
+                    height: 200px;
     
-                    left: 25px;
-                    top: 0;
+                    left: 40px;
+                    top: 25px;
                 }
                 @include media-breakpoint-down(md){
                     width: 220px;
