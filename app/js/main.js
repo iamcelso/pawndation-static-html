@@ -120,15 +120,17 @@
         }
 
         function animteCountingNumbers(selector){
-            if($(selector).isInViewport() && !isCountingNumberAlreadyShow){
-                isCountingNumberAlreadyShow = true;
-                $(selector).children().each(function(){
-                    const element = $(this).find('[data-count]')
-                    let count  = element.text();                   
-                    count = parseInt(count);
+            if($(document).find(selector).length > 0 ){
+                if($(selector).isInViewport() && !isCountingNumberAlreadyShow){
+                    isCountingNumberAlreadyShow = true;
+                    $(selector).children().each(function(){
+                        const element = $(this).find('[data-count]')
+                        let count  = element.text();                   
+                        count = parseInt(count);
 
-                    animateValue(element,1 , count, 2000);
-                });
+                        animateValue(element,1 , count, 2000);
+                    });
+                }
             }
         }
 
