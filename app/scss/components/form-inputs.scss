@@ -134,7 +134,7 @@ select{display: none;}
     padding: 0;
     list-style: none;
     border-radius: .5em;
-    @include box-shadow("true", (hAlign: 0, vAlign: 0, blur: 12px, spread: -5px), .5);
+    @include box-shadow("box-shadow", (hAlign: 0, vAlign: 0, blur: 12px, spread: -5px), .5);
 
     li {
       margin: 0;

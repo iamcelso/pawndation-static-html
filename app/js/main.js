@@ -35,6 +35,27 @@
             }
         });
 
+        $('.custom-pawn.image-slider').owlCarousel({
+            items: 3,
+            autoplay: false,
+            loop: true,
+            nav: true,
+            dots: false,
+            center: true,
+            lazyLoad:true,
+            mouseDrag: false,
+            responsive:{
+                0:{
+                    items:1,
+                    mouseDrag: true
+                },
+                1199.98:{
+                    items: 3,
+                    mouseDrag: false
+                }
+            }
+        });
+
         $(window).on('resize',function (){          
             $navigationHeight = $navigation.height();
 

@@ -97,8 +97,8 @@ $max-xs: 575.98px;
   }
 }
 
-@mixin box-shadow($none:"", $box-shadow: (hAlign: 0, vAlign: 0, blur: 12px, spread: -5px), $opacity: .7) {
-  @if($none !="none"){
+@mixin box-shadow($shadow:"box-shadow", $box-shadow: (hAlign: 0, vAlign: 0, blur: 12px, spread: -5px), $opacity: .7) {
+  @if($shadow =="box-shadow"){
     -webkit-box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,$opacity);
     -moz-box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,$opacity);
     box-shadow: map-get($map: $box-shadow, $key:hAlign ) map-get($map: $box-shadow, $key:vAlign) map-get($map: $box-shadow, $key: blur) map-get($map: $box-shadow, $key:spread) rgba(0,0,0,$opacity);

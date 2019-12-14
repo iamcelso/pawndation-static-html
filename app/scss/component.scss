@@ -85,21 +85,20 @@ a{
           border-radius: 1em;
           transition: $transition;
 
-          @include box-shadow("true", (hAlign: 0, vAlign: 0, blur: 10px, spread: 2px), .5);
+          @include box-shadow("box-shadow", (hAlign: 0, vAlign: 0, blur: 10px, spread: 2px), .5);
         }          
       }
       img{
           margin: auto;
-          margin-top: 8%;
-          width: 90%;
-          height: 80%;
+          width: 100%;
+          height: 95%;
           object-fit: cover;
       }
   }
 
   .owl-nav{
       position: absolute;
-      top: 45%;
+      top: 42%;
       left: 28.5%;
       width: 43%;
       display: flex;
@@ -299,12 +298,11 @@ a{
             @include media-breakpoint-down(sm){
                 position: absolute;
                 top: -80px;
-                left: 11vw;
             }
             @include media-breakpoint-down(xs){
                 position: absolute;
                 top: -90px;
-                left: 12vw;
+                left: 11vw;
             }
             @include media-breakpoint-only(xs, landscape){
                 top: -135px;
@@ -319,11 +317,10 @@ a{
             @include media-breakpoint-down(sm){
                 position: absolute;
                 top: -128px;
-                right: -108vw;
             }
             @include media-breakpoint-down(xs){
                 top: -140px;
-                right: -110vw;
+                right: -108vw;
             }
             @include media-breakpoint-only(xs, landscape){
                 top: -185px;
