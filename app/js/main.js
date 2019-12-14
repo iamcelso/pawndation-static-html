@@ -8,7 +8,8 @@
         $navigationHeight = $navigation.height();
 
         let isCountingNumberAlreadyShow = false;
-        
+        const baseUrl =  window.location.origin;
+
         $('.featured-items').owlCarousel({
             items: 3,
             autoplay: false,
@@ -54,6 +55,10 @@
             setElementFixed('nav', 50 ,768 , {position : 'absolute', background: '#2e40a0'});
             animteCountingNumbers('#countingNumberContainer');
         });
+
+        $('.brand-container').click(function(){
+            $(location).attr('href', baseUrl);
+        })
 
 //----------------------------------------------------------
 

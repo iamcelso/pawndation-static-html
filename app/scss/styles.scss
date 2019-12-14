@@ -73,6 +73,7 @@ nav{
     .brand-container{
         display: flex;
         align-items: center;
+        cursor: pointer;
 
         margin: 30px 0;
         .brand{
@@ -363,14 +364,21 @@ nav{
         background: $alternate-background;
 
         .pawn.media.image-left-align{
+            padding: 80px 0;
             .image-container{
+                .shape.ellipse{
+                    left: 205px;
+                    top: 25px;
+                }
+
                 img{
+                    margin-left: 100px;
                     clip-path: none;
                     transform: none;
-                    width: 65%;
+                    width: 50%;
                     height: auto;
                 }
-            } 
+            }
         }        
     }
     

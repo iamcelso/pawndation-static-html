@@ -1148,7 +1148,8 @@ a {
     .pawn.media.image-left-align {
       flex-direction: column; } }
   .pawn.media.image-left-align .image-container {
-    position: relative; }
+    position: relative;
+    z-index: 9; }
     @media (max-width: 767.98px) {
       .pawn.media.image-left-align .image-container {
         display: flex;
@@ -1158,6 +1159,7 @@ a {
       position: absolute;
       left: 70px;
       top: 25px;
+      z-index: -1;
       width: 280px;
       height: 280px;
       background: #2e40a0;
@@ -1304,6 +1306,7 @@ nav {
     nav .container .brand-container {
       display: flex;
       align-items: center;
+      cursor: pointer;
       margin: 30px 0; }
       nav .container .brand-container .brand {
         width: 50px;
@@ -1513,11 +1516,17 @@ nav {
 
 .about-page .built-kennel-container {
   background: #f9f9f9; }
-  .about-page .built-kennel-container .pawn.media.image-left-align .image-container img {
-    clip-path: none;
-    transform: none;
-    width: 65%;
-    height: auto; }
+  .about-page .built-kennel-container .pawn.media.image-left-align {
+    padding: 80px 0; }
+    .about-page .built-kennel-container .pawn.media.image-left-align .image-container .shape.ellipse {
+      left: 205px;
+      top: 25px; }
+    .about-page .built-kennel-container .pawn.media.image-left-align .image-container img {
+      margin-left: 100px;
+      clip-path: none;
+      transform: none;
+      width: 50%;
+      height: auto; }
 
 .footer {
   width: 100%;

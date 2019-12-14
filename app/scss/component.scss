@@ -638,6 +638,7 @@ a{
         } 
         .image-container{
             position: relative;
+            z-index: 9;
             @include media-breakpoint-down(sm){
                 display: flex;
                 align-items: center;
@@ -648,6 +649,7 @@ a{
                 position: absolute;
                 left: 70px;
                 top: 25px;
+                z-index: -1;
     
                 width: 280px;
                 height: 280px;                
