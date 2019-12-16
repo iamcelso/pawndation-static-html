@@ -1562,7 +1562,8 @@ nav {
       -moz-box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.7);
       box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.7);
       height: auto;
-      border-radius: 1em; }
+      border-radius: 1em;
+      padding: 15px 10px; }
 
 .about-page .people-behind-shelter-container {
   margin-top: -50px;
