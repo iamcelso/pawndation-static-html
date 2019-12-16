@@ -3,6 +3,7 @@
 $alternate-background: #f9f9f9;
 $margin-top-from-heading: 80px;
 $custom-button-height: 45px;
+$container-bottom-padding: 50px;
 
 html, body{
     margin: 0;
@@ -402,26 +403,67 @@ nav{
         overflow: hidden;
         margin-top: 100px;
     }
+
+    .enrichment-programs-container{
+        padding: 0 150px;
+        .card-container{
+            margin-top: $margin-top-from-heading;
+            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+            
+    
+            .card{
+                @include box-shadow('box-shadow',
+                (hAlign: 0, vAlign: 0, blur: 15px, spread: -10px));
+                height: auto;
+                border-radius: 1em;
+
+            }
+        }
+    }
+    
+    .people-behind-shelter-container{
+        margin-top: -50px;
+        padding: 100px 155px;
+        background: $alternate-background;
+
+      .user-headshot-container{
+          margin-top: $margin-top-from-heading;
+
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-row-gap: 40px;
+      }
+    }
+
+    .partner-container{
+        padding-bottom: $container-bottom-padding;
+
+        .partner-list-container{
+            margin-top: $margin-top-from-heading;
+            padding: 0 50px;
+           
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+           
+            justify-items: center;
+            grid-row-gap: 60px;
+
+            img{
+                width: 120px;
+                height: 120px;
+                
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
     
 }
 
-.enrichment-programs-container{
-    .card-container{
-        margin-top: $margin-top-from-heading;
-        
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 15px;
-        
 
-        .card{
-            @include box-shadow('box-shadow',
-            (hAlign: 0, vAlign: 0, blur: 15px, spread: -10px));
-            height: 150px;
-            border-radius: 1em;
-        }
-    }
-}
 
 .footer{
     width: 100%;

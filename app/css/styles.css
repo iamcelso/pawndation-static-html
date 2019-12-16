@@ -1249,6 +1249,19 @@ a {
     text-transform: uppercase;
     height: 45px; }
 
+.user-headshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .user-headshot img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100em;
+    object-fit: cover;
+    object-position: top center;
+    margin: 10px 0; }
+
 html, body {
   margin: 0;
   padding: 0; }
@@ -1537,17 +1550,44 @@ nav {
   overflow: hidden;
   margin-top: 100px; }
 
-.enrichment-programs-container .card-container {
-  margin-top: 80px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 15px; }
-  .enrichment-programs-container .card-container .card {
-    -webkit-box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.7);
-    -moz-box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.7);
-    height: 150px;
-    border-radius: 1em; }
+.about-page .enrichment-programs-container {
+  padding: 0 150px; }
+  .about-page .enrichment-programs-container .card-container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px; }
+    .about-page .enrichment-programs-container .card-container .card {
+      -webkit-box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.7);
+      height: auto;
+      border-radius: 1em; }
+
+.about-page .people-behind-shelter-container {
+  margin-top: -50px;
+  padding: 100px 155px;
+  background: #f9f9f9; }
+  .about-page .people-behind-shelter-container .user-headshot-container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 40px; }
+
+.about-page .partner-container {
+  padding-bottom: 50px; }
+  .about-page .partner-container .partner-list-container {
+    margin-top: 80px;
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    grid-row-gap: 60px; }
+    .about-page .partner-container .partner-list-container img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      object-position: center; }
 
 .footer {
   width: 100%;
