@@ -583,6 +583,32 @@ nav{
             }
         }
     }
+    .about-page{
+        .built-kennel-container{
+            .pawn.media.image-left-align{
+                .image-container{
+                    .shape.ellipse{
+                        left: 150px;
+                        top: 20px;
+
+                        width: 240px;
+                        height: 240px;
+                    }
+                    div{
+                        width: 450px;
+                        img{
+                            margin-left: 50px;
+                            width: 65%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .enrichment-programs-container{
+            padding: 0 100px;
+        }
+    }
 }
 
 @include media-breakpoint-down(md){  
@@ -615,6 +641,36 @@ nav{
                     width: 100%;                    
                 }
             }
+        }
+    }
+
+    .about-page{
+        .built-kennel-container{
+            .pawn.media.image-left-align{
+                .image-container{
+                    .shape.ellipse{
+                        left: 80px;
+                        width: 190px;
+                        height: 190px;
+                    }
+                    div{
+                        width: 350px;
+                        img{
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .enrichment-programs-container{
+            padding:  0;
+        }
+        .people-behind-shelter-container{
+            padding: 100px 0;
+            .partner-list-container{
+                padding: 0;
+            }
+
         }
     }
 }

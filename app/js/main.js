@@ -49,7 +49,7 @@
                     items:1,
                     mouseDrag: true
                 },
-                1199.98:{
+                768:{
                     items: 3,
                     mouseDrag: false
                 }

@@ -691,15 +691,18 @@ a {
 .border-left {
   border-left: 1px solid #e2e2e2 !important; }
 
-.custom-pawn.owl-carousel {
+.custom-pawn.image-slider {
   position: relative; }
-  .custom-pawn.owl-carousel .owl-item {
+  @media (max-width: 991.98px) {
+    .custom-pawn.image-slider {
+      overflow-y: hidden; } }
+  .custom-pawn.image-slider .owl-item {
     width: 300px;
     height: 350px;
     padding: .7% 0; }
-    .custom-pawn.owl-carousel .owl-item.active.center {
+    .custom-pawn.image-slider .owl-item.active.center {
       z-index: 999; }
-      .custom-pawn.owl-carousel .owl-item.active.center img {
+      .custom-pawn.image-slider .owl-item.active.center img {
         margin: auto;
         width: 120%;
         height: 110%;
@@ -711,19 +714,30 @@ a {
         -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
         -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
         box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5); }
-    .custom-pawn.owl-carousel .owl-item img {
+        @media (max-width: 991.98px) {
+          .custom-pawn.image-slider .owl-item.active.center img {
+            margin-top: -5%;
+            height: 95%; } }
+    .custom-pawn.image-slider .owl-item img {
       margin: auto;
       width: 100%;
       height: 95%;
       object-fit: cover; }
-  .custom-pawn.owl-carousel .owl-nav {
+      @media (max-width: 991.98px) {
+        .custom-pawn.image-slider .owl-item img {
+          height: 80%;
+          margin-top: 5%; } }
+  .custom-pawn.image-slider .owl-nav {
     position: absolute;
     top: 42%;
     left: 28.5%;
     width: 43%;
     display: flex;
     justify-content: space-between; }
-    .custom-pawn.owl-carousel .owl-nav .owl-prev, .custom-pawn.owl-carousel .owl-nav .owl-next {
+    @media (max-width: 991.98px) {
+      .custom-pawn.image-slider .owl-nav {
+        top: 40%; } }
+    .custom-pawn.image-slider .owl-nav .owl-prev, .custom-pawn.image-slider .owl-nav .owl-next {
       background: #fff;
       height: 38px;
       width: 38px;
@@ -736,7 +750,7 @@ a {
       -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
       -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
       box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7); }
-      .custom-pawn.owl-carousel .owl-nav .owl-prev::before, .custom-pawn.owl-carousel .owl-nav .owl-next::before {
+      .custom-pawn.image-slider .owl-nav .owl-prev::before, .custom-pawn.image-slider .owl-nav .owl-next::before {
         position: absolute;
         content: "";
         width: 18px;
@@ -745,10 +759,10 @@ a {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center; }
-      .custom-pawn.owl-carousel .owl-nav .owl-prev:hover, .custom-pawn.owl-carousel .owl-nav .owl-next:hover {
+      .custom-pawn.image-slider .owl-nav .owl-prev:hover, .custom-pawn.image-slider .owl-nav .owl-next:hover {
         background: #2e40a0;
         transform: scale(0.9); }
-        .custom-pawn.owl-carousel .owl-nav .owl-prev:hover::before, .custom-pawn.owl-carousel .owl-nav .owl-next:hover::before {
+        .custom-pawn.image-slider .owl-nav .owl-prev:hover::before, .custom-pawn.image-slider .owl-nav .owl-next:hover::before {
           content: "";
           width: 18px;
           height: 18px;
@@ -757,12 +771,12 @@ a {
           background-repeat: no-repeat;
           background-position: center;
           background-image: url("../assets/icons/up-arrow-white.svg"); }
-      .custom-pawn.owl-carousel .owl-nav .owl-prev span, .custom-pawn.owl-carousel .owl-nav .owl-next span {
+      .custom-pawn.image-slider .owl-nav .owl-prev span, .custom-pawn.image-slider .owl-nav .owl-next span {
         display: none; }
-    .custom-pawn.owl-carousel .owl-nav .owl-prev::before {
+    .custom-pawn.image-slider .owl-nav .owl-prev::before {
       transform: rotate(-90deg);
       margin-right: 2px; }
-    .custom-pawn.owl-carousel .owl-nav .owl-next::before {
+    .custom-pawn.image-slider .owl-nav .owl-next::before {
       transform: rotate(90deg);
       margin-left: 2px; }
 
@@ -1169,9 +1183,9 @@ a {
           top: 25px; } }
       @media (max-width: 991.98px) {
         .pawn.media.image-left-align .image-container .shape.ellipse {
-          width: 220px;
-          height: 220px;
-          left: -35px; } }
+          width: 190px;
+          height: 190px;
+          left: -5px; } }
       @media (max-width: 767.98px) {
         .pawn.media.image-left-align .image-container .shape.ellipse {
           position: absolute;
@@ -1261,6 +1275,10 @@ a {
     object-fit: cover;
     object-position: top center;
     margin: 10px 0; }
+    @media (max-width: 1199.98px) {
+      .user-headshot img {
+        width: 180px;
+        height: 180px; } }
 
 .header-container {
   margin: 20; }
