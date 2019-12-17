@@ -1691,22 +1691,20 @@ nav {
     padding: 20px 40px; }
   .homepage .what-wedo-container .inner-container .card-container {
     width: 100%; }
-  .about-page {
-    overflow: hidden; }
-    .about-page .built-kennel-container .pawn.media.image-left-align .image-container .shape.ellipse {
-      left: 80px;
-      width: 190px;
-      height: 190px; }
-    .about-page .built-kennel-container .pawn.media.image-left-align .image-container div {
-      width: 350px; }
-      .about-page .built-kennel-container .pawn.media.image-left-align .image-container div img {
-        margin-left: 0; }
-    .about-page .enrichment-programs-container {
-      padding: 0; }
-    .about-page .people-behind-shelter-container {
-      padding: 100px 0; }
-      .about-page .people-behind-shelter-container .partner-list-container {
-        padding: 0; } }
+  .about-page .built-kennel-container .pawn.media.image-left-align .image-container .shape.ellipse {
+    left: 80px;
+    width: 190px;
+    height: 190px; }
+  .about-page .built-kennel-container .pawn.media.image-left-align .image-container div {
+    width: 350px; }
+    .about-page .built-kennel-container .pawn.media.image-left-align .image-container div img {
+      margin-left: 0; }
+  .about-page .enrichment-programs-container {
+    padding: 0; }
+  .about-page .people-behind-shelter-container {
+    padding: 100px 0; }
+    .about-page .people-behind-shelter-container .partner-list-container {
+      padding: 0; } }
 
 @media (max-width: 767.98px) {
   nav .container .brand-container {
