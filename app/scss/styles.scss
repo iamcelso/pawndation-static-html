@@ -330,7 +330,6 @@ nav{
             }
             button:first-child{
                 width: 200px;
-                text-transform: none;
             }
         }
 
@@ -458,10 +457,38 @@ nav{
 
 .news-events-page{
     .jumbotron{
-        background-image: url('../assets/images/hero-about.jpg');
+        background-image: url('../assets/images/hero-news-events.png');
         h1{
             width: auto;
         }
+    }
+
+    .events-container{
+        margin-top: 70px;
+        
+        .button-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            margin-top: -35px;
+    
+            button{
+                @include box-shadow;
+                height: $custom-button-height;
+                width: auto;
+                padding: 0 40px;
+    
+                &:nth-child(2){
+                    margin: 0 20px;
+                }
+            }
+        }
+
+        .events-card-container{
+            margin-top: $margin-top-from-heading;
+            padding: 0 115px;
+        }  
     }
 }
 
@@ -810,6 +837,31 @@ nav{
                 grid-template-columns: repeat(2, 1fr);
                 padding: 0;
             }
+        }
+    }
+
+    .news-events-page{
+        .events-container{
+            .button-container{
+                button{                
+                    width: 70px;
+                    padding: 0;
+
+                    &.btn.pawn{
+                        font-size: 12px;
+                    }
+
+                    &:nth-child(2){
+                        width: auto;
+                        margin: 0 10px;
+                        padding: 0 15px;
+                    }  
+                }
+            }
+            .events-card-container{
+                margin-top: $margin-top-from-heading;
+                padding: 0;
+            }   
         }
     }
 

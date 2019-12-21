@@ -234,8 +234,7 @@ nav {
       .homepage .news-events-container .button-container button:hover {
         background: #fff; }
     .homepage .news-events-container .button-container button:first-child {
-      width: 200px;
-      text-transform: none; }
+      width: 200px; }
   .homepage .news-events-container .events-card-container {
     margin-top: 80px;
     padding: 0 115px; }
@@ -314,9 +313,29 @@ nav {
       object-position: center; }
 
 .news-events-page .jumbotron {
-  background-image: url("../assets/images/hero-about.jpg"); }
+  background-image: url("../assets/images/hero-news-events.png"); }
   .news-events-page .jumbotron h1 {
     width: auto; }
+
+.news-events-page .events-container {
+  margin-top: 70px; }
+  .news-events-page .events-container .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px; }
+    .news-events-page .events-container .button-container button {
+      -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+      height: 45px;
+      width: auto;
+      padding: 0 40px; }
+      .news-events-page .events-container .button-container button:nth-child(2) {
+        margin: 0 20px; }
+  .news-events-page .events-container .events-card-container {
+    margin-top: 80px;
+    padding: 0 115px; }
 
 .footer {
   width: 100%;
@@ -477,6 +496,18 @@ nav {
     grid-template-columns: 1fr; }
   .about-page .partner-container .partner-list-container {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0; }
+  .news-events-page .events-container .button-container button {
+    width: 70px;
+    padding: 0; }
+    .news-events-page .events-container .button-container button.btn.pawn {
+      font-size: 12px; }
+    .news-events-page .events-container .button-container button:nth-child(2) {
+      width: auto;
+      margin: 0 10px;
+      padding: 0 15px; }
+  .news-events-page .events-container .events-card-container {
+    margin-top: 50px;
     padding: 0; }
   .footer .inner-container {
     margin: 20px 0; }
