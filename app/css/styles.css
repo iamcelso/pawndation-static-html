@@ -8,22 +8,10 @@ html, body {
 .sub-header-fluid {
   width: 60%;
   margin: auto; }
-  @media (max-width: 991.98px) {
-    .sub-header-fluid {
-      width: 80%; } }
-  @media (max-width: 767.98px) {
-    .sub-header-fluid {
-      width: 100%; } }
 
 .sub-header {
   width: 65%;
   margin: auto; }
-  @media (max-width: 991.98px) {
-    .sub-header {
-      width: 90%; } }
-  @media (max-width: 767.98px) {
-    .sub-header {
-      width: 100%; } }
 
 h2.heading {
   margin-top: 50px; }
@@ -36,10 +24,6 @@ h2.heading {
   .btn-seemore-container .btn.pawn {
     margin: 50px;
     height: 45px; }
-
-@media (max-width: 991.98px) {
-  .card.border-right, .card.border-top {
-    border: none !important; } }
 
 nav {
   width: 100%;
@@ -136,6 +120,10 @@ nav {
   align-items: center;
   justify-content: center;
   background-position: center; }
+  .jumbotron.half-size {
+    height: 75vh; }
+    .jumbotron.half-size h1 {
+      margin-top: 10vh; }
   .jumbotron h1 {
     font-weight: 800;
     color: #fff;
@@ -256,10 +244,7 @@ nav {
   margin-top: 80px; }
 
 .about-page .jumbotron {
-  height: 75vh;
   background-image: url("../assets/images/hero-about.jpg"); }
-  .about-page .jumbotron h1 {
-    margin-top: 10vh; }
 
 .about-page .built-kennel-container {
   background: #f9f9f9; }
@@ -399,6 +384,12 @@ nav {
     padding: 0 100px; } }
 
 @media (max-width: 991.98px) {
+  .sub-header-fluid {
+    width: 80%; }
+  .sub-header {
+    width: 90%; }
+  .card.border-right, .card.border-top {
+    border: none !important; }
   nav .container .menu-navigation {
     display: none; }
   .jumbotron h1, .jumbotron p {
@@ -425,6 +416,10 @@ nav {
       padding: 0; } }
 
 @media (max-width: 767.98px) {
+  .sub-header-fluid {
+    width: 100%; }
+  .sub-header {
+    width: 100%; }
   nav .container .brand-container {
     margin: 20px 0; }
   .jumbotron h1, .jumbotron p {
@@ -506,6 +501,8 @@ nav {
 @media (max-width: 575.98px) {
   nav .container .brand-container {
     margin: 20px 0; }
+  .jumbotron.half-size {
+    height: 100vh; }
   .jumbotron h1 {
     margin-top: 30px; }
   .jumbotron h1, .jumbotron p {

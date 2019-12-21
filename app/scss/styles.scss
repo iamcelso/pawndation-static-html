@@ -21,26 +21,10 @@ html, body{
 .sub-header-fluid{
     width: 60%;
     margin: auto;
-
-    @include media-breakpoint-down(md){
-        width: 80%;
-    }
-
-    @include media-breakpoint-down(sm){
-        width: 100%;
-    }
 }
 .sub-header{
     width: 65%;
     margin: auto;
-
-    @include media-breakpoint-down(md){
-        width: 90%;
-    }
-
-    @include media-breakpoint-down(sm){
-        width: 100%;
-    }
 }
 
 h2.heading{
@@ -57,12 +41,6 @@ h2.heading{
     .btn.pawn{
         margin: 50px;
         height: $custom-button-height;
-    }
-}
-
-.card.border-right, .card.border-top{
-    @include media-breakpoint-down(md){
-        border: none !important;
     }
 }
 
@@ -192,6 +170,14 @@ nav{
     align-items: center;
     justify-content: center;
     background-position: center;
+
+    &.half-size{
+        height: $jumbotron-height;
+        
+        h1{
+            margin-top: $jumbotron-h1-margin-top;
+        }
+    }
 
     h1{
         font-weight: 800;
@@ -363,12 +349,7 @@ nav{
 
 .about-page{
     .jumbotron{
-        height: $jumbotron-height;
         background-image: url('../assets/images/hero-about.jpg');
-        
-        h1{
-            margin-top: $jumbotron-h1-margin-top;
-        }
     }
     .built-kennel-container{
         background: $alternate-background;
@@ -623,7 +604,17 @@ nav{
     }
 }
 
-@include media-breakpoint-down(md){  
+@include media-breakpoint-down(md){
+    .sub-header-fluid{
+        width: 80%;
+    }
+    .sub-header{
+        width: 90%;
+    }
+
+    .card.border-right, .card.border-top{
+        border: none !important;
+    }
     nav{
         .container{
             .menu-navigation{
@@ -690,6 +681,13 @@ nav{
     $heading-width: 55%;
     $paragraph-margin-top-from-heading:20px;
     $margin-top-from-heading: 50px;
+
+    .sub-header-fluid{
+        width: 100%;
+    }
+    .sub-header{
+        width: 100%;
+    }
 
     nav{
         .container{
@@ -871,6 +869,9 @@ nav{
 
     
     .jumbotron{
+        &.half-size{
+            height: $jumbotron-height;
+        }
         h1{
             margin-top: 30px;
         }
