@@ -1410,6 +1410,9 @@ nav {
           nav .container .button-container .btn.pawn.outline:hover {
             border: none; }
 
+.content {
+  overflow: hidden; }
+
 .jumbotron {
   background-repeat: no-repeat;
   background-size: cover;
@@ -1540,6 +1543,7 @@ nav {
   margin-top: 80px; }
 
 .about-page .jumbotron {
+  height: 75vh;
   background-image: url("../assets/images/hero-about.jpg"); }
 
 .about-page .built-kennel-container {
@@ -1803,7 +1807,9 @@ nav {
     margin-top: -28%;
     word-break: break-all; }
   .homepage .featured-container {
-    margin-bottom: 0; } }
+    margin-bottom: 0; }
+  .about-page .jumbotron {
+    height: 100vh; } }
 
 @media only screen and (max-width: 767.98px) and (orientation: landscape) {
   nav .container .brand-container {

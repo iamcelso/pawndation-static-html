@@ -4,6 +4,7 @@ $alternate-background: #f9f9f9;
 $margin-top-from-heading: 80px;
 $custom-button-height: 45px;
 $container-bottom-padding: 50px;
+$jumbotron-height: 75vh;
 
 html, body{
     margin: 0;
@@ -172,6 +173,10 @@ nav{
         }
     }
     }
+}
+
+.content{
+    overflow: hidden;
 }
 
 
@@ -354,7 +359,9 @@ nav{
 
 .about-page{
     .jumbotron{
+        height: $jumbotron-height;
         background-image: url('../assets/images/hero-about.jpg');
+        
     }
     .built-kennel-container{
         background: $alternate-background;
@@ -852,6 +859,7 @@ nav{
 
 
 @include media-breakpoint-down(xs){
+    $jumbotron-height: 100vh;
     nav{
         .container{
             .brand-container{
@@ -883,6 +891,11 @@ nav{
             margin-bottom: 0;
         }
        
+    }
+    .about-page{
+        .jumbotron{
+            height: $jumbotron-height;
+        }
     }
 }
 
