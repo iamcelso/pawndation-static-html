@@ -737,6 +737,10 @@ a {
     @media (max-width: 991.98px) {
       .custom-pawn.image-slider .owl-nav {
         top: 40%; } }
+    @media (max-width: 767.98px) {
+      .custom-pawn.image-slider .owl-nav {
+        width: 96%;
+        left: 2%; } }
     .custom-pawn.image-slider .owl-nav .owl-prev, .custom-pawn.image-slider .owl-nav .owl-next {
       background: #fff;
       height: 38px;
@@ -1323,9 +1327,6 @@ h2.heading {
   .card.border-right, .card.border-top {
     border: none !important; } }
 
-.content {
-  overflow-y: hidden; }
-
 nav {
   width: 100%;
   border-bottom: 1px solid #868686;
@@ -1652,6 +1653,8 @@ nav {
     width: 40%; }
   .jumbotron .button-container {
     width: 33%; }
+  .content {
+    overflow-x: hidden; }
   .homepage .faq-container {
     margin-top: -11%; }
   .homepage .what-wedo-container .inner-container .card-container {
@@ -1739,6 +1742,28 @@ nav {
     padding-bottom: 30px; }
   .homepage .news-events-container .button-container {
     width: 100%; }
+  .about-page .built-kennel-container .pawn.media.image-left-align .image-container {
+    margin-top: 50px;
+    padding-bottom: 50px; }
+    .about-page .built-kennel-container .pawn.media.image-left-align .image-container .shape.ellipse {
+      top: -60px;
+      width: 220px;
+      height: 220px; }
+    .about-page .built-kennel-container .pawn.media.image-left-align .image-container div {
+      width: 60%;
+      margin: auto; }
+      .about-page .built-kennel-container .pawn.media.image-left-align .image-container div img {
+        width: 100%;
+        margin-left: 0; }
+  .about-page .enrichment-programs-container .card-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    grid-template-columns: 1fr; }
+  .about-page .people-behind-shelter-container .user-headshot-container {
+    grid-template-columns: 1fr; }
+  .about-page .partner-container .partner-list-container {
+    grid-template-columns: 1fr; }
   .footer .inner-container {
     margin: 20px 0; }
     .footer .inner-container ul {

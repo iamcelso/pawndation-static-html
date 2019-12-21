@@ -61,9 +61,6 @@ h2.heading{
         border: none !important;
     }
 }
-.content{
-    overflow-y: hidden;
-}
 
 nav{
     width: 100%;
@@ -547,6 +544,10 @@ nav{
             width: 33%;
         }
     }
+    
+    .content{
+        overflow-x: hidden;
+    }
 
     .homepage{
 
@@ -680,6 +681,7 @@ nav{
     $custom-button-width: 110px;
     $heading-width: 55%;
     $paragraph-margin-top-from-heading:20px;
+    $margin-top-from-heading: 50px;
 
     nav{
         .container{
@@ -744,6 +746,54 @@ nav{
         .news-events-container{
             .button-container{
                 width: 100%;
+            }
+        }
+    }
+
+    .about-page{
+        .built-kennel-container{
+            .pawn.media.image-left-align{
+                .image-container{
+                    margin-top: 50px;
+                    padding-bottom: $container-bottom-padding;
+
+                    .shape.ellipse{
+                        top: -60px;
+                        width: 220px;
+                        height: 220px;
+                    }
+                    div{
+                        width: 60%;
+                        margin: auto;
+
+                        img{
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                    }         
+                }
+            }
+        }
+
+        .enrichment-programs-container{
+            .card-container{
+                width: 80%;
+                margin: auto;
+                margin-top: $margin-top-from-heading;
+
+                grid-template-columns: 1fr;
+            }  
+        }
+
+        .people-behind-shelter-container{
+            .user-headshot-container{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .partner-container{
+            .partner-list-container{
+                grid-template-columns: 1fr;
             }
         }
     }

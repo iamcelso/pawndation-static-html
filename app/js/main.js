@@ -61,6 +61,19 @@
 
             $('nav').css('position', 'absolute');
             $mobileNavigation.css('top', $navigationHeight);
+            
+            $('#builtOurKennelTabs').removeChildren({
+                 0:{
+                    display: 3
+                 },
+                 359:{
+                    display: 768
+                 },
+                 992: {
+                     display: 8
+                 }
+            });
+
         });
         
         $('.hamburger').on('click',function() {
@@ -168,6 +181,22 @@
             const viewportBottom = viewportTop + $(window).height();
             return elementBottom > viewportTop && elementTop < viewportBottom;
           };
+
+        $.fn.removeChildren = function(...value){
+            const settings = value[0];
+            const elements  = $(this).children();
+
+            objectKeys = Object.keys(settings);
+
+            for(i = 0; i < objectKeys.length; i++){
+                if(+objectKeys[i] <= $(window).width()){
+                    const itemsToShow = elements.filter(`:lt(${settings[objectKeys[i]].display})`);
+
+                    itemsToShow.show();
+                    elements.not(itemsToShow).hide();
+                }
+            }
+        }
 
         function animateValue(element, start, end, duration) {
             const range = end - start;

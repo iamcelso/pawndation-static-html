@@ -736,6 +736,10 @@ a {
     @media (max-width: 991.98px) {
       .custom-pawn.image-slider .owl-nav {
         top: 40%; } }
+    @media (max-width: 767.98px) {
+      .custom-pawn.image-slider .owl-nav {
+        width: 96%;
+        left: 2%; } }
     .custom-pawn.image-slider .owl-nav .owl-prev, .custom-pawn.image-slider .owl-nav .owl-next {
       background: #fff;
       height: 38px;
