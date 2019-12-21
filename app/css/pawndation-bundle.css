@@ -11,6 +11,9 @@
   font-size: 14px;
   color: #ffffff;
   text-transform: uppercase; }
+  @media (max-width: 767.98px) {
+    .btn.pawn {
+      font-size: 12px; } }
   .btn.pawn.active, .btn.pawn:hover {
     color: #868686;
     background: none;

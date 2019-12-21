@@ -44,6 +44,10 @@ $transform-scale: scale(.9);
     font-size: 14px;
     color: #ffffff;
     text-transform: uppercase;
+
+    @include media-breakpoint-down(sm){
+        font-size: 12px;
+    }
     &.active, &:hover{
         @include btn-pawn-outline;
         transform: $transform-scale;
