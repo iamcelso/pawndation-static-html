@@ -8,7 +8,8 @@
         $navigationHeight = $navigation.height();
 
         let isCountingNumberAlreadyShow = false;
-        
+        const baseUrl =  window.location.origin;
+
         $('.featured-items').owlCarousel({
             items: 3,
             autoplay: false,
@@ -34,11 +35,45 @@
             }
         });
 
+        $('.custom-pawn.image-slider').owlCarousel({
+            items: 3,
+            autoplay: false,
+            loop: true,
+            nav: true,
+            dots: false,
+            center: true,
+            lazyLoad:true,
+            mouseDrag: false,
+            responsive:{
+                0:{
+                    items:1,
+                    mouseDrag: true
+                },
+                768:{
+                    items: 3,
+                    mouseDrag: false
+                }
+            }
+        });
+
         $(window).on('resize',function (){          
             $navigationHeight = $navigation.height();
 
             $('nav').css('position', 'absolute');
             $mobileNavigation.css('top', $navigationHeight);
+            
+            $('#builtOurKennelTabs').removeChildren({
+                 0:{
+                    display: 3
+                 },
+                 359:{
+                    display: 768
+                 },
+                 992: {
+                     display: 8
+                 }
+            });
+
         });
         
         $('.hamburger').on('click',function() {
@@ -54,6 +89,10 @@
             setElementFixed('nav', 50 ,768 , {position : 'absolute', background: '#2e40a0'});
             animteCountingNumbers('#countingNumberContainer');
         });
+
+        $('.brand-container').click(function(){
+            $(location).attr('href', baseUrl);
+        })
 
 //----------------------------------------------------------
 
@@ -120,15 +159,17 @@
         }
 
         function animteCountingNumbers(selector){
-            if($(selector).isInViewport() && !isCountingNumberAlreadyShow){
-                isCountingNumberAlreadyShow = true;
-                $(selector).children().each(function(){
-                    const element = $(this).find('[data-count]')
-                    let count  = element.text();                   
-                    count = parseInt(count);
+            if($(document).find(selector).length > 0 ){
+                if($(selector).isInViewport() && !isCountingNumberAlreadyShow){
+                    isCountingNumberAlreadyShow = true;
+                    $(selector).children().each(function(){
+                        const element = $(this).find('[data-count]')
+                        let count  = element.text();                   
+                        count = parseInt(count);
 
-                    animateValue(element,1 , count, 2000);
-                });
+                        animateValue(element,1 , count, 2000);
+                    });
+                }
             }
         }
 
@@ -140,6 +181,22 @@
             const viewportBottom = viewportTop + $(window).height();
             return elementBottom > viewportTop && elementTop < viewportBottom;
           };
+
+        $.fn.removeChildren = function(...value){
+            const settings = value[0];
+            const elements  = $(this).children();
+
+            objectKeys = Object.keys(settings);
+
+            for(i = 0; i < objectKeys.length; i++){
+                if(+objectKeys[i] <= $(window).width()){
+                    const itemsToShow = elements.filter(`:lt(${settings[objectKeys[i]].display})`);
+
+                    itemsToShow.show();
+                    elements.not(itemsToShow).hide();
+                }
+            }
+        }
 
         function animateValue(element, start, end, duration) {
             const range = end - start;
