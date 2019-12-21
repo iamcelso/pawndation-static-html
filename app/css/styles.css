@@ -500,8 +500,6 @@ nav {
   .news-events-page .events-container .button-container button {
     width: 70px;
     padding: 0; }
-    .news-events-page .events-container .button-container button.btn.pawn {
-      font-size: 12px; }
     .news-events-page .events-container .button-container button:nth-child(2) {
       width: auto;
       margin: 0 10px;
