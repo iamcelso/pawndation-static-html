@@ -1769,7 +1769,8 @@ nav {
   .about-page .people-behind-shelter-container .user-headshot-container {
     grid-template-columns: 1fr; }
   .about-page .partner-container .partner-list-container {
-    grid-template-columns: 1fr; }
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0; }
   .footer .inner-container {
     margin: 20px 0; }
     .footer .inner-container ul {
