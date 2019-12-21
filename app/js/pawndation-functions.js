@@ -1,20 +1,21 @@
 let isCountingNumberAlreadyShow = false;
 
 
-function setElementFixed(element, offset, resolutionTobeFixed, styles ={}){
-    if($(window).width() <= resolutionTobeFixed){
-        if($(window).scrollTop() >= offset){
-            
-            if($(element).css('position') != 'fixed'){                        
-                $(element).css({
-                    ...styles,
+$.fn.setElementFixed = function(...value){
+    const settings = value[0]
+
+    if($(window).width() <= settings.resolutionTobeFixed){
+        if($(window).scrollTop() >= settings.offset){
+            if($(this).css('position') != 'fixed'){                        
+                $(this).css({
+                    ...settings.style,
                     position : 'fixed',
                     zIndex: 9999,
                     transform: 'translateY(-50px)',
                     '-webkit-transform': 'translateY(-50px)'                  
                 });
                 
-                $(element).animate({
+                $(this).animate({
                     opacity: 1,
                     transform: 'translateY(0)',
                     '-webkit-transform': 'translateY(0)'
@@ -22,9 +23,9 @@ function setElementFixed(element, offset, resolutionTobeFixed, styles ={}){
             }
         }
         else{                    
-            if($(element).css('position') != styles.position){                      
-                $(element).css({
-                    ...styles,
+            if($(this).css('position') != settings.style.position){                      
+                $(this).css({
+                    ...settings.style,
                     background : 'none',
                     opacity: 1
                 });
@@ -63,11 +64,11 @@ function animateMobileNavigation(selector){
     
 }
 
-function animteCountingNumbers(selector){
-    if($(document).find(selector).length > 0 ){
-        if($(selector).isInViewport() && !isCountingNumberAlreadyShow){
+$.fn.animteCountingNumbers = function(){
+    if($(document).find(this).length > 0 ){
+        if($(this).isInViewport() && !isCountingNumberAlreadyShow){
             isCountingNumberAlreadyShow = true;
-            $(selector).children().each(function(){
+            $(this).children().each(function(){
                 const element = $(this).find('[data-count]')
                 let count  = element.text();                   
                 count = parseInt(count);

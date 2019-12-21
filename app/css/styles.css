@@ -313,6 +313,11 @@ nav {
       object-fit: contain;
       object-position: center; }
 
+.news-events-page .jumbotron {
+  background-image: url("../assets/images/hero-about.jpg"); }
+  .news-events-page .jumbotron h1 {
+    width: auto; }
+
 .footer {
   width: 100%;
   background: #2e40a0; }
