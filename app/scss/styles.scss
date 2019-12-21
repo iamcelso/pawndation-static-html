@@ -1,4 +1,6 @@
-@import './index.scss';
+@import './variable.scss';
+@import './mixin.scss';
+
 
 $alternate-background: #f9f9f9;
 $margin-top-from-heading: 80px;
@@ -203,14 +205,15 @@ nav{
 
     .button-container{
         margin: 40px 0;
-        width: 28%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: inline-block;
 
         .btn.pawn{
             height: $custom-button-height;
 
+            &:last-child{
+                margin: 0 20px;
+            }
+            
             &:hover{
                 border-color: #fff;
                 color: #fff;
@@ -551,9 +554,6 @@ nav{
         h1, p{
             width: 40%;
         }
-        .button-container{
-            width: 33%;
-        }
     }
     
     .content{
@@ -637,9 +637,6 @@ nav{
         h1, p{
             width: 55%;
         }
-        .button-container{
-            width: 45%;
-        }
     }
     .homepage{
         .faq-container{
@@ -708,7 +705,6 @@ nav{
         }
 
         .button-container{
-            width: 70%;
             .btn.pawn{
                 width: $custom-button-width;
                 height: $custom-button-height;
@@ -881,9 +877,6 @@ nav{
         h1,p{
             width: 100%;
         }
-        .button-container{
-            width: 80%;
-        }
     }
 
     .homepage{
@@ -922,7 +915,6 @@ nav{
         }
 
         .button-container{
-            width: 45%;
             margin: 10px 0;
         }
     }
