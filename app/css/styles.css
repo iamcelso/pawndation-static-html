@@ -1545,6 +1545,8 @@ nav {
 .about-page .jumbotron {
   height: 75vh;
   background-image: url("../assets/images/hero-about.jpg"); }
+  .about-page .jumbotron h1 {
+    margin-top: 10vh; }
 
 .about-page .built-kennel-container {
   background: #f9f9f9; }
@@ -1809,7 +1811,9 @@ nav {
   .homepage .featured-container {
     margin-bottom: 0; }
   .about-page .jumbotron {
-    height: 100vh; } }
+    height: 100vh; }
+    .about-page .jumbotron h1 {
+      margin-top: 0; } }
 
 @media only screen and (max-width: 767.98px) and (orientation: landscape) {
   nav .container .brand-container {
