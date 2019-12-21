@@ -337,6 +337,12 @@ nav {
     margin-top: 80px;
     padding: 0 115px; }
 
+.blog-page .jumbotron {
+  background-image: url("../assets/images/hero-blog.png"); }
+
+.blog-page .blog-container {
+  margin-top: 80px; }
+
 .footer {
   width: 100%;
   background: #2e40a0; }

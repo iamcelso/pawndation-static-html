@@ -492,6 +492,16 @@ nav{
     }
 }
 
+.blog-page{
+    .jumbotron{
+        background-image: url('../assets/images/hero-blog.png');
+    }
+
+    .blog-container{
+        margin-top: $margin-top-from-heading;
+    }
+}
+
 
 
 .footer{
