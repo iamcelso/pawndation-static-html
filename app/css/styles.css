@@ -89,7 +89,7 @@ nav {
           left: 0;
           right: 0;
           bottom: -40.5px;
-          border: 1px solid color(primary-1); }
+          border: 1px solid #fbc67a; }
     nav .container .button-container {
       width: 190px;
       display: flex;
@@ -312,6 +312,11 @@ nav {
       height: 120px;
       object-fit: contain;
       object-position: center; }
+
+.news-events-page .jumbotron {
+  background-image: url("../assets/images/hero-about.jpg"); }
+  .news-events-page .jumbotron h1 {
+    width: auto; }
 
 .footer {
   width: 100%;

@@ -85,8 +85,13 @@
         });
 
         $(window).scroll(function(){
-            setElementFixed('nav', 50 ,768 , {position : 'absolute', background: '#2e40a0'});
-            animteCountingNumbers('#countingNumberContainer');
+            $('nav').setElementFixed({
+                offset: 50,
+                resolutionTobeFixed: 768,
+                style: {position : 'absolute', background: '#2e40a0'}
+            })
+
+            $('#countingNumberContainer').animteCountingNumbers();
         });
 
         $('.brand-container').click(function(){
