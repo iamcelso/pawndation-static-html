@@ -20,7 +20,8 @@
 .pawn.progress-form {
   width: 100%;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
   .pawn.progress-form .progress-item {
     display: flex;
     align-items: center;

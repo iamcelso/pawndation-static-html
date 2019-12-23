@@ -392,7 +392,8 @@
 .pawn.progress-form {
   width: 100%;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
   .pawn.progress-form .progress-item {
     display: flex;
     align-items: center;
@@ -1307,6 +1308,37 @@ a {
         width: 180px;
         height: 180px; } }
 
+.inline-fields-form .fields-inline-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  @media (max-width: 767.98px) {
+    .inline-fields-form .fields-inline-container {
+      flex-direction: column; } }
+  .inline-fields-form .fields-inline-container input, .inline-fields-form .fields-inline-container select {
+    width: 49%; }
+    @media (max-width: 767.98px) {
+      .inline-fields-form .fields-inline-container input, .inline-fields-form .fields-inline-container select {
+        width: 100%;
+        margin: 2% 0; } }
+  .inline-fields-form .fields-inline-container:not(:last-child) {
+    margin: 2% 0; }
+
+.inline-fields-form textarea {
+  width: 100%; }
+
+.inline-fields-form .submit-container {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media (max-width: 767.98px) {
+    .inline-fields-form .submit-container {
+      margin-top: 20px; } }
+  .inline-fields-form .submit-container input[type=submit] {
+    height: 45px; }
+
 .contact-form-container {
   width: 100%;
   margin: auto;
@@ -1322,33 +1354,3 @@ a {
   @media (max-width: 767.98px) {
     .contact-form-container {
       padding: 20px; } }
-  .contact-form-container .contact-form {
-    margin-top: 50px; }
-    .contact-form-container .contact-form .fields-inline-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      @media (max-width: 767.98px) {
-        .contact-form-container .contact-form .fields-inline-container {
-          flex-direction: column; } }
-      .contact-form-container .contact-form .fields-inline-container input {
-        width: 49%; }
-        @media (max-width: 767.98px) {
-          .contact-form-container .contact-form .fields-inline-container input {
-            width: 100%;
-            margin: 2% 0; } }
-      .contact-form-container .contact-form .fields-inline-container:not(:last-child) {
-        margin: 2% 0; }
-    .contact-form-container .contact-form textarea {
-      width: 100%; }
-    .contact-form-container .contact-form .submit-container {
-      width: 100%;
-      margin-top: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      @media (max-width: 767.98px) {
-        .contact-form-container .contact-form .submit-container {
-          margin-top: 20px; } }
-      .contact-form-container .contact-form .submit-container input[type=submit] {
-        height: 45px; }

@@ -822,6 +822,51 @@ a{
     }
 }
 
+.inline-fields-form{
+    .fields-inline-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include media-breakpoint-down(sm){
+            flex-direction: column;
+        }
+
+        input, select{
+            width: 49%;
+            @include media-breakpoint-down(sm){
+                width: 100%;
+                margin: 2% 0;
+            }
+        }
+
+        &:not(:last-child){
+            margin: 2% 0;
+        }
+    }
+
+    textarea{
+        width: 100%;
+    }
+    
+    .submit-container{
+        width: 100%;
+        margin-top: 40px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include media-breakpoint-down(sm){
+            margin-top: 20px;
+        }
+
+        input[type=submit]{
+            height: 45px;
+        }
+    }
+}
+
 
 .contact-form-container{
     width: 100%;
@@ -838,52 +883,5 @@ a{
 
     @include media-breakpoint-down(sm){
         padding: 20px;
-    }
-
-    .contact-form{
-        margin-top: 50px;
-
-        .fields-inline-container{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            @include media-breakpoint-down(sm){
-                flex-direction: column;
-            }
-
-            input{
-                width: 49%;
-                @include media-breakpoint-down(sm){
-                    width: 100%;
-                    margin: 2% 0;
-                }
-            }
-
-            &:not(:last-child){
-                margin: 2% 0;
-            }
-        }
-
-        textarea{
-            width: 100%;
-        }
-        
-        .submit-container{
-            width: 100%;
-            margin-top: 40px;
-            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include media-breakpoint-down(sm){
-                margin-top: 20px;
-            }
-
-            input[type=submit]{
-                height: 45px;
-            }
-        }
     }
 }

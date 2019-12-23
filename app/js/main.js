@@ -96,7 +96,11 @@
 
         $('.brand-container').click(function(){
             $(location).attr('href', baseUrl);
-        })
+        });
+
+        $('.btn.pawn.adopt').click(function(){
+           $(location).attr('href',`${baseUrl}${$(this).data('link')}`);
+        });
         
     });
 })(jQuery);

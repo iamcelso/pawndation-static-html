@@ -107,9 +107,30 @@ nav {
           color: #fff; }
           nav .container .button-container .btn.pawn.outline:hover {
             border: none; }
+  nav.brand-navy {
+    border-bottom: none;
+    -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7); }
+    nav.brand-navy .container .brand-container .brand {
+      background-image: url("../assets/brand/logo-mark.svg"); }
+    nav.brand-navy .container .brand-container h5, nav.brand-navy .container .brand-container .brand-name-container {
+      color: #2e40a0; }
+    nav.brand-navy .container .menu-navigation li a {
+      color: #000; }
+    nav.brand-navy .container .button-container .btn.pawn.outline {
+      color: #868686;
+      border-color: #fbc67a; }
+      nav.brand-navy .container .button-container .btn.pawn.outline:hover, nav.brand-navy .container .button-container .btn.pawn.outline.focus {
+        color: #fff; }
+    nav.brand-navy .container .button-container .btn.pawn:hover, nav.brand-navy .container .button-container .btn.pawn.focus {
+      color: #868686;
+      border-color: #fbc67a; }
 
 .content {
   overflow: hidden; }
+  .content.padding-top120 {
+    padding-top: 120px; }
 
 .jumbotron {
   background-repeat: no-repeat;
@@ -349,6 +370,8 @@ nav {
 .contact-page .contact-form-container {
   width: 90%;
   margin-top: -80px; }
+  .contact-page .contact-form-container .inline-fields-form {
+    margin-top: 50px; }
 
 .contact-page .contact-details-container {
   margin: 100px auto;
@@ -363,6 +386,43 @@ nav {
     height: 100px; }
     .contact-page .contact-details-container .contact-details p {
       margin: 10px 0; }
+
+.adoption-page {
+  width: 80%;
+  margin: auto; }
+  .adoption-page .button-back-container {
+    display: flex;
+    align-items: center;
+    margin: 50px 0; }
+    .adoption-page .button-back-container span {
+      margin: 0 15px; }
+  .adoption-page .card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .adoption-page .card-container .adoptaion-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 60%;
+      padding: 20px 30px;
+      -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7); }
+      .adoption-page .card-container .adoptaion-form .pawn.progress-form {
+        margin: 50px 0;
+        margin-bottom: 80px; }
+        .adoption-page .card-container .adoptaion-form .pawn.progress-form .progress-item .separator {
+          width: 110px; }
+        .adoption-page .card-container .adoptaion-form .pawn.progress-form .progress-item .label {
+          width: 120px;
+          left: -40px; }
+      .adoption-page .card-container .adoptaion-form .personal-information-container, .adoption-page .card-container .adoptaion-form .address-container {
+        margin-top: 40px; }
+        .adoption-page .card-container .adoptaion-form .personal-information-container h6, .adoption-page .card-container .adoptaion-form .address-container h6 {
+          text-transform: none; }
+    .adoption-page .card-container .dog-details {
+      width: 35%; }
 
 .footer {
   width: 100%;
