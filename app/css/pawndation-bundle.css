@@ -497,7 +497,7 @@
   background: none;
   outline: none;
   border: 1px solid #868686;
-  border-radius: .5em;
+  border-radius: 0.5em;
   padding: 15px;
   width: 100%; }
   .pawn.input:focus, .pawn.input.active {
@@ -624,6 +624,15 @@ select {
       background: #f9f9f9; }
     .select-options li[rel="placeholder"] {
       display: none; }
+
+textarea {
+  border: 1px solid #868686;
+  border-radius: 0.5em;
+  padding: 15px;
+  height: 200px;
+  resize: none; }
+  textarea:focus, textarea.active {
+    border-color: #2e40a0; }
 
 * {
   font-family: "Open Sans", sans-serif;
@@ -1297,3 +1306,49 @@ a {
       .user-headshot img {
         width: 180px;
         height: 180px; } }
+
+.contact-form-container {
+  width: 100%;
+  margin: auto;
+  background: #fff;
+  padding: 50px 80px;
+  border-radius: 1em;
+  -webkit-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 12px -5px rgba(0, 0, 0, 0.7); }
+  @media (max-width: 1199.98px) {
+    .contact-form-container {
+      padding: 50px; } }
+  @media (max-width: 767.98px) {
+    .contact-form-container {
+      padding: 20px; } }
+  .contact-form-container .contact-form {
+    margin-top: 50px; }
+    .contact-form-container .contact-form .fields-inline-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      @media (max-width: 767.98px) {
+        .contact-form-container .contact-form .fields-inline-container {
+          flex-direction: column; } }
+      .contact-form-container .contact-form .fields-inline-container input {
+        width: 49%; }
+        @media (max-width: 767.98px) {
+          .contact-form-container .contact-form .fields-inline-container input {
+            width: 100%;
+            margin: 2% 0; } }
+      .contact-form-container .contact-form .fields-inline-container:not(:last-child) {
+        margin: 2% 0; }
+    .contact-form-container .contact-form textarea {
+      width: 100%; }
+    .contact-form-container .contact-form .submit-container {
+      width: 100%;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      @media (max-width: 767.98px) {
+        .contact-form-container .contact-form .submit-container {
+          margin-top: 20px; } }
+      .contact-form-container .contact-form .submit-container input[type=submit] {
+        height: 45px; }

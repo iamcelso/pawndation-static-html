@@ -2,7 +2,7 @@
   background: none;
   outline: none;
   border: 1px solid #868686;
-  border-radius: .5em;
+  border-radius: 0.5em;
   padding: 15px;
   width: 100%; }
   .pawn.input:focus, .pawn.input.active {
@@ -129,3 +129,12 @@ select {
       background: #f9f9f9; }
     .select-options li[rel="placeholder"] {
       display: none; }
+
+textarea {
+  border: 1px solid #868686;
+  border-radius: 0.5em;
+  padding: 15px;
+  height: 200px;
+  resize: none; }
+  textarea:focus, textarea.active {
+    border-color: color(primary-0); }

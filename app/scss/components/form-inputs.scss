@@ -7,22 +7,22 @@ $select-width: 100%;
 $select-height: 54px;
 
 $border: 1px solid $gray;
+$border-radius: .5em;
+$padding: 15px;
 
 .pawn{
     &.input{
         background: none;
         outline: none;
         border: $border;
-        border-radius: .5em;
-        padding: 15px;
+        border-radius: $border-radius;
+        padding: $padding;
         width: 100%;
 
         &:focus, &.active{
             border-color: $navy-blue;
         }
     }
-
-    
     &.custom-radio-btn {
       position: relative;
       display: flex;
@@ -149,5 +149,18 @@ select{display: none;}
       &[rel="placeholder"] {
         display: none;
       }
+    }
+  }
+
+  textarea{
+    border: $border;
+    border-radius: $border-radius;
+    padding: $padding;
+    height: 200px;
+
+    resize: none;
+    
+    &:focus, &.active{
+      border-color: $navy-blue;
     }
   }
