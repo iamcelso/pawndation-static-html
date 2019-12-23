@@ -343,6 +343,27 @@ nav {
 .blog-page .blog-container {
   margin-top: 80px; }
 
+.contact-page .jumbotron {
+  background-image: url("../assets/images/hero-contact.jpg"); }
+
+.contact-page .contact-form-container {
+  width: 90%;
+  margin-top: -80px; }
+
+.contact-page .contact-details-container {
+  margin: 100px auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+  .contact-page .contact-details-container .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px; }
+    .contact-page .contact-details-container .contact-details p {
+      margin: 10px 0; }
+
 .footer {
   width: 100%;
   background: #2e40a0; }
@@ -411,7 +432,15 @@ nav {
       margin-left: 50px;
       width: 65%; }
   .about-page .enrichment-programs-container {
-    padding: 0 100px; } }
+    padding: 0 100px; }
+  .contact-page .contact-form-container, .contact-page .contact-details-container {
+    width: 100%; }
+  .contact-page .contact-details-container {
+    grid-template-columns: 1fr; }
+    .contact-page .contact-details-container .contact-details {
+      height: 180px; }
+      .contact-page .contact-details-container .contact-details.border-right, .contact-page .contact-details-container .contact-details.border-left {
+        border: none !important; } }
 
 @media (max-width: 991.98px) {
   .sub-header-fluid {
